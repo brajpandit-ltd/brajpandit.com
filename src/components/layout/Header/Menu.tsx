@@ -28,7 +28,7 @@ const Menu = ({ wrapperClass, isMobile = false, menuItems }: MenuProps) => {
       {isMobile && (
         <Button
           variant="default"
-          icon={<span className="material-icons">menu</span>}
+          icon={<span className="material-icons">Menu</span>}
           label=""
           size="large"
           className="border-none rounded-full !p-4"

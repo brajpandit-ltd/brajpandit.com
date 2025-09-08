@@ -8,7 +8,7 @@ const UpcommingPujas = async () => {
   const { data: upcommingPujas, success } = await services.ePujas();
 
   return (
-    <section className="relative py-12 mx-4 md:mx-8">
+    <section className="relative py-10 mx-4 md:mx-8">
       <div className="flex flex-col justify-between gap-6 border-l-4 border-secondary pl-4 transition-all sm:flex-row sm:items-center">
         <div>
           <h4 className="text-sm md:text-base text-primary">

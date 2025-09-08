@@ -1,6 +1,7 @@
 brajpanditji/
 ├── .env
 ├── .gitignore
+├── .next.zip
 ├── eslint.config.mjs
 ├── Home Page.png
 ├── next-env.d.ts
@@ -10,19 +11,56 @@ brajpanditji/
 ├── postcss.config.mjs
 ├── public/
 │   ├── assets/
+│   │   ├── adaptive-icon.png
+│   │   ├── astrology/
+│   │   │   ├── astro1.png
+│   │   │   └── family.png
+│   │   ├── career-business-financial-astrology.jpg
+│   │   ├── Compatibility Synastry_ Secrets of Synastry Compatibility.jpg
+│   │   ├── divine-vastu-energy-solutions.jpg
+│   │   ├── dosha-remedies-vedic-solutions.jpg
+│   │   ├── health-well-being-astrology.jpg
 │   │   ├── home-hero-light.jpg
-│   │   └── home-hero.jpg
-│   └── braj-pandit-logo.svg
+│   │   ├── home-hero.jpg
+│   │   ├── horoscope-kundli-services.jpg
+│   │   ├── pandits/
+│   │   │   ├── Anil Sastri ji.jpg
+│   │   │   ├── bharat bhusan.jpg
+│   │   │   ├── Kanhaiya Pandit ji.jpg
+│   │   │   ├── lalit.png
+│   │   │   ├── Meghsyam Vyas ji.jpg
+│   │   │   ├── Pavan Upadhyay.jpg
+│   │   │   ├── Radha Raman ji.jpg
+│   │   │   ├── Ramesh Rasik ji maharaj.jpg
+│   │   │   └── Rohini saran ji .jpg
+│   │   ├── personalized_puja/
+│   │   │   └── rudraksha.jpg
+│   │   ├── premmandir.png
+│   │   ├── pujas/
+│   │   │   ├── all.jpg
+│   │   │   ├── all.png
+│   │   │   ├── banner.jpg
+│   │   │   ├── diya.jpg
+│   │   │   ├── health.png
+│   │   │   ├── study.png
+│   │   │   └── wealth.png
+│   │   ├── relationship-personal-life-astrology.jpg
+│   │   ├── services-hero.jpg
+│   │   ├── shivji.png
+│   │   ├── temple.jpg
+│   │   └── upcoming_puja/
+│   │       └── upcoming1.jpeg
+│   ├── braj-pandit-logo.svg
+│   ├── favicon.ico
+│   └── logo-new.svg
 ├── README.md
 ├── src/
 │   ├── app/
 │   │   ├── (admin)/
 │   │   │   ├── dashboard/
 │   │   │   │   └── page.tsx
-│   │   │   ├── layout.tsx
 │   │   │   ├── manages-blogs/
 │   │   │   │   └── page.tsx
-│   │   │   ├── products/
 │   │   │   └── users/
 │   │   │       └── page.tsx
 │   │   ├── (pages)/
@@ -38,99 +76,152 @@ brajpanditji/
 │   │   │   │   └── page.tsx
 │   │   │   ├── horoscope/
 │   │   │   │   └── page.tsx
+│   │   │   ├── pandits/
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── [id]/
+│   │   │   │       └── page.tsx
 │   │   │   └── services/
-│   │   │       └── page.tsx
-│   │   ├── (user)/
-│   │   │   ├── cart/
-│   │   │   │   └── page.tsx
-│   │   │   ├── home/
-│   │   │   │   └── page.tsx
-│   │   │   ├── layout.tsx
-│   │   │   ├── live-darshan/
-│   │   │   │   └── page.tsx
-│   │   │   └── products/
+│   │   │       ├── e-puja/
+│   │   │       │   ├── EPujaServices.tsx
+│   │   │       │   ├── loading.tsx
+│   │   │       │   ├── page.tsx
+│   │   │       │   └── [pujaSlug]/
+│   │   │       │       ├── ClientComponents.tsx
+│   │   │       │       ├── CTASection.tsx
+│   │   │       │       ├── page.tsx
+│   │   │       │       └── TempleDetails.tsx
+│   │   │       ├── Filter.tsx
+│   │   │       ├── HeroSection.tsx
+│   │   │       ├── page.tsx
+│   │   │       ├── PoojaCard.tsx
+│   │   │       ├── puja/
+│   │   │       │   ├── page.tsx
+│   │   │       │   └── [pujaSlug]/
+│   │   │       │       └── page.tsx
+│   │   │       ├── puja-booking/
+│   │   │       │   ├── BookingForm.tsx
+│   │   │       │   ├── page.tsx
+│   │   │       │   └── PageLayout.tsx
+│   │   │       ├── SearchHeader.tsx
+│   │   │       └── [serviceSlug]/
+│   │   │           └── page.tsx
 │   │   ├── api/
-│   │   │   ├── auth/
-│   │   │   │   ├── login/
-│   │   │   │   │   └── route.ts
-│   │   │   │   └── register/
-│   │   │   │       └── route.ts
-│   │   │   ├── blogs/
+│   │   │   ├── pandits/
 │   │   │   │   └── route.ts
-│   │   │   ├── daashboard/
+│   │   │   ├── products/
 │   │   │   │   └── route.ts
-│   │   │   └── user/
-│   │   │       └── route.ts
-│   │   ├── favicon.ico
+│   │   │   └── services/
+│   │   │       ├── e-pooja/
+│   │   │       │   ├── route.ts
+│   │   │       │   └── [ePoojaSlug]/
+│   │   │       │       └── route.ts
+│   │   │       ├── personalised-pujas/
+│   │   │       │   ├── route.ts
+│   │   │       │   └── [poojaSlug]/
+│   │   │       │       └── route.ts
+│   │   │       └── puja-booking/
+│   │   │           └── route.ts
 │   │   ├── globals.css
 │   │   ├── layout.tsx
 │   │   └── page.tsx
 │   ├── components/
 │   │   ├── common/
 │   │   │   ├── Button.tsx
+│   │   │   ├── ComingSoon.tsx
 │   │   │   ├── index.ts
-│   │   │   ├── Model.tsx
+│   │   │   ├── Modal.tsx
 │   │   │   ├── Navbar.tsx
-│   │   │   ├── ThemeToggle.tsx
-│   │   │   ├── Toast.tsx
-│   │   │   └── UserLayout.tsx
+│   │   │   └── ThemeToggle.tsx
 │   │   ├── input/
-│   │   │   └── index.ts
+│   │   │   ├── index.ts
+│   │   │   ├── SelectInput.tsx
+│   │   │   ├── TextareaInput.tsx
+│   │   │   └── TextInput.tsx
 │   │   ├── layout/
+│   │   │   ├── BookingProcess.tsx
+│   │   │   ├── FAQs.tsx
 │   │   │   ├── Footer.tsx
 │   │   │   ├── Header/
 │   │   │   │   ├── Header.tsx
 │   │   │   │   └── Menu.tsx
-│   │   │   └── index.ts
-│   │   └── user/
-│   │       └── home/
-│   │           ├── BlogSection.tsx
-│   │           ├── FamousPlaces.tsx
-│   │           ├── HeroSection.tsx
-│   │           ├── HomeProducts.tsx
-│   │           ├── LiveBhajans.tsx
-│   │           ├── PujaServices.tsx
-│   │           └── VerifiedPanditjis.tsx
+│   │   │   ├── home/
+│   │   │   │   ├── Categories.tsx
+│   │   │   │   ├── index.tsx
+│   │   │   │   ├── LiveBhajans.tsx
+│   │   │   │   ├── old/
+│   │   │   │   │   ├── BlogSection.tsx
+│   │   │   │   │   ├── FamousPlaces.tsx
+│   │   │   │   │   ├── HeroSection.tsx
+│   │   │   │   │   ├── HomeProducts.tsx
+│   │   │   │   │   └── PujaServices.tsx
+│   │   │   │   ├── PanditCard.tsx
+│   │   │   │   ├── PersonalisedPujas.tsx
+│   │   │   │   ├── UpcommingPujas.tsx
+│   │   │   │   ├── vedic_section.tsx
+│   │   │   │   └── VerifiedPanditjis.tsx
+│   │   │   ├── index.ts
+│   │   │   ├── ProductCard.tsx
+│   │   │   ├── Testimonials.tsx
+│   │   │   └── WhyChooseUs.tsx
+│   │   └── ui/
+│   │       ├── Accordian.tsx
+│   │       ├── Badge.tsx
+│   │       ├── Card.tsx
+│   │       ├── index.ts
+│   │       └── WhatsAppLogo.tsx
 │   ├── constants/
-│   │   └── static.json
+│   │   ├── brajYatra.json
+│   │   ├── ePujas.json
+│   │   ├── famousPlaces.json
+│   │   ├── pandits.json
+│   │   ├── pujaServices.json
+│   │   ├── static.json
+│   │   ├── static.ts
+│   │   └── static2.json
 │   ├── context/
 │   │   ├── AdminContext.tsx
 │   │   ├── AuthContext.tsx
 │   │   └── CartContext.tsx
-│   ├── data/
-│   │   ├── pujaService.ts
-│   │   └── pujaServices.json
+│   ├── helper/
+│   │   ├── apiHandler.ts
+│   │   ├── apiResponse.ts
+│   │   ├── email.ts
+│   │   └── messaging.ts
 │   ├── hooks/
-│   │   ├── useAuth.ts
-│   │   ├── useCart.ts
 │   │   └── useTranslation.ts
 │   ├── lib/
-│   │   ├── auth.ts
-│   │   ├── constants.ts
-│   │   └── db.ts
+│   │   └── i18n.ts
 │   ├── locales/
 │   │   ├── en.json
 │   │   └── hi.json
 │   ├── providers/
+│   │   ├── index.ts
+│   │   ├── RootProvider.tsx
+│   │   ├── StoreProvider.tsx
 │   │   └── themeProvider.tsx
 │   ├── services/
-│   │   ├── admin/
-│   │   │   └── dashboardService.ts
-│   │   ├── common/
-│   │   │   └── api.ts
-│   │   └── user/
-│   │       ├── blogService.ts
-│   │       └── user.Service.ts
+│   │   ├── bookingByEmailjs.ts
+│   │   ├── bookingClientService.tsx
+│   │   ├── bookingService.ts
+│   │   ├── e-pujaService.ts
+│   │   ├── personalisedPujaService.ts
+│   │   └── services.ts
+│   ├── store/
+│   │   ├── features/
+│   │   │   └── pujaSeavicesSlice.ts
+│   │   ├── hooks.ts
+│   │   └── store.ts
 │   ├── styles/
 │   │   └── marquee.css
-│   ├── type/
 │   ├── types/
+│   │   ├── brajYatra.ts
+│   │   ├── pandit.ts
+│   │   ├── products.ts
 │   │   ├── pujaService.ts
+│   │   ├── response.ts
 │   │   └── user.d.ts
 │   └── utils/
-│       ├── cloudinaryUpload.js
-│       ├── config.js
-│       └── helpers.js
+│       └── unitsFun.ts
 ├── tailwind.config.ts
 ├── tree.cjs
 └── tsconfig.json

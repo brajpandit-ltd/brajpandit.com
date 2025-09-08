@@ -1,61 +1,52 @@
 "use client";
 
 import React from "react";
-import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import Link from "next/link";
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
-const Logo = ({ logo }: { logo: string }) => (
-  <Link href="/" className="flex items-center">
-    <Image src={logo} alt="brajpandit logo" width={135} height={53} />
-  </Link>
-);
-
-const Footer: React.FC = () => {
-  const { t } = useTranslation();
-
+const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-[#3b0d0d] to-[#1F1B1B] text-white py-12 px-6 mt-20 dark:from-[#1a1a1a] dark:to-black">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-sm">
-        {/* About */}
+    <footer className="bg-white text-gray-700 py-12">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+        {/* Logo + Description */}
         <div>
-          <Logo logo="/braj-pandit-logo.svg" />
-          <p className="text-gray-300 dark:text-gray-400 leading-relaxed text-justify">
-            Welcome to Braj pandit – your trusted source for online puja
-            services, astrology consultations, prasad delivery, and spiritual
-            essentials like Rudraksha, Shaligrams, and Yantras.
+          <Image
+            src="/assets/braj-pandit-logo.svg"
+            alt="Braj Pandit Logo"
+            width={160}
+            height={60}
+            className="mb-4"
+          />
+          <p className="text-sm leading-relaxed">
+            Welcome to <span className="font-semibold">Braj Pandit</span> – your
+            trusted source for online puja services, astrology consultations,
+            prasad delivery, and spiritual essentials like Rudraksha, Shaligrams,
+            and Yantras.
           </p>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-xl font-semibold mb-4 text-yellow-400">
-            Quick Links
-          </h3>
-          <ul className="space-y-2">
+          <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
+          <ul className="space-y-2 text-sm">
             <li>
-              <Link href="/" className="hover:text-yellow-300 transition">
+              <Link href="/" className="hover:text-primary transition">
                 Home
               </Link>
             </li>
             <li>
-              <Link
-                href="/services/e-puja"
-                className="hover:text-yellow-300 transition"
-              >
+              <Link href="/services/e-puja" className="hover:text-primary transition">
                 E Pujas
               </Link>
             </li>
             <li>
-              <Link href="/blogs" className="hover:text-yellow-300 transition">
+              <Link href="/vedic-gyan" className="hover:text-primary transition">
                 Vedic Gyan
               </Link>
             </li>
             <li>
-              <Link
-                href="/booking"
-                className="hover:text-yellow-300 transition"
-              >
+              <Link href="/about" className="hover:text-primary transition">
                 About Us
               </Link>
             </li>
@@ -64,79 +55,66 @@ const Footer: React.FC = () => {
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-xl font-semibold mb-4 text-yellow-400">
-            {t("footer.contact")}
-          </h3>
-          <ul className="space-y-1 text-gray-300 dark:text-gray-400">
+          <h3 className="text-lg font-semibold mb-3">Contact</h3>
+          <ul className="space-y-2 text-sm">
+            <li>📞 +91 8595009640</li>
+            <li>📞 +91 8595009640</li>
             <li>
-              <a href="tel:+918595009640">📞 +91 8595009640</a>
-            </li>
-            <li>
-              <a href="tel:+918595009640">📞 +91 8595009640</a>
-            </li>
-            <li>
-              <a href="mailto:brajpandit123@gmail.com ">
-                📧 brajpandit123@gmail.com
+              📧{" "}
+              <a
+                href="mailto:brajpandit123@gmail.com"
+                className="hover:text-primary transition"
+              >
+                brajpandit123@gmail.com
               </a>
             </li>
           </ul>
         </div>
 
-        {/* Social Media */}
+        {/* Social Links with Icons */}
         <div>
-          <h3 className="text-xl font-semibold mb-4 text-yellow-400">
-            {t("footer.follow_us")}
-          </h3>
-          <div className="flex flex-col gap-3">
-            <Link
-              href="#"
-              className="flex items-center gap-2 hover:text-yellow-300 transition"
-            >
-              <Image
-                src="https://res.cloudinary.com/djtq2eywl/image/upload/v1751794911/facebook-circle-logo-blue-70175169479332995fhjt438m_aqi7dg.png"
-                alt="Facebook"
-                width={20}
-                height={20}
-              />
-              Facebook
-            </Link>
-            <Link
-              href="https://www.instagram.com/vedagyanam_official?igsh=ODkyNHhmczZiYnhh"
-              className="flex items-center gap-2 hover:text-yellow-300 transition"
-            >
-              <Image
-                src="https://res.cloudinary.com/djtq2eywl/image/upload/v1751794910/instagram-logo_971166-164497_yfnzdl.avif"
-                alt="Instagram"
-                width={20}
-                height={20}
-              />
-              Instagram
-            </Link>
-            <Link
-              href="https://youtube.com/@vedagyanam?si=587Ev8d_yQzUOVE4"
-              className="flex items-center gap-2 hover:text-yellow-300 transition"
-            >
-              <Image
-                src="https://res.cloudinary.com/djtq2eywl/image/upload/v1751794910/png-clipart-youtube-logo-youtube-red-logo-sunny-leone-angle-rectangle-thumbnail_lgwxiu.png"
-                alt="YouTube"
-                width={20}
-                height={20}
-              />
-              YouTube
-            </Link>
-          </div>
+          <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
+          <ul className="space-y-2 text-sm">
+            <li className="flex items-center gap-2">
+              <FaFacebookF className="text-blue-600" /> 
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition"
+              >
+                Facebook
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <FaInstagram className="text-pink-500" /> 
+              <a
+                href="https://www.instagram.com/vedagyanam_official/?igsh=ODkyNHhmczZiYnhh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition"
+              >
+                Instagram
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <FaYoutube className="text-red-600" /> 
+              <a
+                href="https://youtube.com/@vedagyanam?si=587Ev8d_yQzUOVE4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition"
+              >
+                YouTube
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 
-      {/* Copyright */}
-      <div className="text-center mt-10 text-gray-400 dark:text-gray-500 text-sm">
-        © {new Date().getFullYear()} BrajPandit. All rights reserved.
-      </div>
-
-      {/* Legal Warning */}
-      <div className="text-center text-xs text-red-300 dark:text-red-400 mt-2 italic">
-        ⚠️ Unauthorized copying or reuse of this code or design is strictly
-        prohibited. Legal action may be taken against violators.
+      {/* Bottom copyright */}
+      <div className="mt-10 text-center text-sm text-gray-600 border-t border-gray-300 pt-2">
+        © {new Date().getFullYear()} <span className="font-semibold">BrajPandit</span>. All rights reserved.
       </div>
     </footer>
   );

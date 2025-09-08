@@ -3,7 +3,7 @@
     {
       "title": "Krishna Janmashtami Puja – Divine Celebration at Your Doorstep",
       "subtitle": "Celebrate the birth of Lord Krishna with authentic Vedic rituals, experienced pandits, and complete samagri.",
-      "bannerImage": "/images/pujas/krishna-janmashtami-jhula.jpg",
+     "bannerImage": "/assets/upcoming_puja/upcoming1.jpeg",
       "slug": "krishna-janmashtami-puja",
       "location": "Mathura",
       "date": "2025-10-09",
@@ -113,7 +113,335 @@
     {
       "title": "Raksha Bandhan Poojan – Strengthen the Bond of Protection",
       "subtitle": "Celebrate this sacred bond with traditional rituals and blessings from Vedic Pandits.",
-      "bannerImage": "/images/pujas/raksha-bandhan.jpg",
+      "bannerImage": "/assets/upcoming_puja/upcoming1.jpeg",
+      "slug": "raksha-bandhan-poojan",
+      "location": "Delhi NCR",
+      "date": "2025-08-18",
+      "time": "10:00 AM",
+
+      "category": ["upcomming-pujas", "puja"],
+      "tags": ["Raksha Bandhan", "Vedic Rituals", "Protection Bond"],
+
+      "benefits": {
+        "heading": "Benefits of Krishna Janmashtami Puja",
+        "description": "Our pandits are connected with famous Braj temples like Banke Bihari Ji (Vrindavan), ISKCON Temple (Mathura), Radha Raman Mandir, and others. This ensures authentic rituals as per the Vaishnav tradition.",
+        "points": [
+          "Brings happiness, peace, and prosperity in the family",
+          "Removes negativity and obstacles from life",
+          "Ensures blessings of Lord Krishna for good health and success",
+          "Strengthens love, devotion, and family bonding",
+          "Fulfills desires and attracts divine grace"
+        ]
+      },
+      "packages": [
+        {
+          "id": "basic",
+          "title": "Basic Ritual",
+          "price": "₹401",
+          "description": "Simple Rakhi puja with samagri and blessings.",
+          "features": [
+            "Essential samagri",
+            "Pandit guidance via video call",
+            "Prasad included"
+          ]
+        },
+        {
+          "id": "standard",
+          "title": "Standard Poojan",
+          "price": "₹901",
+          "description": "Includes havan, raksha sutra, and sankalp.",
+          "features": [
+            "Complete samagri",
+            "In-person Pandit",
+            "Sankalp & Havan",
+            "Rakhi + Prasad for family"
+          ]
+        }
+      ],
+      "comparisonTable": {
+        "columns": ["Package", "Price", "Features", "Delivery"],
+        "rows": [
+          {
+            "package": "Basic",
+            "price": "₹401",
+            "features": "Video Call Pooja + Samagri Kit",
+            "delivery": "Yes"
+          },
+          {
+            "package": "Standard",
+            "price": "₹901",
+            "features": "In-person Pooja + Havan",
+            "delivery": "Yes"
+          }
+        ]
+      },
+      "templeDetails": {
+        "heading": "Our Temple Network",
+        "highlights": [
+          "Tied with ancient Raksha Bandhan temples in Vrindavan",
+          "Puja blessings from Vraj region priests",
+          "Prasad available from associated temples"
+        ],
+        "temples": [
+          "Banke Bihari Ji (Vrindavan)",
+          "ISKCON Temple (Mathura)",
+          "Radha Raman Mandir",
+          "Radha Vallabh Temple",
+          "Prem Mandir",
+          "Krishna Balaram Mandir"
+        ]
+      }
+    },
+    {
+      "title": "Raksha Bandhan Poojan – Strengthen the Bond of Protection",
+      "subtitle": "Celebrate this sacred bond with traditional rituals and blessings from Vedic Pandits.",
+      "bannerImage": "/assets/upcoming_puja/upcoming1.jpeg",
+      "slug": "raksha-bandhan-poojan",
+      "location": "Delhi NCR",
+      "date": "2025-08-18",
+      "time": "10:00 AM",
+
+      "category": ["upcomming-pujas", "puja"],
+      "tags": ["Raksha Bandhan", "Vedic Rituals", "Protection Bond"],
+
+      "benefits": {
+        "heading": "Benefits of Krishna Janmashtami Puja",
+        "description": "Our pandits are connected with famous Braj temples like Banke Bihari Ji (Vrindavan), ISKCON Temple (Mathura), Radha Raman Mandir, and others. This ensures authentic rituals as per the Vaishnav tradition.",
+        "points": [
+          "Brings happiness, peace, and prosperity in the family",
+          "Removes negativity and obstacles from life",
+          "Ensures blessings of Lord Krishna for good health and success",
+          "Strengthens love, devotion, and family bonding",
+          "Fulfills desires and attracts divine grace"
+        ]
+      },
+      "packages": [
+        {
+          "id": "basic",
+          "title": "Basic Ritual",
+          "price": "₹401",
+          "description": "Simple Rakhi puja with samagri and blessings.",
+          "features": [
+            "Essential samagri",
+            "Pandit guidance via video call",
+            "Prasad included"
+          ]
+        },
+        {
+          "id": "standard",
+          "title": "Standard Poojan",
+          "price": "₹901",
+          "description": "Includes havan, raksha sutra, and sankalp.",
+          "features": [
+            "Complete samagri",
+            "In-person Pandit",
+            "Sankalp & Havan",
+            "Rakhi + Prasad for family"
+          ]
+        }
+      ],
+      "comparisonTable": {
+        "columns": ["Package", "Price", "Features", "Delivery"],
+        "rows": [
+          {
+            "package": "Basic",
+            "price": "₹401",
+            "features": "Video Call Pooja + Samagri Kit",
+            "delivery": "Yes"
+          },
+          {
+            "package": "Standard",
+            "price": "₹901",
+            "features": "In-person Pooja + Havan",
+            "delivery": "Yes"
+          }
+        ]
+      },
+      "templeDetails": {
+        "heading": "Our Temple Network",
+        "highlights": [
+          "Tied with ancient Raksha Bandhan temples in Vrindavan",
+          "Puja blessings from Vraj region priests",
+          "Prasad available from associated temples"
+        ],
+        "temples": [
+          "Banke Bihari Ji (Vrindavan)",
+          "ISKCON Temple (Mathura)",
+          "Radha Raman Mandir",
+          "Radha Vallabh Temple",
+          "Prem Mandir",
+          "Krishna Balaram Mandir"
+        ]
+      }
+    },
+    {
+      "title": "Raksha Bandhan Poojan – Strengthen the Bond of Protection",
+      "subtitle": "Celebrate this sacred bond with traditional rituals and blessings from Vedic Pandits.",
+      "bannerImage": "/assets/upcoming_puja/upcoming1.jpeg",
+      "slug": "raksha-bandhan-poojan",
+      "location": "Delhi NCR",
+      "date": "2025-08-18",
+      "time": "10:00 AM",
+
+      "category": ["upcomming-pujas", "puja"],
+      "tags": ["Raksha Bandhan", "Vedic Rituals", "Protection Bond"],
+
+      "benefits": {
+        "heading": "Benefits of Krishna Janmashtami Puja",
+        "description": "Our pandits are connected with famous Braj temples like Banke Bihari Ji (Vrindavan), ISKCON Temple (Mathura), Radha Raman Mandir, and others. This ensures authentic rituals as per the Vaishnav tradition.",
+        "points": [
+          "Brings happiness, peace, and prosperity in the family",
+          "Removes negativity and obstacles from life",
+          "Ensures blessings of Lord Krishna for good health and success",
+          "Strengthens love, devotion, and family bonding",
+          "Fulfills desires and attracts divine grace"
+        ]
+      },
+      "packages": [
+        {
+          "id": "basic",
+          "title": "Basic Ritual",
+          "price": "₹401",
+          "description": "Simple Rakhi puja with samagri and blessings.",
+          "features": [
+            "Essential samagri",
+            "Pandit guidance via video call",
+            "Prasad included"
+          ]
+        },
+        {
+          "id": "standard",
+          "title": "Standard Poojan",
+          "price": "₹901",
+          "description": "Includes havan, raksha sutra, and sankalp.",
+          "features": [
+            "Complete samagri",
+            "In-person Pandit",
+            "Sankalp & Havan",
+            "Rakhi + Prasad for family"
+          ]
+        }
+      ],
+      "comparisonTable": {
+        "columns": ["Package", "Price", "Features", "Delivery"],
+        "rows": [
+          {
+            "package": "Basic",
+            "price": "₹401",
+            "features": "Video Call Pooja + Samagri Kit",
+            "delivery": "Yes"
+          },
+          {
+            "package": "Standard",
+            "price": "₹901",
+            "features": "In-person Pooja + Havan",
+            "delivery": "Yes"
+          }
+        ]
+      },
+      "templeDetails": {
+        "heading": "Our Temple Network",
+        "highlights": [
+          "Tied with ancient Raksha Bandhan temples in Vrindavan",
+          "Puja blessings from Vraj region priests",
+          "Prasad available from associated temples"
+        ],
+        "temples": [
+          "Banke Bihari Ji (Vrindavan)",
+          "ISKCON Temple (Mathura)",
+          "Radha Raman Mandir",
+          "Radha Vallabh Temple",
+          "Prem Mandir",
+          "Krishna Balaram Mandir"
+        ]
+      }
+    },
+    {
+      "title": "Raksha Bandhan Poojan – Strengthen the Bond of Protection",
+      "subtitle": "Celebrate this sacred bond with traditional rituals and blessings from Vedic Pandits.",
+      "bannerImage": "/assets/upcoming_puja/upcoming1.jpeg",
+      "slug": "raksha-bandhan-poojan",
+      "location": "Delhi NCR",
+      "date": "2025-08-18",
+      "time": "10:00 AM",
+
+      "category": ["upcomming-pujas", "puja"],
+      "tags": ["Raksha Bandhan", "Vedic Rituals", "Protection Bond"],
+
+      "benefits": {
+        "heading": "Benefits of Krishna Janmashtami Puja",
+        "description": "Our pandits are connected with famous Braj temples like Banke Bihari Ji (Vrindavan), ISKCON Temple (Mathura), Radha Raman Mandir, and others. This ensures authentic rituals as per the Vaishnav tradition.",
+        "points": [
+          "Brings happiness, peace, and prosperity in the family",
+          "Removes negativity and obstacles from life",
+          "Ensures blessings of Lord Krishna for good health and success",
+          "Strengthens love, devotion, and family bonding",
+          "Fulfills desires and attracts divine grace"
+        ]
+      },
+      "packages": [
+        {
+          "id": "basic",
+          "title": "Basic Ritual",
+          "price": "₹401",
+          "description": "Simple Rakhi puja with samagri and blessings.",
+          "features": [
+            "Essential samagri",
+            "Pandit guidance via video call",
+            "Prasad included"
+          ]
+        },
+        {
+          "id": "standard",
+          "title": "Standard Poojan",
+          "price": "₹901",
+          "description": "Includes havan, raksha sutra, and sankalp.",
+          "features": [
+            "Complete samagri",
+            "In-person Pandit",
+            "Sankalp & Havan",
+            "Rakhi + Prasad for family"
+          ]
+        }
+      ],
+      "comparisonTable": {
+        "columns": ["Package", "Price", "Features", "Delivery"],
+        "rows": [
+          {
+            "package": "Basic",
+            "price": "₹401",
+            "features": "Video Call Pooja + Samagri Kit",
+            "delivery": "Yes"
+          },
+          {
+            "package": "Standard",
+            "price": "₹901",
+            "features": "In-person Pooja + Havan",
+            "delivery": "Yes"
+          }
+        ]
+      },
+      "templeDetails": {
+        "heading": "Our Temple Network",
+        "highlights": [
+          "Tied with ancient Raksha Bandhan temples in Vrindavan",
+          "Puja blessings from Vraj region priests",
+          "Prasad available from associated temples"
+        ],
+        "temples": [
+          "Banke Bihari Ji (Vrindavan)",
+          "ISKCON Temple (Mathura)",
+          "Radha Raman Mandir",
+          "Radha Vallabh Temple",
+          "Prem Mandir",
+          "Krishna Balaram Mandir"
+        ]
+      }
+    },
+    {
+      "title": "Raksha Bandhan Poojan – Strengthen the Bond of Protection",
+      "subtitle": "Celebrate this sacred bond with traditional rituals and blessings from Vedic Pandits.",
+      "bannerImage": "/assets/upcoming_puja/upcoming1.jpeg",
       "slug": "raksha-bandhan-poojan",
       "location": "Delhi NCR",
       "date": "2025-08-18",
@@ -196,7 +524,7 @@
     {
       "title": "Sharad Purnima Maha Abhishek – Divine Moonlit Night Puja",
       "subtitle": "Participate in the sacred abhishek of Radha-Krishna under full moon energy.",
-      "bannerImage": "/images/pujas/sharad-purnima.jpg",
+      "bannerImage": "/assets/upcoming_puja/upcoming1.jpeg",
       "slug": "sharad-purnima-maha-abhishek",
       "location": "Mathura",
       "date": "2025-10-09",

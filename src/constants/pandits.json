@@ -6,6 +6,7 @@
     "experience": "10+ years",
     "years": "years",
     "status": "approved",
+    "image":"/assets/pandits/lalit.png",
     "location": "New Delhi, India"
   },
   {
@@ -15,6 +16,7 @@
     "experience": "10+ years",
     "years": "years",
     "status": "approved",
+    "image":"/assets/pandits/Kanhaiya Pandit ji.jpg",
     "location": "New Delhi, India"
   },
   {
@@ -24,6 +26,7 @@
     "experience": "10+ years",
     "years": "years",
     "status": "approved",
+    "image":"/assets/pandits/bharat bhusan.jpg",
     "location": "New Delhi, India"
   },
   {
@@ -33,6 +36,7 @@
     "experience": "10+ years",
     "years": "years",
     "status": "approved",
+    "image":"/assets/pandits/Rohini saran ji .jpg",
     "location": "New Delhi, India"
   },
   {
@@ -42,6 +46,67 @@
     "experience": "10+ years",
     "years": "years",
     "status": "approved",
+    "image":"/assets/pandits/Meghsyam Vyas ji.jpg",
+    "location": "New Delhi, India"
+  },
+  {
+    "name": "Bhagwan Shri Guru Prasad Maharaj",
+    "slug": "guru-prasad-maharaj",
+    "expertise": "Astrology",
+    "experience": "10+ years",
+    "years": "years",
+    "status": "approved",
+    "image":"/assets/pandits/Anil Sastri ji.jpg",
+    "location": "New Delhi, India"
+  },
+  {
+    "name": "Bhagwan Shri Guru Prasad Maharaj",
+    "slug": "guru-prasad-maharaj",
+    "expertise": "Astrology",
+    "experience": "10+ years",
+    "years": "years",
+    "status": "approved",
+    "image":"/assets/pandits/Ramesh Rasik ji maharaj.jpg",
+    "location": "New Delhi, India"
+  },
+  {
+    "name": "Bhagwan Shri Guru Prasad Maharaj",
+    "slug": "guru-prasad-maharaj",
+    "expertise": "Astrology",
+    "experience": "10+ years",
+    "years": "years",
+    "status": "approved",
+    "image":"/assets/pandits/Ramesh Rasik ji maharaj.jpg",
+    "location": "New Delhi, India"
+  },
+  {
+    "name": "Bhagwan Shri Guru Prasad Maharaj",
+    "slug": "guru-prasad-maharaj",
+    "expertise": "Astrology",
+    "experience": "10+ years",
+    "years": "years",
+    "status": "approved",
+    "image":"/assets/pandits/Ramesh Rasik ji maharaj.jpg",
+    "location": "New Delhi, India"
+  },
+  {
+    "name": "Bhagwan Shri Guru Prasad Maharaj",
+    "slug": "guru-prasad-maharaj",
+    "expertise": "Astrology",
+    "experience": "10+ years",
+    "years": "years",
+    "status": "approved",
+    "image":"/assets/pandits/Ramesh Rasik ji maharaj.jpg",
+    "location": "New Delhi, India"
+  },
+  {
+    "name": "Bhagwan Shri Guru Prasad Maharaj",
+    "slug": "guru-prasad-maharaj",
+    "expertise": "Astrology",
+    "experience": "10+ years",
+    "years": "years",
+    "status": "approved",
+    "image":"/assets/pandits/Ramesh Rasik ji maharaj.jpg",
     "location": "New Delhi, India"
   }
 ]

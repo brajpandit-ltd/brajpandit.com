@@ -1,83 +1,179 @@
-import React from "react";
-import Image from "next/image";
-import { Button } from "@/components/common";
-import Link from "next/link";
+"use client";
 
-const AboutUs = () => {
+import Image from "next/image";
+
+const teamMembers = [
+  {
+    id: 1,
+    name: "xxxxxxxxxxx",
+    role: "Founder & Developer",
+    image: "/assets/team/lalit.jpg",
+  },
+  {
+    id: 2,
+    name: "xxxxxx",
+    role: "Founder & Media",
+    image: "/assets/team/lalit.jpg",
+  },
+  {
+    id: 3,
+    name: "xxxxxxxx",
+    role: "Senior Adviser",
+    image: "/assets/team/lalit.jpg",
+  },
+  {
+    id: 4,
+    name: "xxxxxxx",
+    role: "Co-founder & Developer",
+    image: "/assets/team/lalit.jpg",
+  },
+  {
+    id: 5,
+    name: "Virendra Singh Rajput",
+    role: "Co-founder",
+    image: "/assets/team/lalit.jpg",
+  },
+];
+
+export default function AboutUsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-brpx-4 py-12">
-      <div className="w-full mx-auto rounded-3xl shadow-xl overflow-hidden backdrop-blur-md">
-        <div className="flex flex-col md:flex-row items-center gap-8 p-8 md:p-16">
-          {/* Left: Image */}
-          <div className="flex-1 flex justify-center">
+    <main className="w-full overflow-hidden">
+      {/* Hero Section */}
+      <section className="bg-[#fff5dc]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          {/* Left Text */}
+          <div className="space-y-6 text-center md:text-left">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+              About <span className="text-red-600">Braj Pandit</span>
+            </h1>
+            <p className="text-gray-700 text-base sm:text-lg max-w-xl mx-auto md:mx-0">
+              We are dedicated to bringing authentic Vedic rituals, astrology,
+              and spiritual guidance to devotees worldwide. Our mission is to
+              connect people with divine traditions in a modern way.
+            </p>
+          </div>
+
+          {/* Right Image */}
+          <div className="flex justify-center md:justify-end">
             <Image
-              src="/assets/about-panditji.jpg"
-              alt="Braj Pandit Ji"
-              width={320}
-              height={320}
-              className="rounded-2xl shadow-lg object-cover border-4 border-orange-200 dark:border-yellow-900"
+              src="/assets/adaptive-icon.png"
+              alt="Lord Krishna - Braj"
+              width={450}
+              height={450}
+              className="object-contain w-72 sm:w-80 md:w-[420px] h-auto rounded-xl shadow"
             />
           </div>
-          {/* Right: Content */}
-          <div className="flex-1">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-orange-800 dark:text-yellow-300 mb-4">
-              About <span className="text-primary">Braj Pandit Ji</span>
-            </h1>
-            <p className="text-lg text-gray-700 dark:text-gray-200 mb-4 leading-relaxed">
-              <span className="font-semibold text-orange-700 dark:text-yellow-300">
-                Braj Pandit Ji
-              </span>{" "}
-              is a renowned Vedic scholar and spiritual guide, dedicated to
-              bringing the divine wisdom of Sanatan Dharma to every home. With
-              decades of experience in performing sacred rituals, kathas, and
-              pujas, our mission is to make authentic spiritual services
-              accessible to all, both online and offline.
-            </p>
-            <p className="text-base text-gray-600 dark:text-gray-400 mb-4">
-              Our team of verified pandits and scholars ensures that every
-              ceremony is performed with utmost devotion and adherence to Vedic
-              traditions. Whether you seek blessings for health, wealth,
-              relationships, or spiritual growth, we are here to guide you on
-              your journey.
-            </p>
-            <ul className="mb-6 space-y-2">
-              <li className="flex items-center gap-2">
-                <span className="inline-block w-2 h-2 bg-orange-500 rounded-full"></span>
-                <span>Authentic Vedic Pujas & Rituals</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="inline-block w-2 h-2 bg-orange-500 rounded-full"></span>
-                <span>Online & In-person Ceremonies</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="inline-block w-2 h-2 bg-orange-500 rounded-full"></span>
-                <span>Personalized Guidance & Consultation</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="inline-block w-2 h-2 bg-orange-500 rounded-full"></span>
-                <span>Trusted by Thousands of Devotees</span>
-              </li>
-            </ul>
-            <div className="flex gap-4">
-              <Link href="/services/e-puja">
-                <Button label="Book a Puja" variant="primary" />
-              </Link>
+        </div>
+      </section>
+
+      {/* Sacred Image Section */}
+      <section className="relative w-full h-[320px] sm:h-[400px] md:h-[480px] lg:h-[550px]">
+        <Image
+          src="/assets/premmandir.png" 
+          alt="Vrindavan Temple - Symbol of Devotion"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-center">
+          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold max-w-2xl leading-snug">
+            “In the Land of Braj, every corner resonates with the divine flute
+            of Lord Krishna.”
+          </h2>
+        </div>
+      </section>
+
+      {/* Our Mission */}
+      <section className="bg-white py-12 sm:py-16 lg:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 space-y-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900">
+            Our Mission & Vision
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="bg-[#fff5dc] p-6 rounded-xl shadow hover:shadow-md transition">
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                Our Mission
+              </h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                To simplify access to Vedic rituals, pujas, and astrological
+                consultations, ensuring authenticity while making it available
+                online for everyone across the globe.
+              </p>
+            </div>
+            <div className="bg-[#fff5dc] p-6 rounded-xl shadow hover:shadow-md transition">
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                Our Vision
+              </h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                To become the most trusted spiritual platform, helping millions
+                reconnect with their roots and divine traditions with ease and
+                transparency.
+              </p>
             </div>
           </div>
         </div>
-        {/* Bottom: Vision/Mission */}
-        <div className="bg-gradient-to-r from-orange-50 to-yellow-100 dark:from-gray-800 dark:to-gray-900 px-8 py-6 border-t border-yellow-200 dark:border-gray-800">
-          <h2 className="text-2xl font-bold text-orange-700 dark:text-yellow-300 mb-2">
-            Our Vision
+      </section>
+
+      {/* Our Story */}
+      <section className="bg-[#fff5dc] py-12 sm:py-16 lg:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+            Our Story
           </h2>
-          <p className="text-base text-gray-700 dark:text-gray-300">
-            To inspire devotion, spread the light of Vedic knowledge, and make
-            every home a temple of peace, prosperity, and spiritual fulfillment.
+          <p className="text-gray-700 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
+            Braj Pandit was founded with the goal of reviving the sacred
+            traditions of Vedic culture. From Mathura to Delhi NCR, we have
+            served thousands of devotees by performing authentic pujas,
+            providing astrology guidance, and supporting temple communities.
           </p>
         </div>
-      </div>
-    </div>
-  );
-};
+      </section>
 
-export default AboutUs;
+      {/* Meet Our Team */}
+      <section className="bg-white py-12 sm:py-16 lg:py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-10">
+            Meet Our Team
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            {teamMembers.map((member) => (
+              <div
+                key={member.id}
+                className="bg-[#fff5dc] rounded-xl shadow hover:shadow-lg transition p-6 flex flex-col items-center text-center"
+              >
+                <div className="relative w-28 h-28 mb-4">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover object-center rounded-full border-4 border-red-200"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900">
+                  {member.name}
+                </h3>
+                <p className="text-gray-600 text-sm">{member.role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="bg-red-600 text-white py-12 sm:py-16 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+            Want to Connect With Us?
+          </h2>
+          <p className="text-base sm:text-lg">
+            Whether you want to book a puja, get astrology guidance, or know
+            more about our services, we are here to help.
+          </p>
+          <button className="bg-white text-red-600 font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition">
+            Contact Us
+          </button>
+        </div>
+      </section>
+    </main>
+  );
+}
