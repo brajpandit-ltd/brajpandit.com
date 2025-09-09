@@ -85,12 +85,12 @@
     {
       "title": "Rudrakshya",
       "slug": "rudrakshya",
-      "image": "/assets/pujas/rudrakshya.png"
+      "image": "/assets/pujas/Rudrakshaya2.jpeg"
     },
     {
       "title": "Zodiac",
       "slug": "zodiac",
-      "image": "/assets/pujas/zodiac.png"
+      "image": "/assets/personalized_puja/zodiac.jpg"
     },
     {
       "title": "Wealth",
@@ -100,7 +100,7 @@
     {
       "title": "Business",
       "slug": "business",
-      "image": "/assets/pujas/business.png"
+      "image": "/assets/personalized_puja/business.jpeg"
     },
     {
       "title": "Study",
@@ -110,12 +110,12 @@
     {
       "title": "Career",
       "slug": "career",
-      "image": "/assets/pujas/career.png"
+      "image": "/assets/personalized_puja/Career.jpeg"
     },
     {
       "title": "Tantra",
       "slug": "tantra",
-      "image": "/assets/pujas/tantra.png"
+      "image": "/assets/personalized_puja/tantra.jpeg"
     },
     {
       "title": "Health",
@@ -125,17 +125,17 @@
     {
       "title": "Relationship",
       "slug": "relationship",
-      "image": "/assets/pujas/relationship.png"
+      "image": "/assets/personalized_puja/relationship2.jpeg"
     },
     {
       "title": "Family",
       "slug": "family",
-      "image": "/assets/pujas/family.png"
+      "image": "/assets/personalized_puja/family.jpg"
     },
     {
       "title": "Others",
       "slug": "others",
-      "image": "/assets/pujas/others.png"
+      "image": "/assets/personalized_puja/other.jpeg"
     }
   ],
 
@@ -147,7 +147,8 @@
       "trending": ["All Pujas"],
       "tags": ["Griha Pravesh Puja"],
       "description": "Janmastami is the festival of Krishna, the God of wealth and prosperity. People perform special puja to invite Him into their homes. Invite prosperity by booking a traditional Krishna-Puja.",
-      "bannerImage": "/assets/pujas/diya.jpg",
+
+      "bannerImage": "/assets/personalized_puja/janmmastami.jpg",
       "images": [],
       "count": 120,
       "price": 500,
@@ -186,7 +187,7 @@
       "trending": ["All Pujas"],
       "tags": ["Griha Pravesh Puja"],
       "description": "Diwali is the festival of lights, celebrated with joy and devotion. Book a Diwali Pooja to seek blessings for prosperity and happiness.",
-       "bannerImage": "/assets/pujas/diya.jpg",
+       "bannerImage": "/assets/personalized_puja/diwali.jpg",
       "images": [],
       "count": 120,
       "price": 500,
@@ -225,7 +226,7 @@
       "trending": ["All Pujas"],
       "tags": ["Griha Pravesh Puja"],
       "description": "Ganesh Chaturthi marks the birth of Lord Ganesha, the remover of obstacles. Celebrate with a special Pooja to invite His blessings.",
-       "bannerImage": "/assets/pujas/diya.jpg",
+       "bannerImage": "/assets/personalized_puja/ganeshpuja.jpg",
       "images": [],
       "count": 120,
       "price": 500,
@@ -264,7 +265,7 @@
       "trending": ["All Pujas"],
       "tags": ["Griha Pravesh Puja"],
       "description": "Navratri is a nine-night festival dedicated to the Goddess Durga. Participate in the Pooja to seek her blessings for strength and prosperity.",
-       "bannerImage": "/assets/pujas/diya.jpg",
+       "bannerImage": "/assets/personalized_puja/durga.jpg",
       "images": [],
       "count": 120,
       "price": 500,
@@ -303,7 +304,7 @@
       "trending": ["All Pujas"],
       "tags": ["Griha Pravesh Puja"],
       "description": "Maha Shivaratri is a significant festival dedicated to Lord Shiva. Book a Pooja to seek His blessings for peace and prosperity.",
-      "bannerImage": "/maha-shivaratri-pooja.jpg",
+      "bannerImage": "/assets/personalized_puja/shiv ratri.gif",
       "images": [],
       "count": 120,
       "price": 500,
@@ -342,7 +343,7 @@
       "trending": ["All Pujas"],
       "tags": ["Griha Pravesh Puja"],
       "description": "Holi is a festival of colors and joy. Celebrate with a Holi Pooja to seek blessings for prosperity and happiness.",
-      "bannerImage": "/holi-pooja.jpg",
+      "bannerImage": "/assets/personalized_puja/holi puja.jpg",
       "images": [],
       "count": 120,
       "price": 500,
@@ -381,7 +382,7 @@
       "trending": ["All Pujas"],
       "tags": ["Griha Pravesh Puja"],
       "description": "Makar Sankranti marks the transition of the sun into Capricorn. Celebrate with a Pooja to invite prosperity and good fortune.",
-      "bannerImage": "/assets/pujas/diya.jpg",
+      "bannerImage":"/assets/personalized_puja/makarshakrati.jpg",
       "images": [],
       "count": 120,
       "price": 500,
@@ -420,7 +421,7 @@
       "trending": ["All Pujas"],
       "tags": ["Griha Pravesh Puja"],
       "description": "Pongal is a harvest festival celebrated in South India. Book a Pooja to express gratitude for the bountiful harvest and seek blessings for prosperity.",
-      "bannerImage": "/pongal-pooja.jpg",
+      "bannerImage": "/assets/personalized_puja/pongal.jpg",
       "images": [],
       "count": 120,
       "price": 500,
@@ -459,7 +460,7 @@
       "trending": ["All Pujas"],
       "tags": ["Griha Pravesh Puja"],
       "description": "Baisakhi marks the harvest festival in Punjab. Celebrate with a Pooja to seek blessings for prosperity and happiness.",
-      "bannerImage": "/baisakhi-pooja.jpg",
+      "bannerImage": "/assets/personalized_puja/baisakhi.jpg",
       "images": [],
       "count": 120,
       "price": 500,
