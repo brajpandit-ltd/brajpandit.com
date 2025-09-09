@@ -7,19 +7,16 @@ import Image from "next/image";
 import { Star } from "lucide-react";
 import Link from "next/link";
 import Button from "@/components/common/Button";
-import { use } from "react";
 
-interface PanditDetailPageProps {
-  params: { panditSlug: string };
-}
-
-export default function PanditDetailPage({ params }: PanditDetailPageProps) {
-  // Unwrap params to support Next.js 15 future behavior
-  const { panditSlug } = use(params as { panditSlug: string });
+// Remove interface entirely
+export default function PanditDetailPage({ params }: { params: any }) {
+  // Access panditSlug directly
+  const panditSlug = params?.panditSlug;
 
   const pandit = (pandits as Pandit[]).find((p) => p.slug === panditSlug);
 
   if (!pandit) return notFound();
+
 
   return (
     <section className="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-10">
