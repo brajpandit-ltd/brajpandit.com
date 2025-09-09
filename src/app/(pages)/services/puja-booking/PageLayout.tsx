@@ -59,7 +59,7 @@ const PageLayout = () => {
         <div className="p-8 md:p-12">
           <div className="relative rounded-2xl mb-6 w-full h-64 object-cover shadow-xl border border-yellow-300 dark:border-yellow-800">
             <Image
-              src={pujaService?.thumbnail || "/assets/pujas/default.jpg"}
+              src={pujaService?.bannerImage || "/assets/pujas/default.jpg"}
               alt={pujaService?.title || "Puja Image"}
               fill
               style={{ objectFit: "cover" }}

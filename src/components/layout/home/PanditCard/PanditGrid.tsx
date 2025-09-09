@@ -1,31 +1,57 @@
 "use client";
 
-import pandits from "@/constants/pandits.json";
-import { PanditCard } from "./PanditCard";
+import Link from "next/link";
 import { Pandit } from "@/types/pandit";
+import { PanditCard } from "./AllPanditCard";
 
-export function PanditGrid() {
+interface PanditGridProps {
+  pandits: Pandit[];
+}
+
+export function PanditGrid({ pandits }: PanditGridProps) {
   return (
-    <section className="px-4 md:px-10 py-16 bg-gradient-to-b from-[#fffdf7] to-[#fff5dc]">
+    <section className="px-4 md:px-10 py-2 ">
       <div className="max-w-7xl mx-auto">
-        {/* Title */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          Meet Our <span className="text-orange-600">Verified Pandits</span>
-        </h2>
-        <p className="text-gray-600 text-base md:text-lg font-medium text-center max-w-3xl mx-auto mb-12">
-          All our Pandits are verified experts with years of experience in
-          performing authentic Vedic rituals.
-        </p>
+      
+        
+       
 
-        {/* Pandit Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {(pandits as Pandit[]).map((pandit) => (
-            <PanditCard key={pandit.id} pandit={pandit} />
+        {/* Grid */}
+        <div
+          className="
+            grid 
+            grid-cols-1
+            sm:grid-cols-2
+            md:grid-cols-3
+            lg:grid-cols-4
+            gap-6
+            justify-items-center
+            width[100%]
+          "
+          style={{
+            maxWidth: "1202.43px", // enforce row width
+            margin: "0 auto",
+          }}
+        >
+          {pandits.map((pandit) => (
+            <Link
+              key={pandit.id}
+              href={`/pandits/${pandit.slug}`}
+              className="block"
+            >
+              <div
+                className="rounded-2xl shadow-md overflow-hidden bg-white hover:shadow-lg transition-transform hover:scale-[1.02]"
+                style={{
+                  width: "280px", // 4 cards per row (≈1202 / 4 - gap)
+                  height: "434px", // fixed row height
+                }}
+              >
+                <PanditCard pandit={pandit} />
+              </div>
+            </Link>
           ))}
         </div>
       </div>
     </section>
   );
 }
-
-export default PanditGrid;

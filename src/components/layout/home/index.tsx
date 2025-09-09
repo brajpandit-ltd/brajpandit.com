@@ -6,7 +6,7 @@
 // export { default as PujaServices } from "./old/PujaServices";
 
 
-export { default as VerifiedPanditJis } from "./VerifiedPanditjis";
+// export { default as VerifiedPanditJis } from "./VerifiedPanditjis";
 
 //
 export { default as UpcommingPujas } from "./UpcommingPujas";

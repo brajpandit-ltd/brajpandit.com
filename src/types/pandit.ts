@@ -8,4 +8,5 @@ export interface Pandit {
   status: string;
   image: string;
   location: string;
+  aboutMe:string;
 }
