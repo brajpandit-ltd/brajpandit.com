@@ -1,7 +1,8 @@
-brajpanditji/
+brajpandit.com/
 ├── .env
 ├── .gitignore
 ├── .next.zip
+├── branch-demo (1).md
 ├── eslint.config.mjs
 ├── Home Page.png
 ├── next-env.d.ts
@@ -14,18 +15,16 @@ brajpanditji/
 │   │   ├── adaptive-icon.png
 │   │   ├── astrology/
 │   │   │   ├── astro1.png
+│   │   │   ├── career-business-financial-astrology.jpg
+│   │   │   ├── Compatibility Synastry_ Secrets of Synastry Compatibility.jpg
 │   │   │   └── family.png
-│   │   ├── career-business-financial-astrology.jpg
-│   │   ├── Compatibility Synastry_ Secrets of Synastry Compatibility.jpg
-│   │   ├── divine-vastu-energy-solutions.jpg
-│   │   ├── dosha-remedies-vedic-solutions.jpg
-│   │   ├── health-well-being-astrology.jpg
+│   │   ├── braj-pandit-logo.svg
 │   │   ├── home-hero-light.jpg
 │   │   ├── home-hero.jpg
-│   │   ├── horoscope-kundli-services.jpg
 │   │   ├── pandits/
 │   │   │   ├── Anil Sastri ji.jpg
 │   │   │   ├── bharat bhusan.jpg
+│   │   │   ├── horoscope-kundli-services.jpg
 │   │   │   ├── Kanhaiya Pandit ji.jpg
 │   │   │   ├── lalit.png
 │   │   │   ├── Meghsyam Vyas ji.jpg
@@ -34,22 +33,66 @@ brajpanditji/
 │   │   │   ├── Ramesh Rasik ji maharaj.jpg
 │   │   │   └── Rohini saran ji .jpg
 │   │   ├── personalized_puja/
-│   │   │   └── rudraksha.jpg
+│   │   │   ├── baisakhi.jpg
+│   │   │   ├── business.jpeg
+│   │   │   ├── Career.jpeg
+│   │   │   ├── diwali.jpg
+│   │   │   ├── durga.jpg
+│   │   │   ├── family.jpg
+│   │   │   ├── ganeshpuja.jpg
+│   │   │   ├── holi puja.jpg
+│   │   │   ├── janmmastami.jpg
+│   │   │   ├── makarshakrati.jpg
+│   │   │   ├── other.jpeg
+│   │   │   ├── pongal.jpg
+│   │   │   ├── relationship2.jpeg
+│   │   │   ├── rudraksha.jpg
+│   │   │   ├── shiv ratri.gif
+│   │   │   ├── shivji.png
+│   │   │   ├── tantra.jpeg
+│   │   │   ├── upcoming1.jpeg
+│   │   │   └── zodiac.jpg
 │   │   ├── premmandir.png
 │   │   ├── pujas/
 │   │   │   ├── all.jpg
 │   │   │   ├── all.png
 │   │   │   ├── banner.jpg
+│   │   │   ├── business2.jpeg
+│   │   │   ├── chhat puja.jpg
+│   │   │   ├── dhanteras.jpg
+│   │   │   ├── divine-vastu-energy-solutions.jpg
+│   │   │   ├── diwali puja.jpg
 │   │   │   ├── diya.jpg
+│   │   │   ├── dosha-remedies-vedic-solutions.jpg
+│   │   │   ├── durga puja.jpg
+│   │   │   ├── dushera.jpg
+│   │   │   ├── govardhan.jpg
+│   │   │   ├── happy family.jpeg
+│   │   │   ├── health-well-being-astrology.jpg
 │   │   │   ├── health.png
+│   │   │   ├── Krishna Janmabhoomi mandir.jpg
+│   │   │   ├── Krishna Raksha Bandan.jpeg
+│   │   │   ├── lakshami puja.jpg
+│   │   │   ├── old janambhoomi.jpeg
+│   │   │   ├── Pournami Pooja Vrath.jpeg
+│   │   │   ├── purnima pujas.jpeg
+│   │   │   ├── rakha_bandhan.jpg
+│   │   │   ├── Raksha Bandan.jpeg
+│   │   │   ├── relationship-personal-life-astrology.jpg
+│   │   │   ├── relationship.jpeg
+│   │   │   ├── Relationship3.jpeg
+│   │   │   ├── Rudrakshaya.jpeg
+│   │   │   ├── Rudrakshaya2.jpeg
+│   │   │   ├── sarad purnima.jpeg
+│   │   │   ├── Sri Radha Krishna.jpeg
 │   │   │   ├── study.png
-│   │   │   └── wealth.png
-│   │   ├── relationship-personal-life-astrology.jpg
+│   │   │   ├── tantra (2).jpeg
+│   │   │   ├── wealth.png
+│   │   │   ├── Zodiac.jpeg
+│   │   │   └── zodic.jpeg
 │   │   ├── services-hero.jpg
 │   │   ├── shivji.png
-│   │   ├── temple.jpg
-│   │   └── upcoming_puja/
-│   │       └── upcoming1.jpeg
+│   │   └── temple.jpg
 │   ├── braj-pandit-logo.svg
 │   ├── favicon.ico
 │   └── logo-new.svg
@@ -77,9 +120,7 @@ brajpanditji/
 │   │   │   ├── horoscope/
 │   │   │   │   └── page.tsx
 │   │   │   ├── pandits/
-│   │   │   │   ├── page.tsx
-│   │   │   │   └── [id]/
-│   │   │   │       └── page.tsx
+│   │   │   │   └── [panditSlug]/
 │   │   │   └── services/
 │   │   │       ├── e-puja/
 │   │   │       │   ├── EPujaServices.tsx
@@ -148,16 +189,12 @@ brajpanditji/
 │   │   │   │   ├── Categories.tsx
 │   │   │   │   ├── index.tsx
 │   │   │   │   ├── LiveBhajans.tsx
-│   │   │   │   ├── old/
-│   │   │   │   │   ├── BlogSection.tsx
-│   │   │   │   │   ├── FamousPlaces.tsx
-│   │   │   │   │   ├── HeroSection.tsx
-│   │   │   │   │   ├── HomeProducts.tsx
-│   │   │   │   │   └── PujaServices.tsx
-│   │   │   │   ├── PanditCard.tsx
+│   │   │   │   ├── PanditCard/
+│   │   │   │   │   ├── PanditCard.tsx
+│   │   │   │   │   ├── PanditGrid.tsx
+│   │   │   │   │   └── VerifiedPandits.tsx
 │   │   │   │   ├── PersonalisedPujas.tsx
 │   │   │   │   ├── UpcommingPujas.tsx
-│   │   │   │   ├── vedic_section.tsx
 │   │   │   │   └── VerifiedPanditjis.tsx
 │   │   │   ├── index.ts
 │   │   │   ├── ProductCard.tsx
