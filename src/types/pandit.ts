@@ -1,7 +1,8 @@
 export interface Pandit {
+  id: string;
   name: string;
   slug: string;
-  expertise: string;
+  specialization: string;
   experience: string;
   years: string;
   status: string;
