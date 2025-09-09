@@ -7,15 +7,17 @@ import Image from "next/image";
 import { Star } from "lucide-react";
 import Link from "next/link";
 import Button from "@/components/common/Button";
+import { use } from "react";
 
 interface PanditDetailPageProps {
   params: { panditSlug: string };
 }
 
 export default function PanditDetailPage({ params }: PanditDetailPageProps) {
-  const pandit = (pandits as Pandit[]).find(
-    (p) => p.slug === params.panditSlug
-  );
+  // Unwrap params to support Next.js 15 future behavior
+  const { panditSlug } = use(params as { panditSlug: string });
+
+  const pandit = (pandits as Pandit[]).find((p) => p.slug === panditSlug);
 
   if (!pandit) return notFound();
 
@@ -49,7 +51,8 @@ export default function PanditDetailPage({ params }: PanditDetailPageProps) {
             {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
-                className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500 fill-orange-500"
+                className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500"
+                fill="currentColor"
               />
             ))}
             <span className="ml-2 text-sm sm:text-base font-semibold">5.0</span>
@@ -110,7 +113,8 @@ export default function PanditDetailPage({ params }: PanditDetailPageProps) {
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500 fill-orange-500"
+                    className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500"
+                    fill="currentColor"
                   />
                 ))}
               </div>
