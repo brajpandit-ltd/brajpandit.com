@@ -9,7 +9,7 @@ export function PanditCard({ pandit }: { pandit: Pandit }) {
       className="rounded-xl shadow-md overflow-hidden bg-white hover:shadow-lg transition flex flex-col cursor-pointer w-full max-w-sm mx-auto"
     >
       {/* Image */}
-      <div className="relative w-full h-48 sm:h-52 md:h-56">
+      <div className="relative w-full h-70 sm:h-40 md:h-44">
         <Image
           src={pandit.image}
           alt={pandit.name}
@@ -20,12 +20,26 @@ export function PanditCard({ pandit }: { pandit: Pandit }) {
         />
       </div>
 
-      {/* Content */}
-      <div className="p-4 bg-[#F685008C] w-full">
-        <h3 className="text-lg font-semibold">{pandit.name}</h3>
-        <p className="text-sm text-gray-700">{pandit.specialization}</p>
-        <p className="text-xs text-gray-600">{pandit.experience}</p>
-      </div>
+     {/* Content */}
+<div className="flex flex-col bg-[#F685008C] w-full p-2 sm:p-2.5">
+  {/* Name on top */}
+  <h3 className="text-sm sm:text-base font-semibold text-gray-600 truncate">
+    {pandit.name}
+  </h3>
+
+  {/* Specialization and experience on the same row */}
+  <div className="flex justify-between items-center mt-1">
+    <p className="text-xs sm:text-sm text-gray-700 break-words">
+      {pandit.specialization}
+    </p>
+    <p className="text-[10px] sm:text-xs text-gray-600 ml-2 flex-shrink-0">
+      {pandit.experience}
+    </p>
+  </div>
+</div>
+
+
+
     </Link>
   );
 }

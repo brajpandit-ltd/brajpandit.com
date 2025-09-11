@@ -7,51 +7,37 @@ interface PanditCardProps {
   pandit: Pandit;
 }
 
-export function PanditCard({ pandit }: PanditCardProps) {
+export function AllPanditCard({ pandit }: PanditCardProps) {
   return (
-    <div
-      className="flex flex-col overflow-hidden shadow-md hover:shadow-lg transition-transform hover:scale-[1.02]"
-      style={{
-        width: "284px",
-        height: "434px",
-        borderRadius: "16.25px",
-      }}
-    >
+    <div className="flex flex-col overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-transform hover:scale-[1.02] bg-white w-full max-w-xs sm:max-w-sm mx-auto">
       {/* Image */}
-      <div
-        className="relative"
-        style={{
-          width: "284px",
-          height: "340px",
-          borderTopLeftRadius: "16.25px",
-          borderTopRightRadius: "16.25px",
-          overflow: "hidden",
-        }}
-      >
+      <div className="relative w-full h-72 sm:h-68 md:h-68">
         <Image
           src={pandit.image}
           alt={pandit.name}
           fill
           className="object-cover"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          priority={false}
         />
       </div>
 
-      {/* Info */}
-      <div
-        className="flex flex-col justify-between p-3 text-white"
-        style={{
-          width: "284.43px",
-          height: "94.18px",
-          borderBottomLeftRadius: "16.25px",
-          borderBottomRightRadius: "16.25px",
-          background: "#F685008C", 
-        }}
-      >
-        <div>
-          <h3 className="text-base font-bold">{pandit.name}</h3>
-          <p className="text-sm opacity-90">{pandit.specialization}</p>
+      {/* Content */}
+      <div className="flex flex-col bg-[#F685008C] w-full p-3 sm:p-4 flex-grow">
+        {/* Name */}
+        <h3 className="text-sm sm:text-base font-semibold text-gray-700 truncate">
+          {pandit.name}
+        </h3>
+
+        {/* Specialization + Experience */}
+        <div className="flex justify-between items-center mt-1">
+          <p className="text-xs sm:text-sm text-gray-800 break-words flex-grow">
+            {pandit.specialization}
+          </p>
+          <p className="text-[10px] sm:text-xs text-gray-600 ml-3 whitespace-nowrap">
+            {pandit.experience}
+          </p>
         </div>
-        <p className="text-xs opacity-75">{pandit.experience}</p>
       </div>
     </div>
   );

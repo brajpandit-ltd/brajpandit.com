@@ -1,9 +1,9 @@
 [
   {
     "id": "lalit",
-    "name": "Guru Prasad Maharaj",
+    "name": "Guru Prasad Maharaj Pandit ji",
     "slug": "guru-prasad-maharaj",
-    "specialization": "Astrology",
+    "specialization": "Astrology & Kundali",
     "experience": "10+ years",
     "years": "years",
     "status": "approved",
@@ -15,7 +15,7 @@
     "id": "kanhaiya",
     "name": "Kanhaiya sharma Pandit",
     "slug": "bhagwan-shri-kanhaiya-pandit",
-    "specialization": "Vedic Rituals",
+    "specialization": "Vedic Rituals & Pujan",
     "experience": "12+ years",
     "years": "years",
     "status": "approved",
@@ -49,7 +49,7 @@
   },
   {
     "id": "meghshyam",
-    "name": "Meghshyam Vyas Ji",
+    "name": "Shree Meghshyam Vyas Pandit Ji",
     "slug": "meghshyam-vyas-ji",
     "specialization": "Vedic Astrology",
     "experience": "15+ years",

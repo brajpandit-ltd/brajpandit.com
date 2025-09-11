@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Pandit } from "@/types/pandit";
-import { PanditCard } from "./AllPanditCard";
+import { AllPanditCard } from "./AllPanditCard";
 
 interface PanditGridProps {
   pandits: Pandit[];
@@ -24,7 +24,7 @@ export function PanditGrid({ pandits }: PanditGridProps) {
             sm:grid-cols-2
             md:grid-cols-3
             lg:grid-cols-4
-            gap-6
+            gap-4
             justify-items-center
             width[100%]
           "
@@ -43,10 +43,10 @@ export function PanditGrid({ pandits }: PanditGridProps) {
                 className="rounded-2xl shadow-md overflow-hidden bg-white hover:shadow-lg transition-transform hover:scale-[1.02]"
                 style={{
                   width: "280px", // 4 cards per row (≈1202 / 4 - gap)
-                  height: "434px", // fixed row height
+                  height: "350px", // fixed row height
                 }}
               >
-                <PanditCard pandit={pandit} />
+                <AllPanditCard pandit={pandit} />
               </div>
             </Link>
           ))}

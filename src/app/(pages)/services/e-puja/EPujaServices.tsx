@@ -31,19 +31,24 @@ const EPujaServices = () => {
       {epujas?.map((puja: any, idx: number) => (
         <div
           key={puja.slug + idx}
-          className="w-full min-w-[230px] rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow group snap-start"
+          className="w-full rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow group snap-start"
         >
           <Link href={`/services/e-puja/${puja.slug}`}>
-            <Image
-              src={puja?.bannerImage}
-              alt={puja?.title}
-              width={230}
-              height={100}
-              className="object-cover h-[150px] group-hover:scale-105 transition-transform duration-300"
-            />
-            <div className="p-2">
+            {/* Responsive Image Container */}
+            <div className="relative w-full aspect-[4/3] overflow-hidden">
+              <Image
+                src={puja?.bannerImage}
+                alt={puja?.title}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div className="p-3">
               <h3 className="text-sm font-bold">{puja?.title}</h3>
-              <p className="text-xs line-clamp-2">{puja.subtitle}</p>
+              <p className="text-xs line-clamp-2 text-gray-600">
+                {puja.subtitle}
+              </p>
             </div>
           </Link>
         </div>
