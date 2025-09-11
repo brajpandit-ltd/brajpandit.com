@@ -10,11 +10,13 @@ import {
   WhyChooseUs,
 } from "@/components/layout";
 import { Button } from "@/components/common";
-
+import Link from "next/link";
 // import {VerifiedPanditJis} from "@/components/layout/home";
 
 import VerifiedPanditsSection from "@/components/layout/home/PanditCard/VerifiedPandits";
 
+
+  
 export const metadata = {
   title: "Braj Pandit Ji",
   description:
@@ -99,8 +101,17 @@ export default async function HomePage() {
           </p>
 
           <div className="flex items-center justify-center flex-col md:flex-row mt-8 gap-6 md:gap-14">
-            <Button label="Book Your Pandit Ji" variant="primary" />
+
+
+            <Link href="#verified-pandits" scroll={true}>
+  <Button label="Book Your Pandit Ji" variant="primary" />
+</Link>
+
+
+             <Link  href="/services">
             <Button label="See All Pooja Services" variant="default" />
+
+            </Link>
           </div>
         </div>
       </section>
