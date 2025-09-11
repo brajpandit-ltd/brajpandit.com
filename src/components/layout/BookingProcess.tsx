@@ -3,7 +3,7 @@
 import { Card } from "@/components/ui";
 import { CheckCircle2, ArrowRightCircle } from "lucide-react";
 import { bookingSteps } from "@/constants/static";
-import Image from "next/image";
+
 
 const BookingProcess = () => {
   return (
