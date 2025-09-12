@@ -444,7 +444,7 @@
       "bannerImage": "/assets/pujas/lakshami puja.jpg",
       "slug": "dushahara",
       "location": "Mathura",
-      "date": "2025-10-1",
+      "date": "2025-10-01",
       "time": "10:00 AM",
 
       "category": ["upcomming-pujas", "puja"],
@@ -612,7 +612,7 @@
       "date": "2025-10-27",
       "time": "5:00 PM",
 
-      "trending": ["upcomming-pujas", "rudrabhishek"],
+      "category": ["upcomming-pujas", "rudrabhishek"],
       "tags": ["chhath puja", "lakshmi puja", "Moonlit Night"],
 
       "benefits": {
