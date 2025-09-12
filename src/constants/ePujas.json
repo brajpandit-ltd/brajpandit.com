@@ -2,7 +2,7 @@
   "ePujas": [
     {
       "title": "Diwali Puja",
-      "subtitle": "Diwali celebrate ",
+      "subtitle": "  Wishing you a Diwali that sparkles with joy, love, and endless blessings Let the spirit of Diwali fill your heart with compassion and kindness ",
      "bannerImage": "/assets/pujas/diwali puja.jpg",
       "slug": "krishna-janmashtami-puja",
       "location": "Mathura",
@@ -111,10 +111,10 @@
     },
 
     {
-      "title": "Raksha Bandhan Poojan – Strengthen the Bond of Protection",
+      "title": "Bhai Dooj Poojan – Strengthen the Bond of Protection",
       "subtitle": "Celebrate this sacred bond with traditional rituals and blessings from Vedic Pandits.",
       "bannerImage": "/assets/pujas/rakha_bandhan.jpg",
-      "slug": "raksha-bandhan-poojan",
+      "slug": "bhai-dooj-bandhan-poojan",
       "location": "Delhi NCR",
       "date": "2025-08-18",
       "time": "10:00 AM",
@@ -444,7 +444,7 @@
       "bannerImage": "/assets/pujas/lakshami puja.jpg",
       "slug": "dushahara",
       "location": "Mathura",
-      "date": "2025-10-1",
+      "date": "2025-10-01",
       "time": "10:00 AM",
 
       "category": ["upcomming-pujas", "puja"],
@@ -612,7 +612,7 @@
       "date": "2025-10-27",
       "time": "5:00 PM",
 
-      "trending": ["upcomming-pujas", "rudrabhishek"],
+      "category": ["upcomming-pujas", "rudrabhishek"],
       "tags": ["chhath puja", "lakshmi puja", "Moonlit Night"],
 
       "benefits": {

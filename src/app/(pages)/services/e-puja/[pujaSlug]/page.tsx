@@ -33,50 +33,57 @@ const page = async ({ params }: any) => {
 
   return (
     <>
-      <section className="relative flex justify-start items-center py-16 md:py-20">
-        <Image
-          src={data?.bannerImage || "/assets/pujas/banner.jpg"}
-          alt={data?.title || "banner"}
-          fill
-          className="w-full h-full object-cover"
+      <section className="relative flex flex-col md:flex-row items-center justify-between py-16 md:py-20 px-6 md:px-8 gap-8">
+  {/* Left side - Content */}
+  <div className="flex-1 max-w-xl">
+    <h1 className="text-2xl md:text-4xl font-bold">{data?.title}</h1>
+
+    <p className="text-base md:text-lg font-medium mt-3 md:mt-6">
+      {data?.subtitle}
+    </p>
+
+    <p className="flex items-center gap-2 mt-4">
+      <Button
+        label={`${data?.date} : ${data?.time}`}
+        variant="primary"
+        size="small"
+      />
+      <span className="text-lg">@ {data?.location}</span>
+    </p>
+
+    <ScrollButton className="packages-section mt-6" label="Book Now" />
+
+    {/* WhatsApp Share Button */}
+    <div className="flex items-center gap-2 mt-6">
+      <Link
+        href={`https://wa.me/?text=${encodeURIComponent(
+          `${data?.title}\n${data?.subtitle}\n Book Now \n\n${process.env.NEXT_PUBLIC_API_BASE_URL}/services/e-puja/${pujaSlug}`
+        )}`}
+        target="_blank"
+      >
+        <Button
+          label="at whatsapp"
+          icon={<IoIosShareAlt color="green" />}
+          variant="default"
+          size="small"
+          className="text-green-600"
         />
+      </Link>
+    </div>
+  </div>
 
-        <div className="flex items-center gap-2 mt-4 absolute bottom-4 right-4">
-          <Link
-            href={`https://wa.me/?text=${encodeURIComponent(
-              `${data?.title}\n${data?.subtitle}\n Book Now \n\n${process.env.NEXT_PUBLIC_API_BASE_URL}/services/e-puja/${pujaSlug}`
-            )}`}
-            target="_blank"
-          >
-            <Button
-              label="at whatsapp"
-              icon={<IoIosShareAlt color="green" />}
-              variant="default"
-              size="small"
-              className="text-green-600"
-            />
-          </Link>
-        </div>
+  {/* Right side - Banner Image */}
+  <div className="flex-1 flex justify-center">
+    <Image
+      src={data?.bannerImage || "/assets/pujas/banner.jpg"}
+      alt={data?.title || "banner"}
+      width={500}       // control max size
+      height={400}
+      className="w-full h-auto max-h-[400px] object-cover rounded-lg shadow-md"
+    />
+  </div>
+</section>
 
-        <div className="relative z-10 md:max-w-[700px] mx-6 md:mx-8">
-          <h1 className="text-2xl md:text-4xl font-bold">{data?.title}</h1>
-
-          <p className="text-base md:text-lg font-medium mt-3 md:mt-6">
-            {data?.subtitle}
-          </p>
-
-          <p className="flex justify-start items-center gap-2 mt-4">
-            <Button
-              label={`${data?.date} : ${data?.time}`}
-              variant="primary"
-              size="small"
-            />
-            <span className="text-lg">@ {data?.location}</span>
-          </p>
-
-          <ScrollButton className="packages-section" label="Book Now" />
-        </div>
-      </section>
 
       <section className="packages-section relative py-12 px-4 md:px-8 bg-amber-50">
         <div className="border-l-4 border-secondary pl-4 transition-all">

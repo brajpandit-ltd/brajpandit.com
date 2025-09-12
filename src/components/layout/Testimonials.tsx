@@ -89,23 +89,23 @@ const testimonials: Testimonial[] = [
   {
     id: "t1",
     name: "Arjun Singh",
-    avatar: "/assets/testimonials/lalit.jpg",
+    avatar: "/assets/testimonials/test6.jpg",
     role: "Devotee",
     quote:
       "We believe astrology is pure science, and we aim to create such a social impact. The Pandit Ji performed the ceremony with devotion and clarity. Very satisfied!",
   },
   {
     id: "t2",
-    name: "Radha Verma",
-    avatar: "/assets/testimonials/lalit.jpg",
+    name: "Raman Verma",
+    avatar: "/assets/testimonials/test2.webp",
     role: "Devotee",
     quote:
       "Excellent experience — timely, respectful and deeply spiritual. The whole family felt the positive energy after the ritual.",
   },
   {
     id: "t3",
-    name: "Mukesh Patel",
-    avatar: "/assets/testimonials/lalit.jpg",
+    name: "Madhu sharma",
+    avatar: "/assets/testimonials/test1.webp",
     role: "Devotee",
     quote:
       "Professional Pandit, clear explanation of steps and meaningful chants. The service was well organized and sincere.",
@@ -113,15 +113,15 @@ const testimonials: Testimonial[] = [
   {
     id: "t4",
     name: "Priya Sharma",
-    avatar: "/assets/testimonials/lalit.jpg",
+    avatar: "/assets/testimonials/test5.jpg",
     role: "Devotee",
     quote:
       "Beautifully conducted puja with all samagri provided. Felt very authentic and calming — highly recommended.",
   },
   {
     id: "t5",
-    name: "Sneha Rao",
-    avatar: "/assets/testimonials/lalit.jpg",
+    name: "vivek Rao",
+    avatar: "/assets/testimonials/test3.webp",
     role: "Devotee",
     quote:
       "The Panditji was humble and precise in every ritual step. The booking & communication were smooth as well.",
@@ -129,7 +129,7 @@ const testimonials: Testimonial[] = [
   {
     id: "t6",
     name: "Vikas Mehra",
-    avatar: "/assets/testimonials/lalit.jpg",
+    avatar: "/assets/testimonials/test4.jpg",
     role: "Devotee",
     quote:
       "I was looking for an authentic ceremony — this was perfect. Great experience for the entire family.",
