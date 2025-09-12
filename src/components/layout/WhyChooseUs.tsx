@@ -26,21 +26,22 @@ const WhyChooseUs = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUsPoints.map((point, index) => (
               <Card
-                key={index}
-                className="p-8 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 group cursor-pointer"
-              >
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-divine rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <point.icon className="w-8 h-8 " />
-                  </div>
+  key={index}
+  className="p-8 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl shadow-sm transition-all duration-300 group cursor-pointer"
+>
+  <div className="text-center">
+    <div className="w-16 h-16 bg-gradient-divine rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+      <point.icon className="w-8 h-8 text-primary" />
+    </div>
 
-                  <h3 className="text-xl font-bold  mb-4 group-hover:text-primary-glow transition-colors duration-300">
-                    {point.title}
-                  </h3>
+    <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
+      {point.title}
+    </h3>
 
-                  <p className="leading-relaxed">{point.description}</p>
-                </div>
-              </Card>
+    <p className="leading-relaxed text-gray-700">{point.description}</p>
+  </div>
+</Card>
+
             ))}
           </div>
         </div>

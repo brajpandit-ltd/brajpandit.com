@@ -41,12 +41,12 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="/vedic-gyan" className="hover:text-primary transition">
-                Vedic Gyan
+              <Link href="/services" className="hover:text-primary transition">
+                Our Premium Services
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-primary transition">
+              <Link href="/about-us" className="hover:text-primary transition">
                 About Us
               </Link>
             </li>
