@@ -3,7 +3,7 @@
 import { Card } from "@/components/ui";
 import { CheckCircle2, ArrowRightCircle } from "lucide-react";
 import { bookingSteps } from "@/constants/static";
-
+import Link from "next/link";
 
 const BookingProcess = () => {
   return (
@@ -34,8 +34,8 @@ const BookingProcess = () => {
                   <div className="w-16 h-16 bg-gradient-to-tr from-primary to-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md">
                     <step.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center shadow-md">
-                    <span className="text-sm font-bold text-white">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-yellow-200 rounded-full flex items-center justify-center shadow-md">
+                    <span className="text-sm font-bold text-gray-600">
                       {index + 1}
                     </span>
                   </div>
@@ -63,10 +63,14 @@ const BookingProcess = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
+
+          <Link href="/services/e-puja">
           <button className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full text-lg font-medium shadow-md hover:shadow-lg hover:bg-primary/90 transition">
             Start Booking
             <ArrowRightCircle className="w-5 h-5" />
           </button>
+
+          </Link>
         </div>
       </div>
     </section>
