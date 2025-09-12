@@ -18,39 +18,41 @@ export function PanditGrid({ pandits }: PanditGridProps) {
 
         {/* Grid */}
         <div
-          className="
-            grid 
-            grid-cols-1
-            sm:grid-cols-2
-            md:grid-cols-3
-            lg:grid-cols-4
-            gap-4
-            justify-items-center
-            width[100%]
-          "
-          style={{
-            maxWidth: "1202.43px", // enforce row width
-            margin: "0 auto",
-          }}
-        >
-          {pandits.map((pandit) => (
-            <Link
-              key={pandit.id}
-              href={`/pandits/${pandit.slug}`}
-              className="block"
-            >
-              <div
-                className="rounded-2xl shadow-md overflow-hidden bg-white hover:shadow-lg transition-transform hover:scale-[1.02]"
-                style={{
-                  width: "280px", // 4 cards per row (≈1202 / 4 - gap)
-                  height: "350px", // fixed row height
-                }}
-              >
-                <AllPanditCard pandit={pandit} />
-              </div>
-            </Link>
-          ))}
-        </div>
+  className="
+    grid 
+    grid-cols-1
+    sm:grid-cols-2
+    md:grid-cols-3
+    lg:grid-cols-4
+    gap-5
+    justify-items-center
+    w-full
+    px-7
+  "
+>
+  {pandits.map((pandit) => (
+    <Link key={pandit.id} href={`/pandits/${pandit.slug}`} className="block w-full">
+      <div
+        className="
+          w-full 
+          max-w-[280px] 
+          sm:max-w-[320px] 
+          lg:max-w-[280px] 
+          rounded-2xl 
+          shadow-md 
+          overflow-hidden 
+          bg-white 
+          hover:shadow-lg 
+          transition-transform 
+          hover:scale-[1.02]
+        "
+      >
+        <AllPanditCard pandit={pandit} />
+      </div>
+    </Link>
+  ))}
+</div>
+
       </div>
     </section>
   );
