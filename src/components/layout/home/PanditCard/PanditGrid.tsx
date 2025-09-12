@@ -27,7 +27,7 @@ export function PanditGrid({ pandits }: PanditGridProps) {
     gap-5
     justify-items-center
     w-full
-    px-7
+    px-4
   "
 >
   {pandits.map((pandit) => (
