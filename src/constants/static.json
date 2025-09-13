@@ -6,7 +6,7 @@
       { "label": "Book Puja", "link": "/services", "subMenu": [] },
       { "label": "Book Pandit", "link": "/pandits", "subMenu": [] },
       { "label": "Astrology", "link": "/astrology", "subMenu": [] },
-      { "label": "Braj Shop", "link": "/brajshop", "subMenu": [] },
+     
       { "label": "Braj Yatra", "link": "/braj-yatra", "subMenu": [] },
       { "label": "About Us", "link": "/about-us", "subMenu": [] }
     ]
