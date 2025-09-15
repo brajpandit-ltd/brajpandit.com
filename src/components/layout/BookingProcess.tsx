@@ -78,3 +78,34 @@ const BookingProcess = () => {
 };
 
 export default BookingProcess;
+
+
+// "use client";
+
+// // import { Card } from "@/components/ui";
+// // import { CheckCircle2, ArrowRightCircle } from "lucide-react";
+// // import { bookingSteps } from "@/constants/static";
+// import Image from "next/image";
+// // import Link from "next/link";
+
+// const BookingProcess = () => {
+//   return (
+//     <div className="flex justify-center items-center w-full px-4">
+//       <div className="w-full max-w-5xl">
+//         <Image
+//           src="/assets/booking process21.png"
+//           // src="/assets/booking process.png"
+//           alt="process"
+//           width={1600}
+//           height={800}
+//           className="w-full h-auto object-contain"
+//           priority
+//         />
+//       </div>
+      
+//     </div>
+    
+//   );
+// };
+
+// export default BookingProcess;
