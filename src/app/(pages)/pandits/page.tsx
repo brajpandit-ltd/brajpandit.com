@@ -1,8 +1,4 @@
 
-
-
-
-
 "use client";
 
 import { useState } from "react";
@@ -19,13 +15,11 @@ export default function PanditsPage() {
 
   return (
     <main className="flex flex-col items-center w-full">
-
       {/* Hero Section */}
       <section className="w-full bg-white flex flex-col justify-center items-center py-16 px-4 sm:px-6 lg:px-16">
         <div className="w-full max-w-[1400px] mx-auto flex flex-col items-center">
-
           {/* Heading */}
-          <h1 className="text-center font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-gray-900 max-w-3xl">
+          <h1 className="text-center font-bold text-3xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-gray-900 max-w-3xl">
             Our <span className="text-[#CD3C49]">Pandit Ji</span>, Your Guide to{" "}
             <span className="text-[#F68500]">Divine Harmony</span>
           </h1>
@@ -35,43 +29,22 @@ export default function PanditsPage() {
             Experience the Power of Vedic Rituals, Anytime, Anywhere. Book Expert
             Pandits for Your Sacred Ceremonies!
           </p>
-
-          {/* Search Bar */}
-          <div className="mt-6 w-full max-w-md">
-            <input
-              type="text"
-              placeholder="Search Pandit Ji"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="
-                w-full 
-                h-10 
-                px-4 
-                rounded-full 
-                border border-gray-300 
-                text-base 
-                focus:outline-none 
-                focus:ring-2 focus:ring-orange-400 
-                focus:border-orange-400
-              "
-            />
-          </div>
         </div>
       </section>
 
       {/* Pandit Grid Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-16 py-16">
+      <section className="w-full px-4 sm:px-6 lg:px-16 py-7">
         <div className="w-full max-w-[1400px] mx-auto">
-          <PanditGrid pandits={filteredPandits} />
+          <PanditGrid
+            pandits={filteredPandits}
+            search={search}
+            setSearch={setSearch}
+          />
         </div>
       </section>
     </main>
   );
 }
-
-
-
-
 
 
 

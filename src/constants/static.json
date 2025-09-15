@@ -3,8 +3,8 @@
     "logo": "/braj-pandit-logo.svg",
     "menuItems": [
       { "label": "Home", "link": "/" },
-      { "label": "Book Puja", "link": "/services", "subMenu": [] },
-      { "label": "Book Pandit", "link": "/pandits", "subMenu": [] },
+      { "label": "Services", "link": "/services", "subMenu": [] },
+      { "label": "PanditJi's", "link": "/pandits", "subMenu": [] },
       { "label": "Astrology", "link": "/astrology", "subMenu": [] },
      
       { "label": "Braj Yatra", "link": "/braj-yatra", "subMenu": [] },
