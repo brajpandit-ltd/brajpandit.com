@@ -83,4 +83,5 @@ export function PanditGrid({ pandits, search, setSearch }: PanditGridProps) {
       </div>
     </section>
   );
+  
 }
