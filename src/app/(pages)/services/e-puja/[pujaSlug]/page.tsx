@@ -51,7 +51,7 @@ const page = async ({ params }: any) => {
       <span className="text-lg">@ {data?.location}</span>
     </p>
 
-    <ScrollButton className="packages-section mt-6" label="Book Now" />
+    <ScrollButton className="packages-section" label="Book Now" />
 
     {/* WhatsApp Share Button */}
     <div className="flex items-center gap-2 mt-6">
