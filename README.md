@@ -1,6 +1,14 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+
+
+## Vercel Links:
+ dev : https://dev-brajpandit.vercel.app/
+ test : https://test-brajpandit.vercel.app/
+ main : https://www.brajpandit.com/
 ## Getting Started
+
+
 
 First, run the development server:
 
