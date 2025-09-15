@@ -59,7 +59,7 @@ const PageLayout = () => {
         <div className="p-8 md:p-12">
           <div className="relative rounded-2xl mb-6 w-full h-64 object-cover shadow-xl border border-yellow-300 dark:border-yellow-800">
             <Image
-              src={pujaService?.thumbnail || "/assets/pujas/default.jpg"}
+              src={pujaService?.bannerImage || "/assets/pujas/default.jpg"}
               alt={pujaService?.title || "Puja Image"}
               fill
               style={{ objectFit: "cover" }}
@@ -67,10 +67,10 @@ const PageLayout = () => {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
-          <h2 className="text-2xl md:text-4xl font-bold text-orange-800 dark:text-yellow-300 mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-orange-800 dark:text-primary mb-4">
             {pujaService?.title || "Puja Service"}
           </h2>
-          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+          <p className="text-gray-500 dark:text-gray-600 text-lg leading-relaxed">
             {pujaService?.description ||
               "Book an auspicious puja ceremony with verified pandits."}
           </p>

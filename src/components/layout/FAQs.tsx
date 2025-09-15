@@ -51,13 +51,13 @@ const FAQs = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+919876543210."
+                href="tel:+918595009640."
                 className="inline-flex items-center justify-center px-6 py-3 bg-gradient-divine  rounded-lg font-semibold hover:shadow-divine transition-all duration-300"
               >
-                Call Us: +91 98765 43210.
+                Call Us: +91 8595009640.
               </a>
               <a
-                href="https://wa.me/+919876543210."
+                href="https://wa.me/+918595009640."
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary transition-all duration-300"
               >
                 WhatsApp Us

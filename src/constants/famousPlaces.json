@@ -3,6 +3,7 @@
   "description": "Explore the most famous places in Braj, each with its own unique history and significance.",
   "places": [
     {
+      
       "name": "Vrindavan",
       "image": "/images/vrindavan.jpg",
       "description": "A sacred town known for its temples and association with Lord Krishna."

@@ -12,7 +12,7 @@ export default function BrajYatraPage() {
       {/* Hero Section */}
       <div className="relative w-full h-[70vh] md:h-screen">
         <Image
-          src="/assets/brajYatra/braj.jpg"
+          src="/assets/premmandir.png" 
           alt="Braj Yatra Hero"
           fill
           priority

@@ -119,8 +119,8 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
             brajpandit123@gmail.com
           </a>{" "}
           or call us at{" "}
-          <a href="tel:+919876543210" className="text-blue-600 hover:underline">
-            +91 98765 43210
+          <a href="tel:+918595009640" className="text-blue-600 hover:underline">
+            +918595009640
           </a>
           .
         </p>
