@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 interface HeroSectionProps {
   onBookPanditClick?: () => void;
@@ -15,7 +15,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   onSeeServicesClick,
 }) => {
   const pathname = usePathname();
-  const router = useRouter();
 
   useEffect(() => {
     scroll.scrollToTop({ duration: 0 });

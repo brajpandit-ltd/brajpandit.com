@@ -79,7 +79,7 @@ const HomeProducts: React.FC = () => {
         <div className="flex space-x-4 min-w-max">
           {sampleProducts.map((product, index) => (
             <div
-              key={product.id}
+              key={product.id + index}
               className="min-w-[180px] max-w-[180px] bg-white dark:bg-gray-800 border border-orange-100 dark:border-gray-700 rounded-2xl shadow hover:shadow-lg p-3 transition-all"
             >
               <div className="w-full h-[140px] relative rounded-xl overflow-hidden mb-3">

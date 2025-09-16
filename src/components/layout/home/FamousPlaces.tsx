@@ -25,6 +25,8 @@ const FamousPlacesSection = () => {
 
   const openMap = (url: string) => window.open(url, "_blank");
 
+  console.log(hoveredCard);
+
   useEffect(() => {
     const container = scrollRef.current;
     const scrollSpeed = 1;
@@ -267,8 +269,8 @@ const FamousPlacesSection = () => {
               Discover Sacred Heritage
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Explore the divine beauty and rich history of Vrindavan's most
-              sacred temples and locations
+              Explore the divine beauty and rich history of Vrindavan&apos;s
+              most sacred temples and locations
             </p>
             <motion.button
               onClick={() => router.push("/famous-places")}

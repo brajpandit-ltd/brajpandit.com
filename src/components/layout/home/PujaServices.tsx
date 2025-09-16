@@ -1,12 +1,12 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import pujaServices from "@/constants/pujaServices.json";
+import data from "@/constants/pujaServices.json";
 import { slugify } from "@/utils/unitsFun";
 
 const PujaServices: React.FC = () => {
+  const { poojaServices } = data;
+
   return (
     <section className="py-12 px-4 md:px-12">
       <div className="text-center mb-10">
@@ -17,7 +17,7 @@ const PujaServices: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        {pujaServices.map((service) => (
+        {poojaServices?.map((service) => (
           <Link
             href={`/puja/${slugify(service.title)}`}
             key={slugify(service.title)}
@@ -25,7 +25,7 @@ const PujaServices: React.FC = () => {
           >
             <div className="relative w-full aspect-square mb-4">
               <Image
-                src={service.img}
+                src={service.image}
                 alt={service.title}
                 fill
                 className="object-cover rounded-md"

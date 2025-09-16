@@ -8,11 +8,10 @@ import {
   FaArrowRight,
   FaCalendarAlt,
   FaUser,
-  FaEye,
-  FaHeart,
   FaBookOpen,
 } from "react-icons/fa";
 import { MdTrendingUp, MdNewReleases } from "react-icons/md";
+import Image from "next/image";
 
 interface Blog {
   _id: string;
@@ -80,6 +79,8 @@ const BlogSection: React.FC = () => {
     const container = scrollRef.current;
     const scrollSpeed = 1;
     const interval = 20;
+
+    setLoading(false);
 
     const startAutoScroll = () => {
       if (!scrollIntervalRef.current) {
@@ -194,9 +195,10 @@ const BlogSection: React.FC = () => {
                       className="group min-w-[320px] max-w-[320px] bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-orange-100 dark:border-gray-700 shadow-lg hover:shadow-2xl hover:shadow-orange-200/50 dark:hover:shadow-yellow-500/20 transition-all duration-500"
                     >
                       <div className="relative h-48 overflow-hidden">
-                        <img
+                        <Image
                           src={blog.imageUrl}
                           alt={blog.title}
+                          fill
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         />
                         <div className="absolute top-4 left-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 shadow-lg">
