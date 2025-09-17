@@ -17,26 +17,33 @@ const PujaServices: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        {poojaServices?.map((service) => (
-          <Link
-            href={`/puja/${slugify(service.title)}`}
-            key={slugify(service.title)}
-            className="bg-white dark:bg-neutral-900 rounded-lg shadow-md p-4 hover:shadow-xl transition"
-          >
-            <div className="relative w-full aspect-square mb-4">
-              <Image
-                src={service.image}
-                alt={service.title}
-                fill
-                className="object-cover rounded-md"
-                sizes="(max-width: 768px) 100vw, 200px"
-              />
-            </div>
-            <h3 className="text-center text-sm font-semibold text-gray-800 dark:text-gray-100">
-              {service.title}
-            </h3>
-          </Link>
-        ))}
+        {poojaServices?.map((service) => {
+          const imageSrc =
+            service.images && service.images.length > 0
+              ? service.images[0]
+              : service.bannerImage;
+
+          return (
+            <Link
+              href={`/puja/${slugify(service.title)}`}
+              key={slugify(service.title)}
+              className="bg-white dark:bg-neutral-900 rounded-lg shadow-md p-4 hover:shadow-xl transition"
+            >
+              <div className="relative w-full aspect-square mb-4">
+                <Image
+                  src={imageSrc}
+                  alt={service.title}
+                  fill
+                  className="object-cover rounded-md"
+                  sizes="(max-width: 768px) 100vw, 200px"
+                />
+              </div>
+              <h3 className="text-center text-sm font-semibold text-gray-800 dark:text-gray-100">
+                {service.title}
+              </h3>
+            </Link>
+          );
+        })}
       </div>
     </section>
   );
