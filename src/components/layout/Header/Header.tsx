@@ -71,19 +71,20 @@ import staticData from "@/constants/static.json";
 import Menu from "./Menu";
 import { header } from "@/constants/static.json";
 import Link from "next/link";
+
 const Logo = () => (
   <Image src={header.logo} alt="brajpandit logo" width={135} height={53} />
 );
 
 const Header = () => {
   const {
-    header: { logo, menuItems },
+    header: { menuItems },
   } = staticData;
 
   return (
     <header className="sticky top-0 w-full py-4 px-4 z-9999 backdrop-blur-md bg-white/80 shadow-base">
       <nav className="hidden items-center justify-between gap-6 text-sm font-medium md:flex">
-        <Logo logo={logo} />
+        <Logo />
 
         <Menu
           menuItems={menuItems || []}
@@ -91,13 +92,12 @@ const Header = () => {
         />
 
         <Link href="/pandits">
-
-    <Button variant="primary" label="Book Your Panditji" size="medium" />
-         </Link>
+          <Button variant="primary" label="Book Your Panditji" size="medium" />
+        </Link>
       </nav>
 
       <nav className="flex items-center justify-between gap-6 text-sm font-medium md:hidden">
-        <Logo logo={logo} />
+        <Logo />
 
         <Menu
           isMobile={true}
@@ -108,6 +108,7 @@ const Header = () => {
     </header>
   );
 };
+
 
 export default Header;
 
