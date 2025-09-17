@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState } from "react";
@@ -23,10 +22,10 @@ const Menu = ({ wrapperClass = "", isMobile = false, menuItems }: MenuProps) => 
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
-  return (
-    <>
-      {/* Mobile Menu Button (Top Right) */}
-      {isMobile && (
+  if (isMobile) {
+    // ✅ Mobile Drawer Menu
+    return (
+      <>
         <Button
           variant="default"
           size="small"
@@ -34,33 +33,39 @@ const Menu = ({ wrapperClass = "", isMobile = false, menuItems }: MenuProps) => 
           onClick={toggleMenu}
           icon={isOpen ? <X className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
         />
-      )}
 
-      {/* Sidebar Menu */}
-      <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white dark:bg-black shadow-lg transform transition-transform duration-300 z-40 ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <ul className={`flex flex-col gap-5 p-6 text-base font-normal ${wrapperClass}`}>
-          {menuItems?.map((item, index) => (
-            <li
-              key={index}
-              className="hover:text-primary transition-colors"
-            >
-              <Link href={item.link} onClick={() => setIsOpen(false)}>
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </>
+        <div
+          className={`fixed top-0 right-0 h-full w-64 bg-white dark:bg-black shadow-lg transform transition-transform duration-300 z-40 ${
+            isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <ul className={`flex flex-col gap-5 p-6 text-base font-normal ${wrapperClass}`}>
+            {menuItems?.map((item, index) => (
+              <li key={index} className="hover:text-primary transition-colors">
+                <Link href={item.link} onClick={() => setIsOpen(false)}>
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </>
+    );
+  }
+
+  // ✅ Desktop Inline Menu
+  return (
+    <ul className={`flex items-center gap-6 text-base font-medium ${wrapperClass}`}>
+      {menuItems?.map((item, index) => (
+        <li key={index} className="hover:text-primary transition-colors">
+          <Link href={item.link}>{item.label}</Link>
+        </li>
+      ))}
+    </ul>
   );
 };
 
 export default Menu;
-
 
 
 
