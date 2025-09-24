@@ -1,6 +1,7 @@
 brajpandit.com/
 ├── .env
 ├── .gitignore
+├── .local_env
 ├── .next.zip
 ├── branch-demo (1).md
 ├── eslint.config.mjs
@@ -13,14 +14,19 @@ brajpandit.com/
 ├── public/
 │   ├── assets/
 │   │   ├── adaptive-icon.png
+│   │   ├── astrohero.jpg
 │   │   ├── astrology/
 │   │   │   ├── astro1.png
 │   │   │   ├── career-business-financial-astrology.jpg
 │   │   │   ├── Compatibility Synastry_ Secrets of Synastry Compatibility.jpg
 │   │   │   └── family.png
+│   │   ├── booking process.png
+│   │   ├── booking process2.png
+│   │   ├── booking process21.png
 │   │   ├── braj-pandit-logo.svg
 │   │   ├── home-hero-light.jpg
 │   │   ├── home-hero.jpg
+│   │   ├── mor.jpg
 │   │   ├── pandits/
 │   │   │   ├── Anil Sastri ji.jpg
 │   │   │   ├── bharat bhusan.jpg
@@ -59,10 +65,10 @@ brajpandit.com/
 │   │   │   ├── banner.jpg
 │   │   │   ├── business2.jpeg
 │   │   │   ├── chhat puja.jpg
+│   │   │   ├── default.jpg
 │   │   │   ├── dhanteras.jpg
 │   │   │   ├── divine-vastu-energy-solutions.jpg
 │   │   │   ├── diwali puja.jpg
-│   │   │   ├── diya.jpg
 │   │   │   ├── dosha-remedies-vedic-solutions.jpg
 │   │   │   ├── durga puja.jpg
 │   │   │   ├── dushera.jpg
@@ -90,9 +96,18 @@ brajpandit.com/
 │   │   │   ├── wealth.png
 │   │   │   ├── Zodiac.jpeg
 │   │   │   └── zodic.jpeg
+│   │   ├── radhak.jpg
 │   │   ├── services-hero.jpg
 │   │   ├── shivji.png
-│   │   └── temple.jpg
+│   │   ├── temple.jpg
+│   │   └── testimonials/
+│   │       ├── lalit.jpg
+│   │       ├── test1.webp
+│   │       ├── test2.webp
+│   │       ├── test3.webp
+│   │       ├── test4.jpg
+│   │       ├── test5.jpg
+│   │       └── test6.jpg
 │   ├── braj-pandit-logo.svg
 │   ├── favicon.ico
 │   └── logo-new.svg
@@ -120,7 +135,9 @@ brajpandit.com/
 │   │   │   ├── horoscope/
 │   │   │   │   └── page.tsx
 │   │   │   ├── pandits/
+│   │   │   │   ├── page.tsx
 │   │   │   │   └── [panditSlug]/
+│   │   │   │       └── page.tsx
 │   │   │   └── services/
 │   │   │       ├── e-puja/
 │   │   │       │   ├── EPujaServices.tsx
@@ -142,7 +159,8 @@ brajpandit.com/
 │   │   │       ├── puja-booking/
 │   │   │       │   ├── BookingForm.tsx
 │   │   │       │   ├── page.tsx
-│   │   │       │   └── PageLayout.tsx
+│   │   │       │   ├── PageLayout.tsx
+│   │   │       │   └── SelectInput.tsx
 │   │   │       ├── SearchHeader.tsx
 │   │   │       └── [serviceSlug]/
 │   │   │           └── page.tsx
@@ -166,13 +184,15 @@ brajpandit.com/
 │   │   ├── layout.tsx
 │   │   └── page.tsx
 │   ├── components/
+│   │   ├── BookedPujaToast.tsx
 │   │   ├── common/
 │   │   │   ├── Button.tsx
 │   │   │   ├── ComingSoon.tsx
 │   │   │   ├── index.ts
 │   │   │   ├── Modal.tsx
 │   │   │   ├── Navbar.tsx
-│   │   │   └── ThemeToggle.tsx
+│   │   │   ├── ThemeToggle.tsx
+│   │   │   └── Toast.tsx
 │   │   ├── input/
 │   │   │   ├── index.ts
 │   │   │   ├── SelectInput.tsx
@@ -186,14 +206,21 @@ brajpandit.com/
 │   │   │   │   ├── Header.tsx
 │   │   │   │   └── Menu.tsx
 │   │   │   ├── home/
+│   │   │   │   ├── BlogSection.tsx
 │   │   │   │   ├── Categories.tsx
+│   │   │   │   ├── FamousPlaces.tsx
+│   │   │   │   ├── HeroSection.tsx
+│   │   │   │   ├── HomeProducts.tsx
 │   │   │   │   ├── index.tsx
 │   │   │   │   ├── LiveBhajans.tsx
 │   │   │   │   ├── PanditCard/
+│   │   │   │   │   ├── AllPanditCard.tsx
 │   │   │   │   │   ├── PanditCard.tsx
 │   │   │   │   │   ├── PanditGrid.tsx
 │   │   │   │   │   └── VerifiedPandits.tsx
 │   │   │   │   ├── PersonalisedPujas.tsx
+│   │   │   │   ├── PujaServiceCategories.tsx
+│   │   │   │   ├── PujaServices.tsx
 │   │   │   │   ├── UpcommingPujas.tsx
 │   │   │   │   └── VerifiedPanditjis.tsx
 │   │   │   ├── index.ts

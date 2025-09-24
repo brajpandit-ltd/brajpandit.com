@@ -92,7 +92,7 @@ const Header = () => {
         />
 
         <Link href="/pandits">
-          <Button variant="primary" label="Book Your Panditji" size="medium" />
+          <Button variant="primary" label="Book Your Pooja" size="medium" />
         </Link>
       </nav>
 

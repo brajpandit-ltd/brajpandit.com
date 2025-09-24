@@ -58,7 +58,7 @@ const FAQs = () => {
               </a>
               <a
                 href="https://wa.me/+918595009640."
-                className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary transition-all duration-300"
+                className="bg-primary inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-white rounded-lg font-semibold hover:bg-red-800 transition-all duration-300"
               >
                 WhatsApp Us
               </a>
