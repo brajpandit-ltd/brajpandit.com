@@ -13,6 +13,8 @@ import { Button } from "@/components/common";
 import Link from "next/link";
 // import {VerifiedPanditJis} from "@/components/layout/home";
 
+
+
 import VerifiedPanditsSection from "@/components/layout/home/PanditCard/VerifiedPandits";
 
 
@@ -104,7 +106,7 @@ export default async function HomePage() {
 
 
             <Link href="#verified-pandits" scroll={true}>
-  <Button label="Book Your Pandit Ji" variant="primary" />
+  <Button label="Book Your Pooja" variant="primary" />
 </Link>
 
 
@@ -136,6 +138,7 @@ export default async function HomePage() {
       <WhyChooseUs />
       <Testimonials />
       <FAQs />
+
 
       {/* Dynamic Sections */}
       

@@ -5,34 +5,29 @@ import Image from "next/image";
 const teamMembers = [
   {
     id: 1,
-    name: "xxxxxxxxxxx",
-    role: "Founder & Developer",
-    image: "/assets/team/lalit.jpg",
-  },
-  {
-    id: 2,
-    name: "xxxxxx",
-    role: "Founder & Media",
-    image: "/assets/team/lalit.jpg",
-  },
-  {
-    id: 3,
-    name: "xxxxxxxx",
+    name: "Arjun Singh",
     role: "Senior Adviser",
     image: "/assets/team/lalit.jpg",
   },
   {
-    id: 4,
-    name: "xxxxxxx",
-    role: "Co-founder & Developer",
+    id: 2,
+  name: "Lalit Kumar",
+    role: "UI Designer",
     image: "/assets/team/lalit.jpg",
   },
   {
-    id: 5,
-    name: "Virendra Singh Rajput",
-    role: "Co-founder",
+    id: 3,
+    name: "Jay Prakash",
+    role: "Developer",
+    image: "/assets/team/jay.jpg",
+  },
+  {
+    id: 4,
+    name: "Krishna Singh",
+    role: "Social Media",
     image: "/assets/team/lalit.jpg",
   },
+  
 ];
 
 export default function AboutUsPage() {
@@ -120,7 +115,7 @@ export default function AboutUsPage() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
             Meet Our Team
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
             {teamMembers.map((member) => (
               <div
                 key={member.id}
@@ -154,9 +149,16 @@ export default function AboutUsPage() {
             Whether you want to book a puja, get astrology guidance, or know
             more about our services, we are here to help you.
           </p>
-          <button className="bg-white text-primary font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition">
-            Contact Us
-          </button>
+          <a
+  href="https://wa.me/918595009640"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button className="bg-white text-primary font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition">
+    📞 Contact Us
+  </button>
+</a>
+
         </div>
       </section>
     </main>
