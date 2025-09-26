@@ -5,7 +5,8 @@ const WhyChooseUs = () => {
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Decorative Elements */}
-      <div className="absolute inset-0 opacity-10">
+      {/* <div className="absolute inset-0 opacity-10"> */}
+      <div className="absolute inset-0 opacity-1">
         <div className="absolute top-20 left-10 w-20 h-20 border-2 border-primary rounded-full"></div>
         <div className="absolute bottom-20 right-10 w-16 h-16 border-2 border-primary rounded-full"></div>
         <div className="absolute top-1/2 left-1/4 w-12 h-12 border-2 border-primary rounded-full"></div>
