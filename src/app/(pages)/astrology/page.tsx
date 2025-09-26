@@ -9,7 +9,7 @@ const astrologyServices = [
     title: "Career & Finance Guidance",
     description:
       "Get clarity on your career growth, job opportunities, and financial stability.",
-    image: "/assets/astrology/astro1.png",
+    image: "/assets/astrology/astro_Car.jpg",
     link: "#",
   },
   {
@@ -25,7 +25,7 @@ const astrologyServices = [
     title: "Health Astrology",
     description:
       "Understand planetary influences on your health and remedies for well-being.",
-    image: "/assets/astrology/family.png",
+    image: "/assets/astrology/health.jpg",
     link: "#",
   },
   {
@@ -33,7 +33,15 @@ const astrologyServices = [
     title: "Numerology & Palmistry",
     description:
       "Discover your destiny through numbers, palm lines, and tarot readings.",
-    image: "/assets/astrology/family.png",
+    image: "/assets/astrology/astro1.png",
+    link: "#",
+  },
+  {
+    id: 4,
+    title: "Girlfriend Numerology & Palmistry",
+    description:
+      "Discover your destiny through numbers, palm lines, and tarot readings.",
+    image: "/assets/astrology/relatio_astro.jpg",
     link: "#",
   },
 ];
@@ -43,34 +51,40 @@ export default function AstrologyPage() {
     <main className="w-full overflow-hidden">
       {/* Hero Section with Full Background Image */}
       <section className="relative w-full h-[70vh] sm:h-[80vh] flex items-center justify-center text-center text-white">
+
+        
+
+
         {/* Background Image */}
         <Image
-          src="/assets/astrohero.jpg"
+          src="/assets/astrology/astro1.jpg"
           alt="Astrology"
           fill
-          className="object-cover"
+          className="object-cover opacity-100"
           priority
-        />
+        /> 
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-white/80"></div>
+        
 
 
         {/* Content */}
         <div className="relative z-10 px-4 sm:px-8 max-w-3xl">
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-snug md:leading-tight">
-            <span className="text-black">Explore the</span>{" "}
-            <span className="text-primary">Science of Astrology</span>
+            <span className="text-white">
+              
+              Astrology</span>{" "}
+            <span className="text-primary"></span>
           </h1>
-          <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-800">
-            Astrology helps you align with the cosmic energies and find answers
-            about love, career, health, and spiritual growth.
+          <p className="mt-4 text-base sm:text-lg md:text-xl text-white-800">
+           
           </p>
          <div className="mt-6 flex justify-center">
+          <Link href="/pandits" className="mt-15">
   <Button 
     label="Book a Consultation" 
     variant="primary" 
   />
+  </Link>
 </div>
 
         </div>

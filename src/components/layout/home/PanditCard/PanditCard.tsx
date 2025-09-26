@@ -23,7 +23,7 @@ export function PanditCard({ pandit }: { pandit: Pandit }) {
       </div>
 
      {/* Content */}
-<div className="flex flex-col bg-[#F685008C] w-full p-2 sm:p-2.5">
+<div className="flex flex-col bg-[#F685008C] w-full h-22  p-2 sm:p-2.5">
   {/* Name on top */}
   <h3 className="text-sm sm:text-base font-semibold text-gray-600 truncate">
     {pandit.name}

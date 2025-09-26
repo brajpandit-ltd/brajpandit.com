@@ -6,8 +6,8 @@ const teamMembers = [
   {
     id: 1,
     name: "Arjun Singh",
-    role: "Senior Adviser",
-    image: "/assets/team/lalit.jpg",
+    role: "Senior Adviser & developer",
+    image: "/assets/team/arjun_singh.jpeg",
   },
   {
     id: 2,
@@ -17,15 +17,15 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: "Jay Prakash",
+    name: "Jay Thakur",
     role: "Developer",
     image: "/assets/team/jay.jpg",
   },
   {
     id: 4,
-    name: "Krishna Singh",
-    role: "Social Media",
-    image: "/assets/team/lalit.jpg",
+    name: "Krishna Chaudhary",
+    role: "Digital marketing",
+    image: "/assets/team/krishna_chaudhary.jpeg",
   },
   
 ];
