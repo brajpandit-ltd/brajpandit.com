@@ -43,6 +43,9 @@ const page = async () => {
         </p>
       </section> */}
 
+
+      
+
       <div className="flex-1 px-6 py-8 md:py-12">
         <Suspense fallback={<p>Loading...</p>}>
           <SearchHeader
