@@ -1,16 +1,19 @@
 [
+
+
   {
-    "id": "lalit",
-    "name": "Guru Prasad Maharaj Pandit ji",
-    "slug": "guru-prasad-maharaj",
-    "specialization": "Astrology & Kundali",
-    "experience": "10+ years",
+    "id": "meghshyam",
+    "name": "Shree Meghshyam Vyas Pandit Ji",
+    "slug": "meghshyam-vyas-ji",
+    "specialization": "Vedic Astrology",
+    "experience": "15+ years",
     "years": "years",
     "status": "approved",
-    "image": "/assets/pandits/lalit.png",
+    "image": "/assets/pandits/Meghsyam Vyas ji.jpg",
     "location": "New Delhi, India",
-    "aboutMe": "I am a dedicated astrologer with over a decade of experience guiding people through life’s challenges using astrology. My mission is to help individuals understand their karmic patterns and discover the right path for relationships, career, health, and spiritual growth. I have examined thousands of natal charts and specialize in providing deep insights into planetary influences. My sessions include remedies, mantras, and guidance rooted in Vedic traditions, helping clients achieve balance and harmony."
+    "aboutMe": "I am a Vedic astrologer with more than 15 years of dedicated practice. My focus is on interpreting ancient astrological texts to provide accurate readings and life-changing remedies. Over the years, I have helped thousands of individuals with career guidance, marriage compatibility, financial stability, and spiritual progress. My consultations are based on authentic Vedic principles and personalized remedies that empower people to face life’s challenges with clarity and confidence."
   },
+  
   {
     "id": "kanhaiya",
     "name": "Kanhaiya sharma Pandit",
@@ -47,18 +50,7 @@
     "location": "New Delhi, India",
     "aboutMe": "For more than 11 years, I have combined astrology and rituals to provide holistic spiritual guidance. My approach blends predictive astrology with powerful pujas and ceremonies that bring peace and prosperity to families. I have guided numerous clients with remedies for planetary doshas, performed rituals for health, wealth, and marriage, and offered spiritual counseling. My goal is to help people achieve harmony in both material and spiritual aspects of life."
   },
-  {
-    "id": "meghshyam",
-    "name": "Shree Meghshyam Vyas Pandit Ji",
-    "slug": "meghshyam-vyas-ji",
-    "specialization": "Vedic Astrology",
-    "experience": "15+ years",
-    "years": "years",
-    "status": "approved",
-    "image": "/assets/pandits/Meghsyam Vyas ji.jpg",
-    "location": "New Delhi, India",
-    "aboutMe": "I am a Vedic astrologer with more than 15 years of dedicated practice. My focus is on interpreting ancient astrological texts to provide accurate readings and life-changing remedies. Over the years, I have helped thousands of individuals with career guidance, marriage compatibility, financial stability, and spiritual progress. My consultations are based on authentic Vedic principles and personalized remedies that empower people to face life’s challenges with clarity and confidence."
-  },
+  
   {
     "id": "anil",
     "name": "Anil Sastri Pandit Ji",
@@ -118,5 +110,29 @@
     "image": "/assets/pandits/Rohini saran ji .jpg",
     "location": "New Delhi, India",
     "aboutMe": "As a young astrologer with 5 years of experience, I focus on modern astrology while keeping Vedic roots intact. I specialize in providing simple, practical guidance for youth and families on career, relationships, and personal growth. My consultations include horoscope readings, planetary remedies, and spiritual counseling, tailored to help clients navigate modern challenges with ancient wisdom."
+  },
+  {
+    "id": "lalit",
+    "name": "vivek-mohan-shastri",
+    "slug": "vivek-mohan-shastri",
+    "specialization": "Astrology & Kundali",
+    "experience": "15+ years",
+    "years": "years",
+    "status": "approved",
+    "image": "/assets/pandits/vivek-mohan-shastri-.avif",
+    "location": "New Delhi, India",
+    "aboutMe": "I am a dedicated astrologer with over a decade of experience guiding people through life’s challenges using astrology. My mission is to help individuals understand their karmic patterns and discover the right path for relationships, career, health, and spiritual growth. I have examined thousands of natal charts and specialize in providing deep insights into planetary influences. My sessions include remedies, mantras, and guidance rooted in Vedic traditions, helping clients achieve balance and harmony."
+  },
+  {
+    "id": "lali",
+    "name": "Kamal Mohan Shastri",
+    "slug": "kamal-mohan-shastri",
+    "specialization": "Astrology & Kundali",
+    "experience": "15+ years",
+    "years": "years",
+    "status": "approved",
+    "image": "/assets/pandits/panditnew.webp",
+    "location": "New Delhi, India",
+    "aboutMe": "I am a dedicated astrologer with over a decade of experience guiding people through life’s challenges using astrology. My mission is to help individuals understand their karmic patterns and discover the right path for relationships, career, health, and spiritual growth. I have examined thousands of natal charts and specialize in providing deep insights into planetary influences. My sessions include remedies, mantras, and guidance rooted in Vedic traditions, helping clients achieve balance and harmony."
   }
 ]
