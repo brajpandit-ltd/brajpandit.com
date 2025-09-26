@@ -10,7 +10,7 @@ export function AllPanditCard({ pandit }: PanditCardProps) {
   return (
     <div className="flex flex-col overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-transform hover:scale-[1.02] bg-white w-full h-full">
       {/* Image */}
-      <div className="relative w-full aspect-[4/4]"> 
+      <div className="relative w-full aspect-[4/4]">
         <Image
           src={pandit.image}
           alt={pandit.name}
