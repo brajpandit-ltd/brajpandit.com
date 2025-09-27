@@ -13,30 +13,30 @@ const FAQs = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+            <h2 className="text-2xl md:text-3xl font-bold">
               Frequently Asked <span className="text-primary">Questions</span>
             </h2>
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base md:text-md max-w-2xl mx-auto mt-3">
               Find answers to common questions about our Krishna Janmashtami
               puja services
             </p>
           </div>
 
-          <Card className="p-8 border-none !shadow-none">
+          <Card className="border-none !shadow-none">
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="border border-border rounded-lg px-6"
+                  className="border border-gray-200 rounded-lg px-4 py-2"
                 >
-                  <AccordionTrigger className="text-left hover:text-primary transition-colors duration-200 py-6">
-                    <span className="text-lg font-semibold">
+                  <AccordionTrigger className="text-left hover:text-primary transition-colors duration-200">
+                    <span className="text-base font-medium">
                       {faq.question}
                     </span>
                   </AccordionTrigger>
                   <AccordionContent className="pb-6">
-                    <p className="text-muted-foreground leading-relaxed text-lg">
+                    <p className="text-muted-foreground leading-relaxed text-sm mt-2">
                       {faq.answer}
                     </p>
                   </AccordionContent>
@@ -45,7 +45,7 @@ const FAQs = () => {
             </Accordion>
           </Card>
 
-          <div className="text-center mt-8">
+          {/* <div className="text-center mt-8">
             <p className="text-lg text-muted-foreground mb-6">
               Still have questions? We&apos;re here to help!
             </p>
@@ -63,7 +63,7 @@ const FAQs = () => {
                 WhatsApp Us
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

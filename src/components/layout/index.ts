@@ -7,3 +7,5 @@ export { default as BookingProcess } from "./BookingProcess";
 export { default as FAQs } from "./FAQs";
 export { default as Testimonials } from "./Testimonials";
 export { default as WhyChooseUs } from "./WhyChooseUs";
+
+export { default as C2APrefooter } from "./C2APrefooter";

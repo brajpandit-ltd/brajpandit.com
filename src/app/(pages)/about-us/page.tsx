@@ -1,6 +1,5 @@
-"use client";
-
 import Image from "next/image";
+import { C2APrefooter } from "@/components/layout";
 
 const teamMembers = [
   {
@@ -11,7 +10,7 @@ const teamMembers = [
   },
   {
     id: 2,
-  name: "Lalit Kumar",
+    name: "Lalit Kumar",
     role: "UI Designer",
     image: "/assets/team/lalit.jpg",
   },
@@ -27,7 +26,6 @@ const teamMembers = [
     role: "Digital marketing",
     image: "/assets/team/krishna_chaudhary.jpeg",
   },
-  
 ];
 
 export default function AboutUsPage() {
@@ -140,27 +138,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-primary text-white py-16 sm:py-20 text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-            Want to Connect With Us?
-          </h2>
-          <p className="text-base sm:text-lg text-white/90">
-            Whether you want to book a puja, get astrology guidance, or know
-            more about our services, we are here to help you.
-          </p>
-          <a
-  href="https://wa.me/918595009640"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <button className="bg-white text-primary font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition">
-    📞 Contact Us
-  </button>
-</a>
-
-        </div>
-      </section>
+      <C2APrefooter />
     </main>
   );
 }
