@@ -105,7 +105,7 @@ export default async function HomePage() {
           <div className="flex items-center justify-center flex-col md:flex-row mt-8 gap-6 md:gap-14">
 
 
-            <Link href="#verified-pandits" scroll={true}>
+            <Link href="/services/e-puja" scroll={true}>
   <Button label="Book Your Pooja" variant="primary" />
 </Link>
 
