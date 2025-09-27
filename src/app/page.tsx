@@ -107,6 +107,7 @@ export default async function HomePage() {
 
              <Link  href="/services">
             <Button label="See All Pooja Services" variant="default" />
+               </Link>
 
            
           </div>
