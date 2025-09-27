@@ -10,7 +10,7 @@ interface PanditGridProps {
 
 export function PanditGrid({ pandits, search, setSearch }: PanditGridProps) {
   return (
-    <section className="px-4 md:px-10 py-2">
+    <section className="px-4 md:px-10 py-0">
       <div className="max-w-7xl mx-auto">
         {/* Search Bar top right */}
         <div className="flex justify-end mb-6 mr-12 sm:mr-6 lg:mr-10 ">

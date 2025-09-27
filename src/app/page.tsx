@@ -12,6 +12,7 @@ import Link from "next/link";
 // import {VerifiedPanditJis} from "@/components/layout/home";
 
 import VerifiedPanditsSection from "@/components/layout/home/PanditCard/VerifiedPandits";
+import Why_Choose_Us from "@/components/layout/home/Why_Choose_Us";
 
 export const metadata = {
   title: "Braj Pandit Ji",
@@ -121,7 +122,9 @@ export default async function HomePage() {
       {/* <LiveBhajans /> */}
 
       <BookingProcess />
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
+
+      <Why_Choose_Us/>
       <Testimonials />
       <FAQs />
       <C2APrefooter />

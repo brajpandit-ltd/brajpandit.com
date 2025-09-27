@@ -21,7 +21,7 @@ const C2APrefooter = () => {
           <Button
             label="📞 Connect us at WhatsApp"
             size="small"
-            className="!bg-green !border-green"
+            className="!bg-green-500 !border-green"
           />
         </a>
       </div>
