@@ -9,6 +9,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Logo + Description */}
         <div>
+          <Link href='/'>
           <Image
             src="/assets/braj-pandit-logo.svg"
             alt="Braj Pandit Logo"
@@ -16,6 +17,7 @@ const Footer = () => {
             height={60}
             className="mb-4"
           />
+          </Link>
           <p className="text-sm leading-relaxed">
             Welcome to <span className="font-semibold">Braj Pandit</span> – your
             trusted source for online puja services, astrology consultations,
