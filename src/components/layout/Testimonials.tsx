@@ -72,8 +72,6 @@
 
 // export default Testimonials;
 
-
-
 "use client";
 
 import React from "react";
@@ -140,15 +138,14 @@ const testimonials: Testimonial[] = [
 
 export default function Testimonials() {
   return (
-    <section className="px-6 md:px-12 py-20">
+    <section className="px-6 md:px-12 py-20 bg-amber-100">
       <div className="max-w-7xl mx-auto">
         {/* Top heading + description */}
-        <div className="text-left mb-10">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-3">
-            Our <span className="text-primary">Happy</span>{" "}
-            <span className="text-red-600">Devotees</span>
+        <div className="mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold">
+            Our <span className="text-primary">Happy Devotees</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl">
+          <p className="text-base md:text-md max-w-2xl mt-3">
             Discover heartfelt testimonials from devotees about their divine
             experiences — real stories of calm, blessings, and spiritual
             fulfillment after their pujas and rituals.
@@ -161,33 +158,7 @@ export default function Testimonials() {
           role="list"
         >
           {testimonials.map((t) => (
-            <div
-              key={t.id}
-              role="listitem"
-              className="snap-start flex-shrink-0 w-[273px] h-[260px]"
-            >
-              <div className="relative bg-gray-100 rounded-2xl px-5 pt-16 pb-6 h-full shadow-sm border border-gray-200">
-                {/* avatar */}
-                <div className="absolute -top-[3px] left-1/2 -translate-x-1/2">
-                  <div className="relative w-[66px] h-[66px] rounded-full border border-gray-300 overflow-hidden shadow-sm">
-                    <Image
-                      src={t.avatar}
-                      alt={t.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-
-                {/* content */}
-                <h4 className="text-sm font-semibold text-center mb-2 mt-2">
-                  {t.name}
-                </h4>
-                <p className="text-xs text-gray-600 leading-5 text-justify">
-                  {t.quote}
-                </p>
-              </div>
-            </div>
+            <Testimonial key={t.id} t={t} />
           ))}
         </div>
 
@@ -199,3 +170,25 @@ export default function Testimonials() {
     </section>
   );
 }
+
+const Testimonial = ({ t }: { t: Testimonial }) => {
+  return (
+    <div
+      role="listitem"
+      className="flex flex-col items-center w-full min-w-[273px] h-[260px] p-5 rounded-lg bg-text-white"
+    >
+      {/* avatar */}
+      <Image
+        src={t.avatar}
+        alt={t.name}
+        width={66}
+        height={66}
+        className="w-[66px] h-[66px] object-cover rounded-full block"
+      />
+
+      {/* content */}
+      <h4 className="text-sm font-medium text-center mt-2 mb-2">{t.name}</h4>
+      <p className="text-xs">{t.quote}</p>
+    </div>
+  );
+};

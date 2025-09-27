@@ -33,7 +33,7 @@ export default function PanditsPage() {
       </section>
 
       {/* Pandit Grid Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-16 py-7">
+      <section className="w-full px-4 sm:px-6 lg:px-16 py-0">
         <div className="w-full max-w-[1400px] mx-auto">
           <PanditGrid
             pandits={filteredPandits}

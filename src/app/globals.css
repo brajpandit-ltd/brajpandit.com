@@ -16,6 +16,15 @@
   --text-black: #110a00;
   --text-white: #ffffff;
   --text-gray: #5c5c5c;
+
+  --green: #25d366;
+  --red: #ff0000;
+  --blue: #0000ff;
+  --yellow: #ffff00;
+  --cyan: #00ffff;
+  --magenta: #ff00ff;
+  --white: #ffffff;
+  --black: #000000;
 }
 
 @theme inline {
@@ -33,6 +42,15 @@
   --color-text-black: var(--text-black);
   --color-text-white: var(--text-white);
   --color-text-gray: var(--text-gray);
+
+  --color-green: var(--green);
+  --color-red: var(--red);
+  --color-blue: var(--blue);
+  --color-yellow: var(--yellow);
+  --color-cyan: var(--cyan);
+  --color-magenta: var(--magenta);
+  --color-white: var(--white);
+  --color-black: var(--black);
 }
 
 .dark {
@@ -51,6 +69,15 @@
   --text-black: #ffffff;
   --text-white: #110a00;
   --text-gray: #bdbdbd;
+
+  --green: #25d366;
+  --red: #ff0000;
+  --blue: #0000ff;
+  --yellow: #ffff00;
+  --cyan: #00ffff;
+  --magenta: #ff00ff;
+  --white: #ffffff;
+  --black: #000000;
 }
 
 body {
