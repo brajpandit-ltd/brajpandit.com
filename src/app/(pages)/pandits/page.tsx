@@ -47,16 +47,16 @@ export const metadata: Metadata = {
   },
 };
 
-interface ServicesPageProps {
-  searchParams: { [key: string]: string };
-}
-
-async function PanditsPage({ searchParams }: ServicesPageProps) {
+async function PanditsPage({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
   const params = await searchParams;
-  const searchQuery = params.search ?? "";
+  const searchQuery = params?.search ?? "";
 
   const filteredPandits = (pandits as Pandit[]).filter((pandit) =>
-    pandit.name.toLowerCase().includes(searchQuery?.toLowerCase())
+    pandit.name.toLowerCase().includes(searchQuery?.toString()?.toLowerCase())
   );
 
   return (
@@ -81,7 +81,10 @@ async function PanditsPage({ searchParams }: ServicesPageProps) {
       {/* Pandit Grid Section */}
       <section className="w-full px-4 sm:px-6 lg:px-16 py-0">
         <div className="w-full max-w-[1400px] mx-auto">
-          <PanditGrid pandits={filteredPandits} search={searchQuery} />
+          <PanditGrid
+            pandits={filteredPandits}
+            search={searchQuery.toString()}
+          />
         </div>
       </section>
     </main>
