@@ -1,38 +1,20 @@
 import Link from "next/link";
 import { Pandit } from "@/types/pandit";
-import { AllPanditCard } from "./AllPanditCard";
+import SearchComponent from "./SearchComponent";
+import PanditCard from "./PanditCard";
 
 interface PanditGridProps {
   pandits: Pandit[];
   search: string;
-  setSearch: (value: string) => void;
 }
 
-export function PanditGrid({ pandits, search, setSearch }: PanditGridProps) {
+export function PanditGrid({ pandits, search }: PanditGridProps) {
   return (
-    <section className="px-4 md:px-10 py-0">
+    <section className="px-4 md:px-10 py-2">
       <div className="max-w-7xl mx-auto">
         {/* Search Bar top right */}
         <div className="flex justify-end mb-6 mr-12 sm:mr-6 lg:mr-10 ">
-          <input
-            type="text"
-            placeholder="Search Pandit Ji"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="
-              sm:w-80
-              lg:w-110
-              h-10
-              w-40
-              px-4
-              rounded-full
-              border border-gray-300
-              text-base
-              focus:outline-none
-              focus:ring-2 focus:ring-secondary
-              focus:border-secondary
-            "
-          />
+          <SearchComponent search={search} />
         </div>
 
         {/* Grid */}
@@ -70,7 +52,7 @@ export function PanditGrid({ pandits, search, setSearch }: PanditGridProps) {
                   hover:scale-[1.02]
                 "
               >
-                <AllPanditCard pandit={pandit} />
+                <PanditCard pandit={pandit} />
               </div>
             </Link>
           ))}

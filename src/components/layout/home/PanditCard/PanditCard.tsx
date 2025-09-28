@@ -20,15 +20,15 @@ export function PanditCard({ pandit }: { pandit: Pandit }) {
       </div>
 
       {/* Content */}
-      <div className="flex flex-col bg-accent-light w-full p-1 sm:p-2.5">
+      <div className="flex flex-col bg-amber-100 w-full p-2">
         {/* Name on top */}
-        <h3 className="text-base font-medium truncate">{pandit.name}</h3>
-        <p className="text-sm break-words">{pandit.specialization}</p>
+        <h3 className="text-sm font-medium truncate">{pandit.name}</h3>
+        <p className="text-xs break-words">{pandit.specialization}</p>
         <p className="text-xs">{pandit.experience}</p>
 
         <Link href={`/pandits/${encodeURIComponent(pandit.slug)}`}>
           <Button
-            className="mt-2 text-primary"
+            className="mt-1 text-primary"
             label="View Details"
             size="v-small"
             variant="link"

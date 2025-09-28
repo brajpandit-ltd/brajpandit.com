@@ -1,13 +1,12 @@
-"use client";
-
-import { notFound } from "next/navigation";
 import pandits from "@/constants/pandits.json";
 import { Pandit } from "@/types/pandit";
 import Image from "next/image";
 import { Star } from "lucide-react";
 import Link from "next/link";
 import Button from "@/components/common/Button";
-import {  IoIosShareAlt } from "react-icons/io";
+import { IoIosShareAlt } from "react-icons/io";
+import { notFound } from "next/navigation";
+
 export default function PanditDetailPage({ params }: { params: any }) {
   const panditSlug = params?.panditSlug;
 
@@ -83,27 +82,22 @@ export default function PanditDetailPage({ params }: { params: any }) {
                 size="small"
                 className="rounded-full w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white border-none"
               />
-
-              
             </Link>
 
-
-          
- <Link
-  href="https://wa.me/918595009640"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="w-full sm:w-auto"
->
-  <Button
-    label="at whatsapp"
-              icon={<IoIosShareAlt color="green" />}
-              variant="default"
-              size="small"
-              className="text-green-600"
-  />
-</Link>
-
+            <Link
+              href="https://wa.me/918595009640"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <Button
+                label="at whatsapp"
+                icon={<IoIosShareAlt color="green" />}
+                variant="default"
+                size="small"
+                className="text-green-600"
+              />
+            </Link>
           </div>
         </div>
       </div>

@@ -1,16 +1,36 @@
 {
   "header": {
-    "logo": "/braj-pandit-logo.svg",
+    "logo": "/braj-pandit-logo.png",
     "menuItems": [
       { "label": "Home", "link": "/" },
       { "label": "Services", "link": "/services", "subMenu": [] },
       { "label": "PanditJi's", "link": "/pandits", "subMenu": [] },
       { "label": "Astrology", "link": "/astrology", "subMenu": [] },
-     
+
       { "label": "Braj Yatra", "link": "/braj-yatra", "subMenu": [] },
       { "label": "About Us", "link": "/about-us", "subMenu": [] }
     ]
-  }
+  },
+  "bookingSteps": [
+    {
+      "icon": "step1.png",
+      "title": "Select your puja",
+      "description": "Choose from our Basic, Standard, or Premium puja packages"
+    },
+    {
+      "icon": "step2.png",
+      "title": "Fill your details",
+      "description": "Provide Name, Date, Address, and Contact information"
+    },
+    {
+      "icon": "step3.png",
+      "title": "Confirm date & time slot",
+      "description": "Select your preferred date and convenient time for the puja"
+    },
+    {
+      "icon": "step4.png",
+      "title": "Payment",
+      "description": "Pay securely using various payment methods"
+    }
+  ]
 }
-
-
