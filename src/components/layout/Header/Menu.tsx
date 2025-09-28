@@ -1,11 +1,9 @@
-
-
 "use client";
 
 import React, { useState } from "react";
 import { Button } from "@/components/common";
-import Link from "next/link";
 import { Menu as MenuIcon, X as CloseIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 interface MenuItem {
   label: string;
@@ -21,6 +19,7 @@ interface MenuProps {
 
 const Menu = ({ wrapperClass, isMobile = false, menuItems }: MenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -41,7 +40,11 @@ const Menu = ({ wrapperClass, isMobile = false, menuItems }: MenuProps) => {
 
       <ul
         className={`flex items-center gap-5 text-base font-normal ${wrapperClass} ${
-          isMobile ? (isOpen ? "flex flex-col absolute top-0 right-0 w-full h-screen bg-white p-6" : "hidden") : "md:flex"
+          isMobile
+            ? isOpen
+              ? "flex flex-col absolute top-0 right-0 w-full h-screen bg-white p-6"
+              : "hidden"
+            : "md:flex"
         }`}
       >
         {/* Close button inside mobile menu */}
@@ -59,8 +62,15 @@ const Menu = ({ wrapperClass, isMobile = false, menuItems }: MenuProps) => {
         )}
 
         {menuItems?.map((item, index) => (
-          <li key={index} className="hover:text-primary transition-colors">
-            <Link href={item.link}>{item.label}</Link>
+          <li
+            key={index}
+            className="hover:text-primary transition-colors"
+            onClick={() => {
+              router.push(item.link);
+              toggleMenu();
+            }}
+          >
+            <p>{item.label}</p>
           </li>
         ))}
       </ul>
@@ -69,4 +79,3 @@ const Menu = ({ wrapperClass, isMobile = false, menuItems }: MenuProps) => {
 };
 
 export default Menu;
-
