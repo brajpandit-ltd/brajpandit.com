@@ -3,13 +3,19 @@
 import Image from "next/image";
 import { Button } from "@/components/common";
 import { Testimonials } from "@/components/layout";
+import { useRef } from "react";
 
 export default function PanditBookingPage() {
+  const formRef = useRef(null);
+
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <>
     <main className="w-full overflow-hidden">
       {/* Hero Section */}
-      <section className="relative w-full h-[60vh] sm:h-[70vh] flex items-center justify-center text-center">
+      <section className="relative w-full h-[60vh] sm:h-[70vh] flex items-center text-left px-6 sm:px-12 lg:px-24">
         <Image
           src="/assets/pandits/services-hero.jpg"
           alt="Pandit Hero"
@@ -18,15 +24,29 @@ export default function PanditBookingPage() {
           priority
         />
         <div className="absolute inset-0 bg-black/40"></div>
-        <h1 className="relative z-10 text-3xl sm:text-5xl md:text-6xl font-bold text-white">
-          Book Your Pandit
-        </h1>
+        <div className="relative z-10 max-w-xl">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white">
+            <span className="text-primary">Book Your </span>
+            <span className="text-secondary">PandinJi's</span>
+          </h1>
+          <p className="mt-4 text-white text-lg sm:text-xl">
+            Experience authentic pooja services by verified Pandits. Make your rituals divine and stress-free.
+          </p>
+          <Button
+            label="Book Your Pandit Ji's"
+            variant="primary"
+            className="mt-6"
+            onClick={scrollToForm}
+          />
+        </div>
       </section>
 
       {/* Booking Form Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-20">
+      <section
+        ref={formRef}
+        className="max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-20"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          
           {/* Left: Booking Form */}
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h2 className="text-2xl font-bold mb-6">Book Your Pandit</h2>
@@ -111,7 +131,7 @@ export default function PanditBookingPage() {
                 Call Now 📞 +91 8595009640
               </a>
               <a
-                href="https://wa.me/91 8595009640"
+                href="https://wa.me/918595009640"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-green-500 text-white rounded-lg font-semibold text-center hover:bg-green-600 cursor-pointer"
@@ -122,11 +142,8 @@ export default function PanditBookingPage() {
           </div>
         </div>
       </section>
-      <Testimonials/>
-      
-      
+
+      <Testimonials />
     </main>
-    
-  </>
   );
 }
