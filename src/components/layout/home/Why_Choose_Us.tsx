@@ -43,6 +43,7 @@ export default function Why_Choose_Us() {
             alt="Lord Shiva illustration"
             fill
             className="object-contain 
+                       lg:opacity-100
                        md:opacity-40
                        opacity-30"
             priority
