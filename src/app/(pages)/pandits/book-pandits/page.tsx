@@ -6,7 +6,8 @@ import { Testimonials } from "@/components/layout";
 import { useRef } from "react";
 
 export default function PanditBookingPage() {
-  const formRef = useRef(null);
+  // Typed ref so scrollIntoView is available
+  const formRef = useRef<HTMLDivElement | null>(null);
 
   const scrollToForm = () => {
     formRef.current?.scrollIntoView({ behavior: "smooth" });
