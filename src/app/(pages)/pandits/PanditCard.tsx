@@ -6,7 +6,7 @@ import { Pandit } from "@/types/pandit";
 interface PanditCardProps {
   pandit: Pandit;
 }
-export function AllPanditCard({ pandit }: PanditCardProps) {
+function PanditCard({ pandit }: PanditCardProps) {
   return (
     <div className="flex flex-col overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-transform hover:scale-[1.02] bg-white w-full h-full">
       {/* Image */}
@@ -39,3 +39,5 @@ export function AllPanditCard({ pandit }: PanditCardProps) {
     </div>
   );
 }
+
+export default PanditCard;

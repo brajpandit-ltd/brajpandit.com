@@ -2,10 +2,13 @@ import { Card } from "@/components/ui";
 import { whyChooseUsPoints } from "@/constants/static";
 
 const WhyChooseUs = () => {
-  return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Decorative Elements */}
+  return <section className="py-20 relative overflow-hidden"></section>;
+};
 
+export default WhyChooseUs;
+
+/**
+ * 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-2xl md:text-3xl font-bold">
@@ -42,8 +45,4 @@ const WhyChooseUs = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
-};
-
-export default WhyChooseUs;
+ */

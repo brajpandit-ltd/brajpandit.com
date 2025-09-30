@@ -107,8 +107,9 @@ export default async function HomePage() {
 
              <Link  href="/services">
             <Button label="See All Pooja Services" variant="default" />
+               </Link>
 
-            </Link>
+            
 
            
           </div>
@@ -128,7 +129,8 @@ export default async function HomePage() {
       {/* <LiveBhajans /> */}
 
       <BookingProcess />
-      {/* <WhyChooseUs /> */}
+        {/* <WhyChooseUs />  */}
+        
 
       <Why_Choose_Us/>
       <Testimonials />
