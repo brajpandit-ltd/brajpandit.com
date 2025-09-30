@@ -37,8 +37,9 @@ export default function Why_Choose_Us() {
     <section className="relative bg-[#f6f2e7] py-20 px-6 md:px-10 overflow-hidden">
 
       {/* Background Image */}
-      <div className="absolute inset-0 flex justify-center items-center pointer-events-none lg:pt-50">
-        <div className="relative w-full h-full lg:w-[580px] lg:h-[580px]">
+
+      <div className="absolute inset-0 flex justify-center items-center pointer-events-none md:pt-20 lg:pt-40">
+        <div className="relative w-full h-full md:w-[400px] md:h-[400px] lg:w-[550px] lg:h-[550px]">
           <Image
             src="/assets/shivji.png"
             alt="Lord Shiva illustration"
@@ -48,7 +49,6 @@ export default function Why_Choose_Us() {
                        opacity-55
                        lg:opacity-100
                        "
-                       
             priority
           />
         </div>
