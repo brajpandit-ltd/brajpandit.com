@@ -58,10 +58,10 @@ const Button = ({
         "text-white bg-secondary hover:bg-secondary-light border border-secondary";
       break;
     case "link":
-      btnStyle = "text-blue-500 hover:text-blue-600 underline";
+      btnStyle = "text-blue-500 hover:text-blue-600 underline !p-0";
       break;
     case "text":
-      btnStyle = "text-black hover:text-gray-900 cursor-auto";
+      btnStyle = "text-black hover:text-gray-900 cursor-auto !p-0";
       break;
     case "danger":
       btnStyle = "bg-red-500 text-white hover:bg-red-600 border border-red-600";

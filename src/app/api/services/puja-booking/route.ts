@@ -1,7 +1,3 @@
-
-
-
-
 import { ApiResponse } from "@/helper/apiResponse";
 import { NextRequest } from "next/server";
 import { sendEmail } from "@/helper/email";

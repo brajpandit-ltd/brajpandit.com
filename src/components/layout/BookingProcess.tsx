@@ -79,18 +79,22 @@
 
 // export default BookingProcess;
 
-
-"use client";
-
-// import { Card } from "@/components/ui";
-// import { CheckCircle2, ArrowRightCircle } from "lucide-react";
-// import { bookingSteps } from "@/constants/static";
 import Image from "next/image";
-// import Link from "next/link";
 
 const BookingProcess = () => {
   return (
-    <div className="bg-[#ebe4da] flex justify-center items-center w-full px-4">
+    <div className="bg-[#ebe4da] flex flex-col justify-center items-center w-full px-4 py-18 md:py-24">
+      <div className="text-center mb-16">
+        <h2 className="text-2xl md:text-3xl font-bold">
+          How to
+          <span className="text-secondary"> book your Puja?</span>
+        </h2>
+        <p className="text-base md:text-md max-w-2xl mx-auto mt-3">
+          A simple and seamless booking process to connect you with divine
+          blessings.
+        </p>
+      </div>
+
       <div className="w-full max-w-5xl">
         <Image
           src="/assets/how_to_book.jpeg"
@@ -102,9 +106,7 @@ const BookingProcess = () => {
           priority
         />
       </div>
-      
     </div>
-    
   );
 };
 

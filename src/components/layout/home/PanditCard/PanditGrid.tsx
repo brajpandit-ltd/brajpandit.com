@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { Pandit } from "@/types/pandit";
 import { AllPanditCard } from "./AllPanditCard";
@@ -12,9 +10,8 @@ interface PanditGridProps {
 
 export function PanditGrid({ pandits, search, setSearch }: PanditGridProps) {
   return (
-    <section className="px-4 md:px-10 py-2">
+    <section className="px-4 md:px-10 py-0">
       <div className="max-w-7xl mx-auto">
-        
         {/* Search Bar top right */}
         <div className="flex justify-end mb-6 mr-12 sm:mr-6 lg:mr-10 ">
           <input
@@ -23,10 +20,8 @@ export function PanditGrid({ pandits, search, setSearch }: PanditGridProps) {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="
-            w-60
               sm:w-80
               lg:w-110
-              
               h-10
               w-40
               px-4
@@ -83,5 +78,4 @@ export function PanditGrid({ pandits, search, setSearch }: PanditGridProps) {
       </div>
     </section>
   );
-  
 }

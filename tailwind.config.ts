@@ -21,6 +21,15 @@ module.exports = {
         "text-black": "var(--text-black)",
         "text-white": "var(--text-white)",
         "text-gray": "var(--text-gray)",
+
+        green: "var(--green)",
+        red: "var(--red)",
+        blue: "var(--blue)",
+        yellow: "var(--yellow)",
+        cyan: "var(--cyan)",
+        magenta: "var(--magenta)",
+        white: "var(--white)",
+        black: "var(--black)",
       },
 
       transitionTimingFunction: {

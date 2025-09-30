@@ -73,20 +73,17 @@ export default function RootLayout({
             <main>
               {children}
 
-               <ToastContainer
-  position="top-center"
-  autoClose={8000}
-  hideProgressBar={false}
-  newestOnTop
-  closeOnClick
-  pauseOnHover
-  draggable
-  theme="light"
-  className="font-sans bg-red-500"
-/>
-
-
-
+              <ToastContainer
+                position="top-center"
+                autoClose={8000}
+                hideProgressBar={false}
+                newestOnTop
+                closeOnClick
+                pauseOnHover
+                draggable
+                theme="light"
+                className="font-sans bg-red-500"
+              />
             </main>
             <Footer />
           </>
