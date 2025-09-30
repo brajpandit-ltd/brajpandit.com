@@ -39,9 +39,9 @@ export default function TopHeader() {
         {/* Close Button */}
         <button
           onClick={() => setVisible(false)}
-          className="absolute top-2 right-3 md:top-2.5 md:right-4 text-white hover:text-red-300 transition"
+          className="absolute top-2 right-3 md:top-2.5 md:right-4 text-primary hover:text-red-300 transition"
         >
-          <X size={18} />
+          <X size={20} />
         </button>
       </div>
     </div>

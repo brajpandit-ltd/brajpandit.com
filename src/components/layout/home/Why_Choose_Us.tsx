@@ -2,100 +2,180 @@
 
 import Image from "next/image";
 
+const reasonsLeft = [
+  {
+    title: "Authentic & Verified Pandits",
+    desc: "Our expert and verified Pandits follow Vedic traditions with precision, ensuring your rituals are performed authentically and bring divine blessings.",
+  },
+  {
+    title: "Complete Pooja Arrangements",
+    desc: "We take care of everything – from samagri to setup. You only focus on devotion while we handle all the details seamlessly.",
+  },
+  {
+    title: "Hassle-Free Online Booking",
+    desc: "Easily book a Pandit Ji from the comfort of your home with our smooth, quick, and transparent process.",
+  },
+];
+
+const reasonsRight = [
+  {
+    title: "Customized Rituals for Every Occasion",
+    desc: "From Griha Pravesh to Wedding Ceremonies, we offer personalized pooja services based on traditions, region, and your required customs.",
+  },
+  {
+    title: "Auspicious Muhurat & Guidance",
+    desc: "Our experts help you choose the best muhurat, ensuring maximum divine benefit and harmony in your rituals.",
+  },
+  {
+    title: "Performed with Purity & Devotion",
+    desc: "Every ritual is conducted with proper Vedic chanting, maintaining sanctity, discipline, and devotion at every step.",
+  },
+];
+
 export default function Why_Choose_Us() {
   return (
-    <>
-      <div className="bg-[#f6f2e7] pt-25 container mx-auto px-6 relative z-10 pb-1">
-        <div className="text-center mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold">
-            Why Book with <span className="text-primary">Braj Pandit?</span>
-          </h2>
-          <p className="text-base md:text-md max-w-2xl mx-auto mt-3">
-            Experience the divine grace of Lord Krishna through our authentic
-            and trusted puja services
-          </p>
-        </div>
-      </div>
-
-      <section className="relative px-4 md:px-10 py-40 bg-[#f6f2e7] overflow-hidden pt-10">
-        {/* Background Image */}
-        <div className="absolute inset-0 flex justify-center items-center pt-40">
+    <section className="relative bg-[#f6f2e7] py-20 px-6 md:px-10 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 flex justify-center items-center pointer-events-none lg:pt-40">
+        <div className="relative w-full h-full lg:w-[550px] lg:h-[550px]">
           <Image
             src="/assets/shivji.png"
             alt="Lord Shiva illustration"
             fill
-            className="object-contain pointer-events-none "
+            className="object-contain 
+                       md:opacity-100 
+                       opacity-40"
             priority
           />
         </div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto">
+        {/* Heading */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Why Book with <span className="text-primary">Braj Pandit?</span>
+          </h2>
+          <p className="text-base md:text-lg mt-4 text-gray-700">
+            Experience the divine grace of Lord Krishna through our authentic and trusted
+            puja services
+          </p>
+        </div>
 
         {/* Content */}
-        <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 z-10">
-          {/* Left Side */}
-          <div className="space-y-8 text-left md:pr-45">
-            <div>
-              <h3 className="text-xl font-semibold text-black">
-                Authentic & Verified Pandits
-              </h3>
-              <p className="text-gray-700 text-sm">
-                Our expert and verified Pandits follow Vedic traditions with
-                precision, ensuring your rituals are performed authentically and
-                bring divine blessings.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-black">
-                Complete Pooja Arrangements
-              </h3>
-              <p className="text-gray-700 text-sm">
-                We take care of everything – from samagri to setup. You only
-                focus on devotion while we handle all the details seamlessly.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-black">
-                Hassle-Free Online Booking
-              </h3>
-              <p className="text-gray-700 text-sm">
-                Easily book a Pandit Ji from the comfort of your home with our
-                smooth, quick, and transparent process.
-              </p>
-            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+          {/* Left Column */}
+          <div className="space-y-8 z-10 relative">
+            {reasonsLeft.map((item, i) => (
+              <div key={i}>
+                <h3 className="text-xl font-semibold text-black">{item.title}</h3>
+                <p className="text-gray-700 text-sm mt-2">{item.desc}</p>
+              </div>
+            ))}
           </div>
 
-          {/* Right Side */}
-          <div className="space-y-8 text-left md:pl-45">
-            <div>
-              <h3 className="text-xl font-semibold text-black">
-                Customized Rituals for Every Occasion
-              </h3>
-              <p className="text-gray-700 text-sm">
-                From Griha Pravesh to Wedding Ceremonies, we offer personalized
-                pooja services based on traditions, region, and your required
-                customs.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-black">
-                Auspicious Muhurat & Guidance
-              </h3>
-              <p className="text-gray-700 text-sm">
-                Our experts help you choose the best muhurat, ensuring maximum
-                divine benefit and harmony in your rituals.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-black">
-                Performed with Purity & Devotion
-              </h3>
-              <p className="text-gray-700 text-sm">
-                Every ritual is conducted with proper Vedic chanting,
-                maintaining sanctity, discipline, and devotion at every step.
-              </p>
-            </div>
+          {/* Empty center column to preserve spacing */}
+          <div className="hidden lg:block"></div>
+
+          {/* Right Column */}
+          <div className="space-y-8 z-10 relative">
+            {reasonsRight.map((item, i) => (
+              <div key={i}>
+                <h3 className="text-xl font-semibold text-black">{item.title}</h3>
+                <p className="text-gray-700 text-sm mt-2">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
+
+
+// "use client";
+
+// import Image from "next/image";
+
+// const reasonsLeft = [
+//   {
+//     title: "Authentic & Verified Pandits",
+//     desc: "Our expert and verified Pandits follow Vedic traditions with precision, ensuring your rituals are performed authentically and bring divine blessings.",
+//   },
+//   {
+//     title: "Complete Pooja Arrangements",
+//     desc: "We take care of everything – from samagri to setup. You only focus on devotion while we handle all the details seamlessly.",
+//   },
+//   {
+//     title: "Hassle-Free Online Booking",
+//     desc: "Easily book a Pandit Ji from the comfort of your home with our smooth, quick, and transparent process.",
+//   },
+// ];
+
+// const reasonsRight = [
+//   {
+//     title: "Customized Rituals for Every Occasion",
+//     desc: "From Griha Pravesh to Wedding Ceremonies, we offer personalized pooja services based on traditions, region, and your required customs.",
+//   },
+//   {
+//     title: "Auspicious Muhurat & Guidance",
+//     desc: "Our experts help you choose the best muhurat, ensuring maximum divine benefit and harmony in your rituals.",
+//   },
+//   {
+//     title: "Performed with Purity & Devotion",
+//     desc: "Every ritual is conducted with proper Vedic chanting, maintaining sanctity, discipline, and devotion at every step.",
+//   },
+// ];
+
+// export default function Why_Choose_Us() {
+//   return (
+//     <section className="relative bg-[#f6f2e7] py-20 px-6 md:px-10 overflow-hidden">
+//       {/* Heading */}
+//       <div className="text-center  max-w-3xl mx-auto">
+//         <h2 className="text-3xl md:text-4xl font-bold">
+//           Why Book with <span className="text-primary">Braj Pandit?</span>
+//         </h2>
+//         <p className="text-base md:text-lg mt-4 text-gray-700">
+//           Experience the divine grace of Lord Krishna through our authentic and trusted
+//           puja services
+//         </p>
+//       </div>
+
+//       {/* Content */}
+//       <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+//         {/* Left column */}
+//         <div className="space-y-8">
+//           {reasonsLeft.map((item, i) => (
+//             <div key={i}>
+//               <h3 className="text-xl font-semibold text-black">{item.title}</h3>
+//               <p className="text-gray-700 text-sm mt-2">{item.desc}</p>
+//             </div>
+//           ))}
+//         </div>
+
+//         {/* Center Image */}
+//         <div className="relative flex-wrap flex justify-center ">
+//           <div className="relative w-[350px] h-[500px] md:w-[400px] md:h-[600px] lg:w-[650px] lg:h-[450px]">
+//             <Image
+//               src="/assets/shivji.png"
+//               alt="Lord Shiva illustration"
+//               fill
+//               className="object-contain"
+//               priority
+//             />
+//           </div>
+//         </div>
+
+//         {/* Right column */}
+//         <div className="space-y-8">
+//           {reasonsRight.map((item, i) => (
+//             <div key={i}>
+//               <h3 className="text-xl font-semibold text-black">{item.title}</h3>
+//               <p className="text-gray-700 text-sm mt-2">{item.desc}</p>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
