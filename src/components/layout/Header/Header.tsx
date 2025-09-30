@@ -28,7 +28,7 @@ const Header = () => {
     <TopHeader/>
     
   
-    <header className="sticky top-0 w-full py-4 px-4 z-9999 backdrop-blur-md bg-white/80 shadow-base">
+    <header className="cursor-pointer sticky top-0 w-full py-4 px-4 z-9999 backdrop-blur-md bg-white/80 shadow-base">
 
       <nav className="hidden items-center justify-between gap-6 text-sm font-medium md:flex">
         <Logo />

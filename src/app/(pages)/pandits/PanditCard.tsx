@@ -2,41 +2,44 @@
 
 import Image from "next/image";
 import { Pandit } from "@/types/pandit";
-
+import Link from "next/link";
+import  Button  from "@/components/common/Button"
 interface PanditCardProps {
   pandit: Pandit;
 }
 function PanditCard({ pandit }: PanditCardProps) {
   return (
-    <div className="flex flex-col overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-transform hover:scale-[1.02] bg-white w-full h-full">
-      {/* Image */}
-      <div className="relative w-full aspect-[4/4]">
-        <Image
-          src={pandit.image}
-          alt={pandit.name}
-          fill
-          className="object-cover"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          priority={false}
-        />
-      </div>
-
-      {/* Content */}
-      <div className="flex flex-col bg-[#F685008C] w-full p-3 sm:p-4 flex-grow">
-        <h3 className="text-sm sm:text-base font-semibold text-gray-700 truncate">
-          {pandit.name}
-        </h3>
-
-        <div className="flex justify-between items-center mt-1">
-          <p className="text-xs sm:text-sm text-gray-800 break-words flex-grow">
-            {pandit.specialization}
-          </p>
-          <p className="text-[10px] sm:text-xs text-gray-600 ml-3 whitespace-nowrap">
-            {pandit.experience}
-          </p>
+    <div className="flex flex-col rounded-lg overflow-hidden w-full max-w-sm mx-2 sm:mx-auto">
+          {/* Image */}
+          <div className="relative w-full aspect-[5/4]">
+            <Image
+              src={pandit.image}
+              alt={pandit.name}
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              priority={false}
+              style={{ objectFit: "cover", objectPosition: "top" }}
+            />
+          </div>
+    
+          {/* Content */}
+          <div className="flex flex-col bg-amber-100 w-full p-2">
+            {/* Name on top */}
+            <h3 className="text-sm font-medium truncate">{pandit.name}</h3>
+            <p className="text-xs break-words">{pandit.specialization}</p>
+            <p className="text-xs">{pandit.experience}</p>
+    
+            <Link href={`/pandits/${encodeURIComponent(pandit.slug)}`}>
+              <Button
+                className="mt-1 text-primary"
+                label="View Details"
+                size="v-small"
+                variant="link"
+              />
+            </Link>
+          </div>
         </div>
-      </div>
-    </div>
   );
 }
 

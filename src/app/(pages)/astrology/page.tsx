@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/common";
@@ -45,7 +47,7 @@ const astrologyServices: IAstrologyService[] = [
     link: "#",
   },
   {
-    id: 4,
+    id: 5,
     title: "Girlfriend Numerology & Palmistry",
     description:
       "Discover your destiny through numbers, palm lines, and tarot readings.",
@@ -57,33 +59,35 @@ const astrologyServices: IAstrologyService[] = [
 export default function AstrologyPage() {
   return (
     <main className="w-full overflow-hidden">
-      {/* Hero Section with Full Background Image */}
-      <section className="relative w-full h-[70vh] sm:h-[80vh] flex items-center justify-center text-center text-white">
-        {/* Background Image */}
-        <Image
-          src="/assets/astrology/astro1.jpg"
-          alt="Astrology"
-          fill
-          className="object-cover opacity-100"
-          priority
-        />
+      {/* Hero Section with Full Background Video */}
+      <section className="relative w-full h-[70vh] sm:h-[80vh] lg:h-screen flex items-center justify-center text-center text-white overflow-hidden">
+  {/* Background Video */}
+  <video
+    src="/assets/astrology/astro_video.mp4"
+    className="absolute top-0 left-0  w-full h-full object-cover"
+    autoPlay
+    muted
+    loop
+  />
 
-        {/* Content */}
-        <div className="relative z-10 px-4 sm:px-8 max-w-3xl">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-snug md:leading-tight">
-            <span className="text-white">Astrology</span>{" "}
-            <span className="text-primary"></span>
-          </h1>
-          <p className="mt-4 text-base sm:text-lg md:text-xl text-white-800"></p>
-          <div className="mt-6 flex justify-center">
-            <Link href="/pandits" className="mt-15">
-              <Button label="Book a Consultation" variant="primary" />
-            </Link>
-          </div>
-        </div>
-      </section>
+  {/* Overlay Content */}
+  <div className="relative z-10 px-4 sm:px-8 max-w-3xl">
+    <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-snug md:leading-tight">
+      <span className="text-white">Astrology</span>
+    </h1>
+    <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-100">
+      Discover insights about your career, health, love, and future with our expert astrologers.
+    </p>
+    <div className="mt-6 flex justify-center">
+      <Link href="/pandits">
+        <Button label="Book a Consultation" variant="primary" />
+      </Link>
+    </div>
+  </div>
+</section>
 
-      {/* Astrology Services */}
+
+      {/* Astrology Services Section */}
       <section className="bg-white py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-10">
