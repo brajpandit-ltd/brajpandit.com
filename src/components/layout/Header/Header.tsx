@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/common";
 import staticData from "@/constants/static.json";
 import Menu from "./Menu";
-
+import TopHeader from "./TopHeader";
 const Logo = () => {
   const {
     header: { logo },
@@ -23,7 +23,13 @@ const Header = () => {
   } = staticData;
 
   return (
+
+    <>
+    <TopHeader/>
+    
+  
     <header className="sticky top-0 w-full py-4 px-4 z-9999 backdrop-blur-md bg-white/80 shadow-base">
+
       <nav className="hidden items-center justify-between gap-6 text-sm font-medium md:flex">
         <Logo />
 
@@ -47,6 +53,8 @@ const Header = () => {
         />
       </nav>
     </header>
+
+    </>
   );
 };
 
