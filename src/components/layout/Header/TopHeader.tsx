@@ -21,7 +21,7 @@ export default function TopHeader() {
 
           <div className="flex items-center gap-2 border border-dotted border-secondary rounded-full px-4 py-1 bg-white/10">
             <span className="font-semibold text-secondary text-sm md:text-base">
-              Navratri Puja Special
+              Group e-Puja 
             </span>
           </div>
         </div>

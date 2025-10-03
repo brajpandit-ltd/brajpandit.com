@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import pandits from "@/constants/pandits.json";
 import { Pandit } from "@/types/pandit";
-import { PanditGrid } from "./PanditGrid";
+import PanditCard from "./PanditCard";
 
 export const metadata: Metadata = {
   title: "Pandits | Braj Pandit Ji",
@@ -64,13 +64,10 @@ async function PanditsPage({
       {/* Hero Section */}
       <section className="w-full bg-white flex flex-col justify-center items-center py-16 px-4 sm:px-6 lg:px-16">
         <div className="w-full max-w-[1400px] mx-auto flex flex-col items-center">
-          {/* Heading */}
           <h1 className="text-center font-bold text-3xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-gray-900 max-w-3xl">
             Our <span className="text-[#CD3C49]">Pandit Ji</span>, Your Guide to{" "}
             <span className="text-[#F68500]">Divine Harmony</span>
           </h1>
-
-          {/* Subheading */}
           <p className="mt-6 text-center text-base sm:text-lg md:text-xl text-gray-900 max-w-2xl opacity-90">
             Experience the Power of Vedic Rituals, Anytime, Anywhere. Book
             Expert Pandits for Your Sacred Ceremonies!
@@ -78,13 +75,25 @@ async function PanditsPage({
         </div>
       </section>
 
-      {/* Pandit Grid Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-16 py-0">
-        <div className="w-full max-w-[1400px] mx-auto">
-          <PanditGrid
-            pandits={filteredPandits}
-            search={searchQuery.toString()}
-          />
+      {/* Pandit Cards Grid */}
+      <section className="w-full px-4 sm:px-6 lg:px-16 py-10">
+        <div
+          className="
+            grid 
+            grid-cols-2 
+            sm:grid-cols-2 
+            md:grid-cols-3 
+            lg:grid-cols-4 
+            gap-6 
+            justify-items-center 
+            w-full 
+            max-w-[1400px] 
+            mx-auto
+          "
+        >
+          {filteredPandits.map((pandit) => (
+            <PanditCard key={pandit.id} pandit={pandit} />
+          ))}
         </div>
       </section>
     </main>
