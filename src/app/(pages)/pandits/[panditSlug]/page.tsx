@@ -1,22 +1,40 @@
-"use client";
-
-import { notFound } from "next/navigation";
 import pandits from "@/constants/pandits.json";
 import { Pandit } from "@/types/pandit";
 import Image from "next/image";
 import { Star } from "lucide-react";
 import Link from "next/link";
 import Button from "@/components/common/Button";
+import { IoIosShareAlt } from "react-icons/io";
+import { notFound } from "next/navigation";
 
-// Remove interface entirely
 export default function PanditDetailPage({ params }: { params: any }) {
-  // Access panditSlug directly
   const panditSlug = params?.panditSlug;
 
   const pandit = (pandits as Pandit[]).find((p) => p.slug === panditSlug);
 
   if (!pandit) return notFound();
 
+  // Dummy review data
+  const reviews = [
+    {
+      name: "Rahul Sharma",
+      date: "20-09-2025",
+      rating: 5,
+      text: "Had a wonderful session, very knowledgeable and kind.",
+    },
+    {
+      name: "Sneha Verma",
+      date: "19-09-2025",
+      rating: 5,
+      text: "The guidance was clear and helpful, highly recommend!",
+    },
+    {
+      name: "Amit Singh",
+      date: "18-09-2025",
+      rating: 5,
+      text: "Amazing experience, felt very comfortable throughout.",
+    },
+  ];
 
   return (
     <section className="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-10">
@@ -57,7 +75,7 @@ export default function PanditDetailPage({ params }: { params: any }) {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mt-6 justify-center md:justify-start">
-            <Link href="/pandits" className="w-full sm:w-auto">
+            <Link href={`/pandits/${pandit.slug}/book`} className="w-full sm:w-auto">
               <Button
                 label="Book Your Session"
                 variant="primary"
@@ -65,12 +83,19 @@ export default function PanditDetailPage({ params }: { params: any }) {
                 className="rounded-full w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white border-none"
               />
             </Link>
-            <Link href="/" className="w-full sm:w-auto">
+
+            <Link
+              href="https://wa.me/918595009640"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
               <Button
-                label="Call Us Directly"
+                label="at whatsapp"
+                icon={<IoIosShareAlt color="green" />}
                 variant="default"
                 size="small"
-                className="rounded-full w-full sm:w-auto bg-white text-black border border-gray-400 hover:bg-gray-100"
+                className="text-green-600"
               />
             </Link>
           </div>
@@ -93,21 +118,21 @@ export default function PanditDetailPage({ params }: { params: any }) {
           Reviews & Ratings
         </h2>
         <div className="space-y-5">
-          {[1, 2, 3].map((id) => (
+          {reviews.map((review, idx) => (
             <div
-              key={id}
+              key={idx}
               className="border p-4 sm:p-5 rounded-md shadow-sm bg-gray-50"
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                 <span className="font-semibold text-sm sm:text-base">
-                  User {id}
+                  {review.name}
                 </span>
                 <span className="text-xs sm:text-sm text-gray-500 mt-1 sm:mt-0">
-                  May 2023
+                  {review.date}
                 </span>
               </div>
               <div className="flex items-center gap-1 mt-2">
-                {[...Array(5)].map((_, i) => (
+                {[...Array(review.rating)].map((_, i) => (
                   <Star
                     key={i}
                     className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500"
@@ -116,12 +141,13 @@ export default function PanditDetailPage({ params }: { params: any }) {
                 ))}
               </div>
               <p className="text-sm sm:text-base text-gray-600 mt-3">
-                Excellent experience, highly recommended!
+                {review.text}
               </p>
             </div>
           ))}
         </div>
       </div>
     </section>
+    
   );
 }

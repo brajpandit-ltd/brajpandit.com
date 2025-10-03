@@ -6,6 +6,7 @@ import services from "@/services/services";
 import BookingForm from "./BookingForm";
 import { useSearchParams } from "next/navigation";
 
+
 const fetchPujaService: any = async (pujaSlug: string, pujaType: string) => {
   try {
     const { data: pujaService }: { data: any } =
@@ -80,6 +81,8 @@ const PageLayout = () => {
         <Suspense fallback={<div>Loading...</div>}>
           <BookingForm pujaService={pujaService} pujas={pujas || []} />
         </Suspense>
+
+        
       </div>
     </div>
   );

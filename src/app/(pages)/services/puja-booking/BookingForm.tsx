@@ -3,9 +3,16 @@
 import React, { FormEvent, memo, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/common";
-import { TextInput, SelectInput, TextareaInput } from "@/components/input";
+import { TextInput, TextareaInput } from "@/components/input";
 import services from "@/services/services";
 import { toast } from "react-toastify";
+
+import SelectInput from "./SelectInput";
+import BookedPujaToast from "@/components/BookedPujaToast";
+
+// import email services
+// import { sendPujaBookingEmail } from "@/services/bookingService";
+import { sendBookingEmails } from "@/services/bookingByEmailjs";
 
 type BookingFormData = {
   name: string;
@@ -62,7 +69,7 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
     const pujaPackage = pujaService?.packages?.find(
       (pkg: any) => pkg.id === packageId
     );
-    console.log(pujaPackage);
+
     setFormData((prevData) => ({
       ...prevData,
       packageId: `${pujaPackage.title} : ${pujaPackage?.price}`,
@@ -80,6 +87,7 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setApiStatus({ ...apiStatus, loading: true });
+
     try {
       const bookingDetails = {
         ...formData,
@@ -91,13 +99,29 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
         trackingNumber: `TRK-${Math.random().toString(36).substring(2, 15)}`,
       };
 
+      // save booking via API
       const data = await services.pujaBooking(bookingDetails);
 
+      // show toast popup
+      toast.success(<BookedPujaToast bookingData={bookingDetails} />, {
+        className:
+          "bg-white text-gray-800 border-l-4 border-green-500 shadow-lg rounded-md p-4",
+        autoClose: 8000,
+        closeButton: true,
+      });
+
+
+
+      // send emails (user + admin)
+      // await sendPujaBookingEmail(bookingDetails); // MailerSend
+      await sendBookingEmails(bookingDetails);   // EmailJS fallback/extra
+
+
+
+
       setApiStatus({ ...apiStatus, success: true, message: data.message });
-      toast.success(`Booking successful!`);
     } catch (error: any) {
       setApiStatus({ ...apiStatus, error: error.message || "Booking failed" });
-      console.error("Error:", error);
       toast.error("Failed to book puja. Please try again.");
     } finally {
       setApiStatus({ ...apiStatus, loading: false });
@@ -119,7 +143,10 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
             brajpandit123@gmail.com
           </a>{" "}
           or call us at{" "}
-          <a href="tel:+918595009640" className="text-blue-600 hover:underline">
+          <a
+            href="tel:+918595009640"
+            className="text-blue-600 hover:underline"
+          >
             +918595009640
           </a>
           .
@@ -142,12 +169,13 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
           type="email"
           required
         />
+
         <SelectInput
           label="Service"
-          name="service"
-          value={formData.puja.value}
+          name="puja"
+          value={formData.puja}
           options={serviceOptions}
-          onChange={handleChange}
+          onChange={(option) => handleChange("puja", option)}
         />
 
         <TextInput
@@ -197,19 +225,14 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
           value={formData.gotra}
           onChange={handleChange}
         />
-        {/* <SelectInput
-          label="Pandit"
-          name="pandit"
-          value={formData.pandit}
-          onChange={handleChange}
-          options={panditOptions}
-        /> */}
+
         <Button
           type="submit"
           label="Confirm Booking"
           loading={apiStatus.loading}
           disabled={apiStatus.loading}
         />
+
         {apiStatus.success && (
           <p className="text-green-600">{apiStatus.message}</p>
         )}

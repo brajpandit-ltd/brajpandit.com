@@ -6,6 +6,7 @@
 
   --primary: #cd3c49;
   --primary-light: #e05a66;
+  --primary-light-1: #e0999f;
   --secondary: #f68500;
   --secondary-light: #ffb347;
   --accent: #ad832c;
@@ -16,6 +17,15 @@
   --text-black: #110a00;
   --text-white: #ffffff;
   --text-gray: #5c5c5c;
+
+  --green: #25d366;
+  --red: #ff0000;
+  --blue: #0000ff;
+  --yellow: #ffff00;
+  --cyan: #00ffff;
+  --magenta: #ff00ff;
+  --white: #ffffff;
+  --black: #000000;
 }
 
 @theme inline {
@@ -24,6 +34,7 @@
 
   --color-primary: var(--primary);
   --color-primary-light: var(--primary-light);
+  --color-primary-light-1: var(--primary-light-1);
   --color-secondary: var(--secondary);
   --color-secondary-light: var(--secondary-light);
   --color-accent: var(--accent);
@@ -33,6 +44,15 @@
   --color-text-black: var(--text-black);
   --color-text-white: var(--text-white);
   --color-text-gray: var(--text-gray);
+
+  --color-green: var(--green);
+  --color-red: var(--red);
+  --color-blue: var(--blue);
+  --color-yellow: var(--yellow);
+  --color-cyan: var(--cyan);
+  --color-magenta: var(--magenta);
+  --color-white: var(--white);
+  --color-black: var(--black);
 }
 
 .dark {
@@ -41,6 +61,7 @@
 
   --primary: #8a2230;
   --primary-light: #a23a48;
+  --primary-light-1: #e0999f;
   --secondary: #b36b00;
   --secondary-light: #ffb347;
   --accent: #ad832c;
@@ -51,6 +72,15 @@
   --text-black: #ffffff;
   --text-white: #110a00;
   --text-gray: #bdbdbd;
+
+  --green: #25d366;
+  --red: #ff0000;
+  --blue: #0000ff;
+  --yellow: #ffff00;
+  --cyan: #00ffff;
+  --magenta: #ff00ff;
+  --white: #ffffff;
+  --black: #000000;
 }
 
 body {

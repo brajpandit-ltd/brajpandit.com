@@ -3,6 +3,8 @@ import { Lexend } from "next/font/google";
 import "./globals.css";
 import { Footer, Header } from "@/components/layout";
 import { RootProvider } from "@/providers";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const lexend = Lexend({
   variable: "--font-lexend",
@@ -68,7 +70,21 @@ export default function RootLayout({
         <RootProvider>
           <>
             <Header />
-            <main>{children}</main>
+            <main>
+              {children}
+
+              <ToastContainer
+                position="top-center"
+                autoClose={8000}
+                hideProgressBar={false}
+                newestOnTop
+                closeOnClick
+                pauseOnHover
+                draggable
+                theme="light"
+                className="font-sans bg-red-500"
+              />
+            </main>
             <Footer />
           </>
         </RootProvider>

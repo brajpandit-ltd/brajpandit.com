@@ -1,37 +1,30 @@
-"use client";
-
 import Image from "next/image";
+import { C2APrefooter } from "@/components/layout";
 
 const teamMembers = [
   {
     id: 1,
-    name: "xxxxxxxxxxx",
-    role: "Founder & Developer",
-    image: "/assets/team/lalit.jpg",
+    name: "Arjun Singh",
+    role: "Senior Adviser & developer",
+    image: "/assets/team/arjun_singh.jpeg",
   },
   {
     id: 2,
-    name: "xxxxxx",
-    role: "Founder & Media",
+    name: "Lalit Kumar",
+    role: "UI Designer",
     image: "/assets/team/lalit.jpg",
   },
   {
     id: 3,
-    name: "xxxxxxxx",
-    role: "Senior Adviser",
-    image: "/assets/team/lalit.jpg",
+    name: "Jay Thakur",
+    role: "Developer",
+    image: "/assets/team/jay.jpg",
   },
   {
     id: 4,
-    name: "xxxxxxx",
-    role: "Co-founder & Developer",
-    image: "/assets/team/lalit.jpg",
-  },
-  {
-    id: 5,
-    name: "Virendra Singh Rajput",
-    role: "Co-founder",
-    image: "/assets/team/lalit.jpg",
+    name: "Krishna Chaudhary",
+    role: "Digital marketing",
+    image: "/assets/team/krishna_chaudhary.jpeg",
   },
 ];
 
@@ -120,7 +113,7 @@ export default function AboutUsPage() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
             Meet Our Team
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
             {teamMembers.map((member) => (
               <div
                 key={member.id}
@@ -145,20 +138,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-primary text-white py-16 sm:py-20 text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-            Want to Connect With Us?
-          </h2>
-          <p className="text-base sm:text-lg text-white/90">
-            Whether you want to book a puja, get astrology guidance, or know
-            more about our services, we are here to help you.
-          </p>
-          <button className="bg-white text-primary font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition">
-            Contact Us
-          </button>
-        </div>
-      </section>
+      <C2APrefooter />
     </main>
   );
 }

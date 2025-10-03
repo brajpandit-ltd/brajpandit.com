@@ -1,17 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Pandit } from "@/types/pandit";
+import { Button } from "@/components/common";
 
 export function PanditCard({ pandit }: { pandit: Pandit }) {
   return (
-    <Link
-  href={`/pandits/${encodeURIComponent(pandit.slug)}`}
-  className="rounded-xl shadow-md overflow-hidden bg-white hover:shadow-lg transition flex flex-col cursor-pointer w-full max-w-sm mx-2 sm:mx-auto"
->
-
+    <div className="flex flex-col rounded-lg overflow-hidden w-full max-w-sm mx-2 sm:mx-auto">
       {/* Image */}
-      <div className="relative w-full aspect-[5/4] sm:aspect-auto sm:h-40 md:h-44">
-
+      <div className="relative w-full aspect-[5/4]">
         <Image
           src={pandit.image}
           alt={pandit.name}
@@ -19,29 +15,26 @@ export function PanditCard({ pandit }: { pandit: Pandit }) {
           className="object-cover"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           priority={false}
+          style={{ objectFit: "cover", objectPosition: "top" }}
         />
       </div>
 
-     {/* Content */}
-<div className="flex flex-col bg-[#F685008C] w-full p-2 sm:p-2.5">
-  {/* Name on top */}
-  <h3 className="text-sm sm:text-base font-semibold text-gray-600 truncate">
-    {pandit.name}
-  </h3>
+      {/* Content */}
+      <div className="flex flex-col bg-amber-100 w-full p-2">
+        {/* Name on top */}
+        <h3 className="text-sm font-medium truncate">{pandit.name}</h3>
+        <p className="text-xs break-words">{pandit.specialization}</p>
+        <p className="text-xs">{pandit.experience}</p>
 
-  {/* Specialization and experience on the same row */}
-  <div className="flex justify-between items-center mt-1">
-    <p className="text-xs sm:text-sm text-gray-700 break-words">
-      {pandit.specialization}
-    </p>
-    <p className="text-[10px] sm:text-xs text-gray-600 ml-2 flex-shrink-0">
-      {pandit.experience}
-    </p>
-  </div>
-</div>
-
-
-
-    </Link>
+        <Link href={`/pandits/${encodeURIComponent(pandit.slug)}`}>
+          <Button
+            className="mt-1 text-primary"
+            label="View Details"
+            size="v-small"
+            variant="link"
+          />
+        </Link>
+      </div>
+    </div>
   );
 }

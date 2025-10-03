@@ -1,10 +1,8 @@
 import Image from "next/image";
-import {
-  PersonalisedPujas,
-  UpcommingPujas,
-} from "@/components/layout/home";
+import { PersonalisedPujas, UpcommingPujas } from "@/components/layout/home";
 import {
   BookingProcess,
+  C2APrefooter,
   FAQs,
   Testimonials,
   WhyChooseUs,
@@ -14,9 +12,8 @@ import Link from "next/link";
 // import {VerifiedPanditJis} from "@/components/layout/home";
 
 import VerifiedPanditsSection from "@/components/layout/home/PanditCard/VerifiedPandits";
+import Why_Choose_Us from "@/components/layout/home/Why_Choose_Us";
 
-
-  
 export const metadata = {
   title: "Braj Pandit Ji",
   description:
@@ -103,15 +100,18 @@ export default async function HomePage() {
           <div className="flex items-center justify-center flex-col md:flex-row mt-8 gap-6 md:gap-14">
 
 
-            <Link href="#verified-pandits" scroll={true}>
-  <Button label="Book Your Pandit Ji" variant="primary" />
+            <Link href="/services/e-puja" scroll={true}>
+  <Button label="Book Your Pooja" variant="primary" />
 </Link>
 
 
              <Link  href="/services">
             <Button label="See All Pooja Services" variant="default" />
+               </Link>
 
-            </Link>
+            
+
+           
           </div>
         </div>
       </section>
@@ -122,25 +122,24 @@ export default async function HomePage() {
       {/* VEDIC Braj Pandit'S PERSONALIZE POOJA */}
       <PersonalisedPujas />
 
-      <VerifiedPanditsSection/>
+      <VerifiedPanditsSection />
 
-      
       {/* <VerifiedPanditJis />  */}
 
-
-
-    
       {/* <LiveBhajans /> */}
 
       <BookingProcess />
-      <WhyChooseUs />
+        {/* <WhyChooseUs />  */}
+        
+
+      <Why_Choose_Us/>
       <Testimonials />
       <FAQs />
+      <C2APrefooter />
 
       {/* Dynamic Sections */}
-      
-      {/* <HomeProducts /> */}
 
+      {/* <HomeProducts /> */}
     </>
   );
 }

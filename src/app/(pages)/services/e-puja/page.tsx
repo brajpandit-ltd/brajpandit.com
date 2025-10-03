@@ -3,6 +3,7 @@ import React, { Suspense } from "react";
 
 import SearchHeader from "../SearchHeader";
 import EPujaServices from "./EPujaServices";
+// import HeroSection from "../HeroSection";
 
 export const metadata: Metadata = {
   title: "Book Pooja In Temples Across India",
@@ -29,6 +30,8 @@ const pujaCategories = [
 const page = async () => {
   return (
     <>
+
+    {/* <HeroSection/> */}
       <section className="px-6 py-8 md:py-12 lg:py-16 text-center bg-amber-100">
         <h1 className="text-3xl md:text-5xl font-bold text-primary">
           Sacred Rituals for Your Spiritual Journey

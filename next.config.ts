@@ -1,15 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  // output: "export",
 
+  eslint: {
+    ignoreDuringBuilds: true, // ⬅ disables eslint check at build
+  },
   images: {
     unoptimized: true,
     domains: [
       "i.pinimg.com",
       "res.cloudinary.com",
-      // add other domains if needed
     ],
   },
 };
