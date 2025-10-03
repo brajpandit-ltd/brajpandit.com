@@ -35,10 +35,11 @@ const reasonsRight = [
 
 export default function Why_Choose_Us() {
   return (
-    <section className="pb-10  relative bg-[#f6f2e7] pt-10 px-6 md:px-10 overflow-hidden sm:pb-5">
+    <section className="pb-10 lg:pb-6 relative bg-[#f6f2e7] pt-10 px-6 md:px-10 overflow-hidden sm:pb-5">
+
 
       {/* Mobile: Shiva Image on Top */}
-      <div className="relative w-full flex justify-center mb-8 lg:hidden">
+      <div className="relative w-full flex justify-center mb-8  lg:hidden">
         <div className="relative w-[200px] h-[200px]">
           <Image
             src="/assets/shivji.png"
@@ -77,7 +78,7 @@ export default function Why_Choose_Us() {
 
           {/* Center Column */}
           <div className="hidden lg:block relative">
-  <div className="relative w-full h-full md:w-[400px] md:h-[400px]  lg:w-[600px] lg:h-[550px]  lg:-translate-x-28 lg:-translate-y-17">
+  <div className="relative w-full h-full md:w-[400px] md:h-[400px]  lg:w-[600px] lg:h-[550px]  lg:-translate-x-28 lg:-translate-y-17 ">
     <Image
       src="/assets/shivji.png"
       alt="Lord Shiva illustration"
