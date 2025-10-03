@@ -75,7 +75,7 @@ export default function PanditDetailPage({ params }: { params: any }) {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mt-6 justify-center md:justify-start">
-            <Link href="/pandits/book-pandits" className="w-full sm:w-auto">
+            <Link href={`/pandits/${pandit.slug}/book`} className="w-full sm:w-auto">
               <Button
                 label="Book Your Session"
                 variant="primary"

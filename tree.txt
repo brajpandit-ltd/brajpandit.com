@@ -1,8 +1,7 @@
 brajpandit.com/
 ├── .env
+├── .env.local
 ├── .gitignore
-├── .local_env
-├── .next.zip
 ├── branch-demo (1).md
 ├── eslint.config.mjs
 ├── Home Page.png
@@ -16,16 +15,29 @@ brajpandit.com/
 │   │   ├── adaptive-icon.png
 │   │   ├── astrohero.jpg
 │   │   ├── astrology/
+│   │   │   ├── astro1.jpg
 │   │   │   ├── astro1.png
-│   │   │   ├── career-business-financial-astrology.jpg
-│   │   │   ├── Compatibility Synastry_ Secrets of Synastry Compatibility.jpg
-│   │   │   └── family.png
+│   │   │   ├── astro2.jpg
+│   │   │   ├── astroee.jpg
+│   │   │   ├── astro_Car.jpg
+│   │   │   ├── astro_good.jpg
+│   │   │   ├── astro_video.mp4
+│   │   │   ├── carrier.jpg
+│   │   │   ├── family.png
+│   │   │   ├── health.jpg
+│   │   │   └── relatio_astro.jpg
 │   │   ├── booking process.png
 │   │   ├── booking process2.png
 │   │   ├── booking process21.png
 │   │   ├── braj-pandit-logo.svg
+│   │   ├── group-puja/
+│   │   │   ├── navratri1.jpg
+│   │   │   ├── navratri2.jpg
+│   │   │   ├── navratri3.jpg
+│   │   │   └── navratri4.jpg
 │   │   ├── home-hero-light.jpg
 │   │   ├── home-hero.jpg
+│   │   ├── how_to_book.jpeg
 │   │   ├── mor.jpg
 │   │   ├── pandits/
 │   │   │   ├── Anil Sastri ji.jpg
@@ -34,10 +46,15 @@ brajpandit.com/
 │   │   │   ├── Kanhaiya Pandit ji.jpg
 │   │   │   ├── lalit.png
 │   │   │   ├── Meghsyam Vyas ji.jpg
+│   │   │   ├── panditnew.webp
+│   │   │   ├── pandit_hero.jpg
+│   │   │   ├── pandit_hero1.jpg
 │   │   │   ├── Pavan Upadhyay.jpg
 │   │   │   ├── Radha Raman ji.jpg
 │   │   │   ├── Ramesh Rasik ji maharaj.jpg
-│   │   │   └── Rohini saran ji .jpg
+│   │   │   ├── Rohini saran ji .jpg
+│   │   │   ├── services-hero.jpg
+│   │   │   └── vivek-mohan-shastri-.avif
 │   │   ├── personalized_puja/
 │   │   │   ├── baisakhi.jpg
 │   │   │   ├── business.jpeg
@@ -96,9 +113,19 @@ brajpandit.com/
 │   │   │   ├── wealth.png
 │   │   │   ├── Zodiac.jpeg
 │   │   │   └── zodic.jpeg
+│   │   ├── Puja_steps/
 │   │   ├── radhak.jpg
 │   │   ├── services-hero.jpg
 │   │   ├── shivji.png
+│   │   ├── step1.png
+│   │   ├── step2.png
+│   │   ├── step3.png
+│   │   ├── step4.png
+│   │   ├── team/
+│   │   │   ├── arjun_singh.jpeg
+│   │   │   ├── jay.jpg
+│   │   │   ├── krishna_chaudhary.jpeg
+│   │   │   └── lalit.jpg
 │   │   ├── temple.jpg
 │   │   └── testimonials/
 │   │       ├── lalit.jpg
@@ -108,6 +135,7 @@ brajpandit.com/
 │   │       ├── test4.jpg
 │   │       ├── test5.jpg
 │   │       └── test6.jpg
+│   ├── braj-pandit-logo.png
 │   ├── braj-pandit-logo.svg
 │   ├── favicon.ico
 │   └── logo-new.svg
@@ -125,6 +153,7 @@ brajpandit.com/
 │   │   │   ├── about-us/
 │   │   │   │   └── page.tsx
 │   │   │   ├── astrology/
+│   │   │   │   ├── AstrologyService.tsx
 │   │   │   │   └── page.tsx
 │   │   │   ├── blogs/
 │   │   │   │   └── page.tsx
@@ -135,7 +164,11 @@ brajpandit.com/
 │   │   │   ├── horoscope/
 │   │   │   │   └── page.tsx
 │   │   │   ├── pandits/
+│   │   │   │   ├── book-pandits/
+│   │   │   │   │   └── page.tsx
 │   │   │   │   ├── page.tsx
+│   │   │   │   ├── PanditCard.tsx
+│   │   │   │   ├── SearchComponent.tsx
 │   │   │   │   └── [panditSlug]/
 │   │   │   │       └── page.tsx
 │   │   │   └── services/
@@ -148,7 +181,10 @@ brajpandit.com/
 │   │   │       │       ├── CTASection.tsx
 │   │   │       │       ├── page.tsx
 │   │   │       │       └── TempleDetails.tsx
+│   │   │       ├── EPujaServices.tsx
 │   │   │       ├── Filter.tsx
+│   │   │       ├── group-puja/
+│   │   │       │   └── page.tsx
 │   │   │       ├── HeroSection.tsx
 │   │   │       ├── page.tsx
 │   │   │       ├── PoojaCard.tsx
@@ -200,11 +236,13 @@ brajpandit.com/
 │   │   │   └── TextInput.tsx
 │   │   ├── layout/
 │   │   │   ├── BookingProcess.tsx
+│   │   │   ├── C2APrefooter.tsx
 │   │   │   ├── FAQs.tsx
 │   │   │   ├── Footer.tsx
 │   │   │   ├── Header/
 │   │   │   │   ├── Header.tsx
-│   │   │   │   └── Menu.tsx
+│   │   │   │   ├── Menu.tsx
+│   │   │   │   └── TopHeader.tsx
 │   │   │   ├── home/
 │   │   │   │   ├── BlogSection.tsx
 │   │   │   │   ├── Categories.tsx
@@ -214,15 +252,14 @@ brajpandit.com/
 │   │   │   │   ├── index.tsx
 │   │   │   │   ├── LiveBhajans.tsx
 │   │   │   │   ├── PanditCard/
-│   │   │   │   │   ├── AllPanditCard.tsx
 │   │   │   │   │   ├── PanditCard.tsx
-│   │   │   │   │   ├── PanditGrid.tsx
 │   │   │   │   │   └── VerifiedPandits.tsx
 │   │   │   │   ├── PersonalisedPujas.tsx
 │   │   │   │   ├── PujaServiceCategories.tsx
 │   │   │   │   ├── PujaServices.tsx
 │   │   │   │   ├── UpcommingPujas.tsx
-│   │   │   │   └── VerifiedPanditjis.tsx
+│   │   │   │   ├── VerifiedPanditjis.tsx
+│   │   │   │   └── Why_Choose_Us.tsx
 │   │   │   ├── index.ts
 │   │   │   ├── ProductCard.tsx
 │   │   │   ├── Testimonials.tsx
