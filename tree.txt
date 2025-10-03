@@ -165,9 +165,7 @@ brajpandit.com/
 │   │   │   │   └── page.tsx
 │   │   │   ├── pandits/
 │   │   │   │   ├── book-pandits/
-│   │   │   │   │   ├── page.tsx
-│   │   │   │   │   └── [panditSlug]/
-│   │   │   │   │       └── page.tsx
+│   │   │   │   │   └── page.tsx
 │   │   │   │   ├── page.tsx
 │   │   │   │   ├── PanditCard.tsx
 │   │   │   │   ├── SearchComponent.tsx
