@@ -56,7 +56,7 @@ export default function Why_Choose_Us() {
           <h2 className="text-3xl md:text-4xl font-bold">
             Why Book with <span className="text-primary">Braj Pandit?</span>
           </h2>
-          <p className="text-base md:text-lg mt-4 text-gray-700">
+          <p className="relative text-base md:text-lg mt-4 text-gray-700">
             Experience the divine grace of Lord Krishna through our authentic and trusted
             puja services
           </p>
