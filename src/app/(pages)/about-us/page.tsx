@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { C2APrefooter } from "@/components/layout";
 
@@ -31,33 +33,29 @@ const teamMembers = [
 export default function AboutUsPage() {
   return (
     <main className="w-full overflow-hidden">
-      {/* Hero Section */}
-      <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Left Text */}
-          <div className="space-y-6 text-center md:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
-              About <span className="text-primary">Braj Pandit</span>
-            </h1>
-            <p className="text-gray-700 text-base sm:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
-              We are dedicated to bringing authentic Vedic rituals, astrology,
-              and spiritual guidance to devotees worldwide. Our mission is to
-              connect people with divine traditions in a modern, accessible, and
-              transparent way.
-            </p>
-          </div>
+      {/* Hero Video Section */}
+      <section className="relative w-full h-[50vh] sm:h-[60vh] lg:h-[90vh] flex items-center justify-center text-center overflow-hidden">
+        {/* Background Video */}
+        <video
+          src="/assets/videos/geeta_video.mp4"
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
 
-          {/* Right Image */}
-          <div className="flex justify-center md:justify-end">
-            <Image
-              src="/assets/radhak.jpg"
-              alt="Lord Krishna - Braj"
-              width={480}
-              height={480}
-              className="object-contain w-72 sm:w-80 md:w-[420px] h-auto rounded-xl shadow-lg"
-              priority
-            />
-          </div>
+        {/* Overlay Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 px-4 sm:px-8 max-w-3xl text-white">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-snug md:leading-tight">
+            <span className="text-primary"></span>
+          </h1>
+          <p className="mt-4 text-sm sm:text-lg md:text-xl">
+           
+          </p>
         </div>
       </section>
 
@@ -73,9 +71,7 @@ export default function AboutUsPage() {
                 Our Mission
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                To simplify access to Vedic rituals, pujas, and astrological
-                consultations, ensuring authenticity while making it available
-                online for everyone across the globe.
+                To simplify access to Vedic rituals, pujas, and astrological consultations, ensuring authenticity while making it available online for everyone across the globe.
               </p>
             </div>
             <div className="bg-white border border-primary/20 p-6 rounded-xl shadow-sm hover:shadow-md transition">
@@ -83,9 +79,7 @@ export default function AboutUsPage() {
                 Our Vision
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                To become the most trusted spiritual platform, helping millions
-                reconnect with their roots and divine traditions with ease and
-                transparency.
+                To become the most trusted spiritual platform, helping millions reconnect with their roots and divine traditions with ease and transparency.
               </p>
             </div>
           </div>
@@ -99,10 +93,7 @@ export default function AboutUsPage() {
             Our Story
           </h2>
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
-            Braj Pandit was founded with the vision of reviving the sacred
-            traditions of Vedic culture. From Mathura to Delhi NCR, we have
-            served thousands of devotees by performing authentic pujas,
-            providing astrology guidance, and supporting temple communities.
+            Braj Pandit was founded with the vision of reviving the sacred traditions of Vedic culture. From Mathura to Delhi NCR, we have served thousands of devotees by performing authentic pujas, providing astrology guidance, and supporting temple communities.
           </p>
         </div>
       </section>
@@ -127,9 +118,7 @@ export default function AboutUsPage() {
                     className="object-cover object-center rounded-full border-4 border-primary/30"
                   />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900">
-                  {member.name}
-                </h3>
+                <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
                 <p className="text-gray-600 text-sm">{member.role}</p>
               </div>
             ))}

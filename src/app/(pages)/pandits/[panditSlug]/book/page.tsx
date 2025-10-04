@@ -28,7 +28,7 @@ export default function PanditBookingPage() {
       {/* Hero Section */}
       <section className="relative py-16 md:py-24">
   <Image
-    src="/assets/services-hero.jpg"
+    src="/assets/pandits/pandithero.jpg"
     alt="Braj Pandit booking hero"
     fill
     priority
@@ -48,7 +48,7 @@ export default function PanditBookingPage() {
       Perform every ritual the authentic Vedic way. Book verified Pandits for
       Poojas, Havans, and Sanskars in Mathura, Vrindavan & beyond.
     </p>
-    <p className="mt-4">Scroll Down 🔻</p>
+    <p className="mt-4">Scroll Down </p>
   </div>
 </section>
 
