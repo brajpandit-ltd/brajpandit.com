@@ -39,7 +39,7 @@ const Header = () => {
         />
 
         <Link href="/pandits">
-          <Button variant="primary" label="Book Your Pooja" size="medium" />
+          <Button variant="primary" label="Book Your Pooja" size="small" />
         </Link>
       </nav>
 
