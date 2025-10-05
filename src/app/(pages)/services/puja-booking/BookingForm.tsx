@@ -6,17 +6,19 @@ import { Button } from "@/components/common";
 import { TextInput, TextareaInput } from "@/components/input";
 import services from "@/services/services";
 import { toast } from "react-toastify";
-
 import SelectInput from "./SelectInput";
 import BookedPujaToast from "@/components/BookedPujaToast";
 
-// import email services
-// import { sendPujaBookingEmail } from "@/services/bookingService";
+//  Email + WhatsApp helpers
 import { sendBookingEmails } from "@/services/bookingByEmailjs";
+// import { sendWhatsAppMessage } from "@/helper/messaging";
+import { sendWhatsApp } from "@/helper/messaging";
+
 
 type BookingFormData = {
   name: string;
   email: string;
+  phone: string;
   date: string;
   time: string;
   temple: string;
@@ -37,6 +39,7 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
   const [formData, setFormData] = useState<BookingFormData>({
     name: "",
     email: "",
+    phone: "",
     date: "",
     time: "",
     temple: "",
@@ -56,6 +59,9 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
     loading: false,
   });
 
+  const adminNumber = process.env.NEXT_PUBLIC_ADMIN_WHATSAPP_NUMBER!;
+
+  // Generate dropdown for pujas
   const serviceOptions = useMemo(() => {
     return pujas?.map((puja: any) => ({
       value: puja.slug,
@@ -63,6 +69,7 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
     }));
   }, [pujas]);
 
+  //  Auto-fill when user navigates via pujaSlug + packageId
   useEffect(() => {
     if (!pujaService) return;
 
@@ -72,7 +79,7 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
 
     setFormData((prevData) => ({
       ...prevData,
-      packageId: `${pujaPackage.title} : ${pujaPackage?.price}`,
+      packageId: `${pujaPackage?.title} : ${pujaPackage?.price}`,
       puja: {
         value: pujaService.slug,
         label: pujaService.title,
@@ -84,6 +91,7 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
     setFormData({ ...formData, [key]: value });
   };
 
+  //  MAIN SUBMIT HANDLER
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setApiStatus({ ...apiStatus, loading: true });
@@ -99,10 +107,10 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
         trackingNumber: `TRK-${Math.random().toString(36).substring(2, 15)}`,
       };
 
-      // save booking via API
+      //  Save booking via backend API
       const data = await services.pujaBooking(bookingDetails);
 
-      // show toast popup
+      // Toast popup for success
       toast.success(<BookedPujaToast bookingData={bookingDetails} />, {
         className:
           "bg-white text-gray-800 border-l-4 border-green-500 shadow-lg rounded-md p-4",
@@ -110,19 +118,39 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
         closeButton: true,
       });
 
+      //  Send Email confirmations (User + Admin)
+      await sendBookingEmails(bookingDetails);
 
+      // Send WhatsApp messages
+      const { name, phone, email, puja, date, time, address, packageId } =
+        bookingDetails;
 
-      // send emails (user + admin)
-      // await sendPujaBookingEmail(bookingDetails); // MailerSend
-      await sendBookingEmails(bookingDetails);   // EmailJS fallback/extra
+      const [pkgTitle, pkgPrice] = packageId.split(":").map((s: string) => s.trim());
 
+      // Message to User
+      // await sendWhatsAppMessage(
+      //   phone,
+      //   `🙏 Namaste ${name}, your pooja booking for "${puja.label}" is confirmed!\n🗓 Date: ${date} (${bookingDetails.day})\n⏰ Time: ${time}\n💰 Package: ${pkgTitle} - ${pkgPrice}\n📍 Address: ${address}\n\nThank you for booking with BrajPandit.com 🌸`
+      // );
 
+      // Message to Admin
+      // await sendWhatsAppMessage(
+      //   adminNumber,
+      //   `📩 New Pooja Booking Confirmed!\n👤 Name: ${name}\n📞 Phone: ${phone}\n📧 Email: ${email}\n🛕 Pooja: ${puja.label}\n💰 Package: ${pkgTitle} - ${pkgPrice}\n🗓 Date: ${date} (${bookingDetails.day})\n⏰ Time: ${time}\n📍 Address: ${address}`
+      // );
 
-
-      setApiStatus({ ...apiStatus, success: true, message: data.message });
+      setApiStatus({
+        ...apiStatus,
+        success: true,
+        message: data?.message || "Booking successful!",
+      });
     } catch (error: any) {
-      setApiStatus({ ...apiStatus, error: error.message || "Booking failed" });
-      toast.error("Failed to book puja. Please try again.");
+      console.error("❌ Booking Error:", error);
+      setApiStatus({
+        ...apiStatus,
+        error: error.message || "Booking failed",
+      });
+      toast.error("Failed to complete booking. Please try again.");
     } finally {
       setApiStatus({ ...apiStatus, loading: false });
     }
@@ -134,7 +162,7 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
         <h2 className="text-4xl font-extrabold text-center mb-2 text-primary">
           Book Your Puja
         </h2>
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-gray-500 text-center">
           For any queries, contact us at{" "}
           <a
             href="mailto:brajpandit123@gmail.com"
@@ -143,11 +171,8 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
             brajpandit123@gmail.com
           </a>{" "}
           or call us at{" "}
-          <a
-            href="tel:+918595009640"
-            className="text-blue-600 hover:underline"
-          >
-            +918595009640
+          <a href="tel:+918595009640" className="text-blue-600 hover:underline">
+            +91 8595009640
           </a>
           .
         </p>
@@ -155,7 +180,7 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-2">
         <TextInput
-          label="Name"
+          label="Full Name"
           name="name"
           value={formData.name}
           onChange={handleChange}
@@ -169,9 +194,17 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
           type="email"
           required
         />
+        <TextInput
+          label="Phone (with country code)"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+          placeholder="e.g. 919876543210"
+        />
 
         <SelectInput
-          label="Service"
+          label="Select Puja"
           name="puja"
           value={formData.puja}
           options={serviceOptions}
@@ -179,12 +212,12 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
         />
 
         <TextInput
-          label="Selected Package Service"
+          label="Selected Package"
           name="packageId"
           value={formData.packageId}
           onChange={handleChange}
-          required
           type="text"
+          required
           disabled
         />
 
@@ -206,12 +239,14 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
             required
           />
         </div>
+
         <TextInput
-          label="Temple"
+          label="Temple (optional)"
           name="temple"
           value={formData.temple}
           onChange={handleChange}
         />
+
         <TextareaInput
           label="Address"
           name="address"
@@ -219,8 +254,9 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
           onChange={handleChange}
           required
         />
+
         <TextInput
-          label="Gotra"
+          label="Gotra (optional)"
           name="gotra"
           value={formData.gotra}
           onChange={handleChange}
@@ -239,9 +275,9 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
         {apiStatus.error && <p className="text-red-600">{apiStatus.error}</p>}
       </form>
     </div>
+    
   );
 });
 
 BookingForm.displayName = "BookingForm";
-
 export default BookingForm;

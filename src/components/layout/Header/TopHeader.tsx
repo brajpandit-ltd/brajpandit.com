@@ -30,7 +30,7 @@ export default function TopHeader() {
         <div className="flex items-center mt-2 md:mt-0">
           <Link
             href="/services/group-puja"
-            className="bg-secondary text-white px-5 py-1.5 rounded-full font-medium shadow-md hover:scale-105 hover:bg-red-700 transition text-sm md:text-base"
+            className="bg-secondary text-white px-5 py-1.5 rounded-full font-medium shadow-md hover:scale-105 hover:bg-primary transition text-sm md:text-base"
           >
             200 /- Book Now
           </Link>

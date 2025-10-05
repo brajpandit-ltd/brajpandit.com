@@ -39,7 +39,7 @@ export default function Why_Choose_Us() {
 
 
       {/* Mobile: Shiva Image on Top */}
-      <div className="relative w-full flex justify-center mb-8  lg:hidden">
+      <div className="pointer-events-none relative w-full flex justify-center mb-8  lg:hidden">
         <div className="relative w-[200px] h-[200px]">
           <Image
             src="/assets/shivji.png"

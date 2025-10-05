@@ -10,25 +10,29 @@ import services from "@/services/services";
 import { sendBookingEmails } from "@/services/bookingByEmailjs";
 import BookedPujaToast from "@/components/BookedPujaToast";
 
-export default function NavratriPuja() {
+export default function DhanterasPuja() {
   const [readMore, setReadMore] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    puja: "Navratri Puja (Online)",
-    price: "₹150",
+    puja: "Dhanteras Puja (Online)",
+    price: "₹201",
   });
 
   const [loading, setLoading] = useState(false);
 
   const description = `
-Navratri Puja e-Puja
-Navratri is one of the most sacred Hindu festivals dedicated to Goddess Durga and her nine divine forms. During these nine days, devotees worship Maa Durga to seek her blessings for health, wealth, and prosperity.
+Dhanteras marks the first day of the five-day Diwali festival. 
+It is considered highly auspicious for purchasing gold, silver, and other valuable items. 
+Devotees worship Lord Dhanvantari, the god of Ayurveda, and Goddess Lakshmi for health, 
+wealth, and prosperity. Performing Dhanteras Puja invites divine blessings, protection, 
+and abundance into your home. 
 
-Performing Navratri Puja brings peace, strength, and removes negativity from life. Our verified pandits will conduct the puja online with authentic rituals, mantras, and offerings. Devotees can join live through camera screen and experience the divine blessings at home.
-
-This special puja will be conducted on Navratri days, between 11:00 AM to 12:00 PM, ensuring Maa Durga’s blessings reach your family.
+Through our online Dhanteras Puja, you can join live from your home and witness the sacred rituals 
+performed by verified Braj Pandits directly from Mathura–Vrindavan. 
+This Puja will be conducted on <b>Dhanteras day</b>, between <b>6:00 PM to 8:00 PM</b>, 
+to invoke Goddess Lakshmi’s blessings and ensure prosperity and well-being for your family.
   `;
 
   const handleChange = (e: any) => {
@@ -43,26 +47,22 @@ This special puja will be conducted on Navratri days, between 11:00 AM to 12:00 
       const bookingDetails = {
         ...formData,
         date: new Date().toLocaleDateString(),
-        time: "11:00 AM - 12:00 PM",
+        time: "6:00 PM - 8:00 PM",
         orderNumber: `ORD-${Date.now()}`,
         trackingNumber: `TRK-${Math.random().toString(36).substring(2, 15)}`,
       };
 
-      // save booking
       await services.pujaBooking(bookingDetails);
 
-      // toast popup
       toast.success(<BookedPujaToast bookingData={bookingDetails} />, {
         className:
           "bg-white text-gray-800 border-l-4 border-green-500 shadow-lg rounded-md p-4",
         autoClose: 8000,
       });
 
-      // send emails
       await sendBookingEmails(bookingDetails);
 
-      // reset
-      setFormData({ name: "", email: "", puja: "Navratri Puja (Online)", price: "₹150" });
+      setFormData({ name: "", email: "", puja: "Dhanteras Puja (Online)", price: "₹201" });
     } catch (err: any) {
       toast.error("Failed to confirm booking. Try again.");
     } finally {
@@ -76,7 +76,7 @@ This special puja will be conducted on Navratri days, between 11:00 AM to 12:00 
       <section className="flex flex-col md:flex-row items-center gap-8 bg-gray-50 p-6 rounded-lg shadow-md">
         {/* Left Text */}
         <div className="flex-1 flex flex-col gap-4">
-          <h1 className="text-3xl font-bold text-primary">Navratri Puja e-Puja</h1>
+          <h1 className="text-3xl font-bold text-primary">Dhanteras Puja e-Puja</h1>
           <p className="text-gray-700">
             {readMore ? description : `${description.slice(0, 280)}...`}
           </p>
@@ -91,7 +91,7 @@ This special puja will be conducted on Navratri days, between 11:00 AM to 12:00 
               href="#booking-form"
               className="bg-primary text-white px-6 py-3 rounded-full font-medium shadow hover:bg-red-500 transition"
             >
-              Book Now ₹150
+              Book Now ₹201
             </Link>
           </div>
         </div>
@@ -100,8 +100,8 @@ This special puja will be conducted on Navratri days, between 11:00 AM to 12:00 
         <div className="flex-1 flex flex-col items-center w-full">
           <div className="relative w-full aspect-[5/4] md:aspect-[16/9]">
             <Image
-              src="/assets/group-puja/navratri1.jpg"
-              alt="Navratri Puja"
+              src="/assets/group-puja/dhanteras1.jpg"
+              alt="Dhanteras Puja"
               fill
               className="object-cover rounded-lg"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -140,13 +140,12 @@ This special puja will be conducted on Navratri days, between 11:00 AM to 12:00 
 
       {/* About Section */}
       <section className="flex flex-col gap-6">
-        <h2 className="text-2xl font-semibold">About Navratri Puja</h2>
+        <h2 className="text-2xl font-semibold">About Dhanteras Puja</h2>
         <p className="text-gray-700 leading-relaxed">
-          Navratri is celebrated to worship Maa Durga and her nine forms. Performing
-          this puja ensures protection from negative energies, prosperity in life,
-          and spiritual upliftment. The puja will be conducted live via camera
-          screen from 11:00 AM to 12:00 PM, allowing you to experience the divine
-          blessings of Maa Durga from your home.
+          Dhanteras, the first day of Diwali, is celebrated for wealth, prosperity, and health. 
+          Devotees worship Lord Dhanvantari and Goddess Lakshmi, perform rituals, and offer precious items 
+          as a symbol of gratitude and devotion. Participating in Dhanteras Puja brings abundance, removes obstacles, 
+          and ensures prosperity and well-being for the entire family.
         </p>
       </section>
 
@@ -158,8 +157,8 @@ This special puja will be conducted on Navratri days, between 11:00 AM to 12:00 
         {/* Left Image */}
         <div className="relative w-full aspect-[4/3] hidden md:block">
           <Image
-            src="/assets/group-puja/navratri2.jpg"
-            alt="Durga Maa Navratri"
+            src="/assets/group-puja/e-puja.jpg"
+            alt="Dhanteras Puja Ceremony"
             fill
             className="object-cover rounded-lg"
           />
@@ -167,10 +166,10 @@ This special puja will be conducted on Navratri days, between 11:00 AM to 12:00 
 
         {/* Right Form */}
         <div className="flex flex-col gap-6">
-          <h2 className="text-2xl font-semibold mb-2">Book Navratri Puja</h2>
+          <h2 className="text-2xl font-semibold mb-2">Book Dhanteras Puja</h2>
           <p className="text-gray-600 text-sm">
-            Join the live online puja on Navratri day, from <b>11:00 AM to 12:00 PM</b>.  
-            Contribution: <b>₹150</b>
+            Join the live online Dhanteras Puja on the auspicious day, from{" "}
+            <b>6:00 PM to 8:00 PM</b>. Contribution: <b>₹201</b>
           </p>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <input
@@ -202,7 +201,7 @@ This special puja will be conducted on Navratri days, between 11:00 AM to 12:00 
               disabled={loading}
               className="bg-primary text-white px-6 py-3 rounded-full shadow hover:bg-red-500 transition disabled:opacity-50"
             >
-              {loading ? "Booking..." : "Confirm Booking ₹150"}
+              {loading ? "Booking..." : "Confirm Booking ₹201"}
             </button>
           </form>
         </div>
