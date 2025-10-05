@@ -95,24 +95,28 @@ export default function PanditBookingPage() {
                   className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
-              <div>
-                <label className="block text-gray-700 font-medium mb-1">
-                  Date of Pooja
-                </label>
-                <input
-                  type="date"
-                  className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
-              <div>
-                <label className="block text-gray-700 font-medium mb-1">
-                  Time of Pooja
-                </label>
-                <input
-                  type="time"
-                  className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
+              <div className="flex gap-4">
+  <div className="w-1/2">
+    <label className="block text-gray-700 font-medium mb-1">
+      Date of Pooja
+    </label>
+    <input
+      type="date"
+      className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+    />
+  </div>
+
+  <div className="w-1/2">
+    <label className="block text-gray-700 font-medium mb-1">
+      Time of Pooja
+    </label>
+    <input
+      type="time"
+      className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+    />
+  </div>
+</div>
+
               <div>
                 <label className="block text-gray-700 font-medium mb-1">
                   Address

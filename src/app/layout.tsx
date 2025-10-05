@@ -66,11 +66,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${lexend.variable}`}>
+      <body className={`${lexend.variable} flex flex-col min-h-screen`}>
         <RootProvider>
           <>
             <Header />
-            <main>
+
+            {/* main takes remaining height so footer sticks to bottom */}
+            <main className="flex-grow">
               {children}
 
               <ToastContainer
@@ -85,6 +87,7 @@ export default function RootLayout({
                 className="font-sans bg-red-500"
               />
             </main>
+
             <Footer />
           </>
         </RootProvider>

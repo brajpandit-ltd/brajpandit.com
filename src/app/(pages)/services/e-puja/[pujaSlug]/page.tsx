@@ -14,7 +14,7 @@ import {
   Testimonials,
   FAQs,
 } from "@/components/layout";
-import TempleDetails from "./TempleDetails";
+// import TempleDetails from "./TempleDetails";
 import CTASection from "./CTASection";
 import { generateStaticParamsEPuja } from "@/services/e-pujaService";
 
@@ -41,6 +41,9 @@ const page = async ({ params }: any) => {
     <p className="text-base md:text-lg font-medium mt-3 md:mt-6">
       {data?.subtitle}
     </p>
+    
+
+    
 
     <p className="flex items-center gap-2 mt-4">
       <Button
@@ -149,10 +152,11 @@ const page = async ({ params }: any) => {
       </section>
 
       <BookingProcess />
-      <TempleDetails templeDetails={data.templeDetails} />
-      <WhyChooseUs />
-      <Testimonials />
+      {/* <TempleDetails templeDetails={data.templeDetails} /> */}
+      {/* <WhyChooseUs /> */}
+      
       <CTASection />
+      <Testimonials />
       <FAQs />
     </>
   );
