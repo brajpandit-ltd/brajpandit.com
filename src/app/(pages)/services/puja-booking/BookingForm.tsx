@@ -11,7 +11,9 @@ import BookedPujaToast from "@/components/BookedPujaToast";
 
 //  Email + WhatsApp helpers
 import { sendBookingEmails } from "@/services/bookingByEmailjs";
-import { sendWhatsAppMessage } from "@/helper/messaging";
+// import { sendWhatsAppMessage } from "@/helper/messaging";
+import { sendWhatsApp } from "@/helper/messaging";
+
 
 type BookingFormData = {
   name: string;
@@ -126,16 +128,16 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
       const [pkgTitle, pkgPrice] = packageId.split(":").map((s: string) => s.trim());
 
       // Message to User
-      await sendWhatsAppMessage(
-        phone,
-        `🙏 Namaste ${name}, your pooja booking for "${puja.label}" is confirmed!\n🗓 Date: ${date} (${bookingDetails.day})\n⏰ Time: ${time}\n💰 Package: ${pkgTitle} - ${pkgPrice}\n📍 Address: ${address}\n\nThank you for booking with BrajPandit.com 🌸`
-      );
+      // await sendWhatsAppMessage(
+      //   phone,
+      //   `🙏 Namaste ${name}, your pooja booking for "${puja.label}" is confirmed!\n🗓 Date: ${date} (${bookingDetails.day})\n⏰ Time: ${time}\n💰 Package: ${pkgTitle} - ${pkgPrice}\n📍 Address: ${address}\n\nThank you for booking with BrajPandit.com 🌸`
+      // );
 
       // Message to Admin
-      await sendWhatsAppMessage(
-        adminNumber,
-        `📩 New Pooja Booking Confirmed!\n👤 Name: ${name}\n📞 Phone: ${phone}\n📧 Email: ${email}\n🛕 Pooja: ${puja.label}\n💰 Package: ${pkgTitle} - ${pkgPrice}\n🗓 Date: ${date} (${bookingDetails.day})\n⏰ Time: ${time}\n📍 Address: ${address}`
-      );
+      // await sendWhatsAppMessage(
+      //   adminNumber,
+      //   `📩 New Pooja Booking Confirmed!\n👤 Name: ${name}\n📞 Phone: ${phone}\n📧 Email: ${email}\n🛕 Pooja: ${puja.label}\n💰 Package: ${pkgTitle} - ${pkgPrice}\n🗓 Date: ${date} (${bookingDetails.day})\n⏰ Time: ${time}\n📍 Address: ${address}`
+      // );
 
       setApiStatus({
         ...apiStatus,
