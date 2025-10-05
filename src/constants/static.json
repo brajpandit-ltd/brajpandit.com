@@ -1,6 +1,6 @@
 {
   "header": {
-    "logo": "/braj-pandit-logo.png",
+    "logo": "/new_braj_pandit_logo.png",
     "menuItems": [
       { "label": "Home", "link": "/" },
       { "label": "Services", "link": "/services", "subMenu": [] },

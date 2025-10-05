@@ -39,7 +39,7 @@ export default function Why_Choose_Us() {
 
 
       {/* Mobile: Shiva Image on Top */}
-      <div className="relative w-full flex justify-center mb-8  lg:hidden">
+      <div className="pointer-events-none relative w-full flex justify-center mb-8  lg:hidden">
         <div className="relative w-[200px] h-[200px]">
           <Image
             src="/assets/shivji.png"
@@ -54,10 +54,10 @@ export default function Why_Choose_Us() {
       <div className="relative max-w-7xl mx-auto">
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-2xl md:text-3xl font-bold">
             Why Book with <span className="text-primary">Braj Pandit?</span>
           </h2>
-          <p className="relative text-base md:text-lg mt-4 text-gray-700">
+          <p className="text-base md:text-md max-w-2xl mx-auto mt-3">
             Experience the divine grace of Lord Krishna through our authentic and trusted
             puja services
           </p>
