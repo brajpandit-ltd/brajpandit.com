@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import services from "@/services/services";
+import services from "@/services/services";  
 
 const EPujaServices = () => {
   const params = useSearchParams();

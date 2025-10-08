@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { Button } from "@/components/common";
-import Link from "next/link";
+import { Menu as MenuIcon, X as CloseIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 interface MenuItem {
   label: string;
@@ -18,6 +19,7 @@ interface MenuProps {
 
 const Menu = ({ wrapperClass, isMobile = false, menuItems }: MenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -28,7 +30,7 @@ const Menu = ({ wrapperClass, isMobile = false, menuItems }: MenuProps) => {
       {isMobile && (
         <Button
           variant="default"
-          icon={<span className="material-icons">Menu</span>}
+          icon={<MenuIcon className="w-6 h-6" />}
           label=""
           size="large"
           className="border-none rounded-full !p-4"
@@ -37,21 +39,38 @@ const Menu = ({ wrapperClass, isMobile = false, menuItems }: MenuProps) => {
       )}
 
       <ul
-        className={`flex items-center gap-5 text-base font-normal ${wrapperClass} ${isMobile ? (isOpen ? "flex" : "hidden") : "md:flex"}`}
+        className={`flex items-center gap-5 text-base font-normal ${wrapperClass} ${
+          isMobile
+            ? isOpen
+              ? "flex flex-col absolute top-0 right-0 w-full h-screen bg-white p-6"
+              : "hidden"
+            : "md:flex"
+        }`}
       >
-        <li className="absolute top-4 right-4 md:hidden">
-          <Button
-            variant="default"
-            label="X"
-            size="large"
-            className="border-none rounded-full !p-4"
-            onClick={toggleMenu}
-          />
-        </li>
+        {/* Close button inside mobile menu */}
+        {isMobile && isOpen && (
+          <li className="absolute top-4 right-4 md:hidden">
+            <Button
+              variant="default"
+              icon={<CloseIcon className="w-6 h-6" />}
+              label=""
+              size="large"
+              className="border-none rounded-full !p-4"
+              onClick={toggleMenu}
+            />
+          </li>
+        )}
 
         {menuItems?.map((item, index) => (
-          <li key={index} className="hover:text-primary transition-colors">
-            <Link href={item.link}>{item.label}</Link>
+          <li
+            key={index}
+            className="hover:text-primary transition-colors"
+            onClick={() => {
+              router.push(item.link);
+              toggleMenu();
+            }}
+          >
+            <p>{item.label}</p>
           </li>
         ))}
       </ul>

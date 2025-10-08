@@ -3,7 +3,7 @@ import {
   getPersonalisedPujas,
   getPersonalisedPuja,
 } from "./personalisedPujaService";
-import { sendEmailByEmailjs } from "./bookingByEmailjs";
+import { sendBookingEmails } from "./bookingByEmailjs";
 
 export const services = {
   ePujas: async (search: string = "", isServer = true) => {
@@ -22,7 +22,7 @@ export const services = {
 
   pujaBooking: async (body: any) => {
     // await sendPujaBookingEmail(body);
-    await sendEmailByEmailjs(body);
+    await sendBookingEmails(body);
 
     return {
       success: true,

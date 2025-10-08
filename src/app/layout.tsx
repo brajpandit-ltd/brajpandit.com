@@ -3,6 +3,8 @@ import { Lexend } from "next/font/google";
 import "./globals.css";
 import { Footer, Header } from "@/components/layout";
 import { RootProvider } from "@/providers";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const lexend = Lexend({
   variable: "--font-lexend",
@@ -64,11 +66,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${lexend.variable}`}>
+      <body className={`${lexend.variable} flex flex-col min-h-screen`}>
         <RootProvider>
           <>
             <Header />
-            <main>{children}</main>
+
+            {/* main takes remaining height so footer sticks to bottom */}
+            <main className="flex-grow">
+              {children}
+
+              <ToastContainer
+                position="top-center"
+                autoClose={8000}
+                hideProgressBar={false}
+                newestOnTop
+                closeOnClick
+                pauseOnHover
+                draggable
+                theme="light"
+                className="font-sans bg-red-500"
+              />
+            </main>
+
             <Footer />
           </>
         </RootProvider>

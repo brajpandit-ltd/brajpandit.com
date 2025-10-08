@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,6 +9,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Logo + Description */}
         <div>
+          <Link href='/'>
           <Image
             src="/assets/braj-pandit-logo.svg"
             alt="Braj Pandit Logo"
@@ -18,11 +17,12 @@ const Footer = () => {
             height={60}
             className="mb-4"
           />
+          </Link>
           <p className="text-sm leading-relaxed">
             Welcome to <span className="font-semibold">Braj Pandit</span> – your
             trusted source for online puja services, astrology consultations,
-            prasad delivery, and spiritual essentials like Rudraksha, Shaligrams,
-            and Yantras.
+            prasad delivery, and spiritual essentials like Rudraksha,
+            Shaligrams, and Yantras.
           </p>
         </div>
 
@@ -36,7 +36,10 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="/services/e-puja" className="hover:text-primary transition">
+              <Link
+                href="/services/e-puja"
+                className="hover:text-primary transition"
+              >
                 E Pujas
               </Link>
             </li>
@@ -76,7 +79,7 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2">
-              <FaFacebookF className="text-blue-600" /> 
+              <FaFacebookF className="text-blue-600" />
               <a
                 href="https://www.facebook.com"
                 target="_blank"
@@ -87,7 +90,7 @@ const Footer = () => {
               </a>
             </li>
             <li className="flex items-center gap-2">
-              <FaInstagram className="text-pink-500" /> 
+              <FaInstagram className="text-pink-500" />
               <a
                 href="https://www.instagram.com/vedagyanam_official/?igsh=ODkyNHhmczZiYnhh"
                 target="_blank"
@@ -98,7 +101,7 @@ const Footer = () => {
               </a>
             </li>
             <li className="flex items-center gap-2">
-              <FaYoutube className="text-red-600" /> 
+              <FaYoutube className="text-red-600" />
               <a
                 href="https://youtube.com/@vedagyanam?si=587Ev8d_yQzUOVE4"
                 target="_blank"
@@ -114,7 +117,8 @@ const Footer = () => {
 
       {/* Bottom copyright */}
       <div className="mt-10 text-center text-sm text-gray-600 border-t border-gray-300 pt-2">
-        © {new Date().getFullYear()} <span className="font-semibold">BrajPandit</span>. All rights reserved.
+        © {new Date().getFullYear()}{" "}
+        <span className="font-semibold">BrajPandit</span>. All rights reserved.
       </div>
     </footer>
   );

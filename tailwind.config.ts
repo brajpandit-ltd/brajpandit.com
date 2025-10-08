@@ -11,6 +11,7 @@ module.exports = {
         primary: "var(--primary)",
         "primary-dark": "var(--primary-dark)",
         "primary-light": "var(--primary-light)",
+        "primary-light-1": "var(--primary-light-1)",
         secondary: "var(--secondary)",
         "secondary-dark": "var(--secondary-dark)",
         "secondary-light": "var(--secondary-light)",
@@ -21,6 +22,15 @@ module.exports = {
         "text-black": "var(--text-black)",
         "text-white": "var(--text-white)",
         "text-gray": "var(--text-gray)",
+
+        green: "var(--green)",
+        red: "var(--red)",
+        blue: "var(--blue)",
+        yellow: "var(--yellow)",
+        cyan: "var(--cyan)",
+        magenta: "var(--magenta)",
+        white: "var(--white)",
+        black: "var(--black)",
       },
 
       transitionTimingFunction: {

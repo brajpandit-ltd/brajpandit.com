@@ -3,13 +3,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/common";
-const astrologyServices = [
+import AstrologyService from "./AstrologyService";
+
+export interface IAstrologyService {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
+
+const astrologyServices: IAstrologyService[] = [
   {
     id: 1,
     title: "Career & Finance Guidance",
     description:
       "Get clarity on your career growth, job opportunities, and financial stability.",
-    image: "/assets/astrology/astro1.png",
+    image: "/assets/astrology/astro_Car.jpg",
     link: "#",
   },
   {
@@ -25,7 +35,7 @@ const astrologyServices = [
     title: "Health Astrology",
     description:
       "Understand planetary influences on your health and remedies for well-being.",
-    image: "/assets/astrology/family.png",
+    image: "/assets/astrology/health.jpg",
     link: "#",
   },
   {
@@ -33,7 +43,15 @@ const astrologyServices = [
     title: "Numerology & Palmistry",
     description:
       "Discover your destiny through numbers, palm lines, and tarot readings.",
-    image: "/assets/astrology/family.png",
+    image: "/assets/astrology/astro1.png",
+    link: "#",
+  },
+  {
+    id: 5,
+    title: "Girlfriend Numerology & Palmistry",
+    description:
+      "Discover your destiny through numbers, palm lines, and tarot readings.",
+    image: "/assets/astrology/relatio_astro.jpg",
     link: "#",
   },
 ];
@@ -41,74 +59,55 @@ const astrologyServices = [
 export default function AstrologyPage() {
   return (
     <main className="w-full overflow-hidden">
-      {/* Hero Section with Full Background Image */}
-      <section className="relative w-full h-[70vh] sm:h-[80vh] flex items-center justify-center text-center text-white">
-        {/* Background Image */}
-        <Image
-          src="/assets/astrohero.jpg"
-          alt="Astrology"
-          fill
-          className="object-cover"
-          priority
-        />
+      {/* ✅ Responsive Hero Video Section */}
+      <section className="relative w-full h-[40vh] sm:h-[60vh] lg:h-[90vh] flex items-center justify-center text-center text-white overflow-hidden">
+        {/* Background Video */}
+        <video
+  src="/assets/videos/old_astro_video.mp4"
+  className="absolute top-0 left-0 w-full h-full object-cover"
+ 
+  autoPlay
+  muted
+  loop
+  playsInline
+/>
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-white/80"></div>
 
 
-        {/* Content */}
+
+
+
+        {/* Overlay gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70" />
+
+        {/* Hero Content */}
         <div className="relative z-10 px-4 sm:px-8 max-w-3xl">
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-snug md:leading-tight">
-            <span className="text-black">Explore the</span>{" "}
-            <span className="text-primary">Science of Astrology</span>
+            Astrology
           </h1>
-          <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-800">
-            Astrology helps you align with the cosmic energies and find answers
-            about love, career, health, and spiritual growth.
+          <p className="mt-4 text-sm sm:text-lg md:text-xl text-gray-100">
+            Discover insights about your career, health, love, and future with
+            our expert astrologers.
           </p>
-         <div className="mt-6 flex justify-center">
-  <Button 
-    label="Book a Consultation" 
-    variant="primary" 
-  />
-</div>
-
+          <div className="mt-6 flex justify-center">
+            <Link href="/pandits">
+              <Button label="Book a Consultation" variant="primary" />
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Astrology Services */}
+      {/* ✅ Astrology Services Section */}
       <section className="bg-white py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-10">
             Our Astrology Services
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          {/* Responsive Grid Layout */}
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
             {astrologyServices.map((service) => (
-              <div
-                key={service.id}
-                className="bg-[#fff5dc] rounded-xl shadow hover:shadow-lg transition p-6 flex flex-col items-center text-center"
-              >
-                <div className="relative w-24 h-24 sm:w-28 sm:h-28 mb-4">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover object-center rounded-full"
-                  />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 text-sm mb-3">
-                  {service.description}
-                </p>
-                <Link
-                  href={service.link}
-                  className="mt-auto inline-block bg-primary hover:bg-red-700 text-white text-xs sm:text-sm px-4 py-2 rounded-full shadow transition"
-                >
-                  Learn More
-                </Link>
-              </div>
+              <AstrologyService key={service.id} service={service} />
             ))}
           </div>
         </div>
