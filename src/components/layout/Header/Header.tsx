@@ -38,7 +38,7 @@ const Header = () => {
           wrapperClass="flex-1 justify-center"
         />
 
-        <Link href="/pandits">
+        <Link href="/services">
           <Button variant="primary" label="Book Your Pooja" size="small" />
         </Link>
       </nav>
