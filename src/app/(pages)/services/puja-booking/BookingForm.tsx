@@ -240,12 +240,12 @@ const BookingForm = memo(({ pujaService, pujas = [] }: any) => {
           />
         </div>
 
-        <TextInput
+        {/* <TextInput
           label="Temple (optional)"
           name="temple"
           value={formData.temple}
           onChange={handleChange}
-        />
+        /> */}
 
         <TextareaInput
           label="Address"

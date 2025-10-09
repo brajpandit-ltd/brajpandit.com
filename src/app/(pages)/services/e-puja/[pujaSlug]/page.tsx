@@ -76,11 +76,12 @@ const page = async ({ params }: any) => {
   </div>
 
   {/* Right side - Banner Image */}
+
   <div className="flex-1 flex justify-center">
     <Image
       src={data?.bannerImage || "/assets/pujas/banner.jpg"}
       alt={data?.title || "banner"}
-      width={500}       // control max size
+      width={500}       
       height={400}
       className="w-full h-auto max-h-[400px] object-cover rounded-lg shadow-md"
     />
