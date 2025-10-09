@@ -1,5 +1,7 @@
 import { Button } from "@/components/common";
 import { Phone, MessageCircle, Calendar } from "lucide-react";
+import Link from "next/link";
+
 
 const CTASection = () => {
   return (
@@ -20,34 +22,62 @@ const CTASection = () => {
         ))}
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="container mx-auto px-3
+       relative z-10">
+        <div className=" text-center">
           <div className="mb-12">
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-              Book Your Krishna Janmashtami Puja Today &
-              <span className="block bg-gradient-divine text-transparent">
-                Invite Lord Krishna&apos;s Blessings!
+            <h2 className="text-2xl
+             md:text-3xl
+            font-bold mb-3
+             leading-tight">
+              
+              Book Your     
+             <span className="text-primary mx-2">
+                
+              Dhanteras Puja 
               </span>
+            
+                Invite 
+                <span className = "text-secondary mx-2">
+                 Devi Lakshmi 
+
+                 </span>
+
+                 in your life
+              
             </h2>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
+            <p className="
+            mx-auto leading-relaxed">
               Don&apos;t miss this sacred opportunity to celebrate the divine
               birth of Lord Krishna with authentic Braj traditions
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+            <Link href= "/services/puja-booking?pujaSlug=dhanteras&packageId=basic&pujaType=ePuja">
             <Button
               label="Proceed to Booking"
               variant="primary"
               size="medium"
               icon={<Calendar className="w-6 h-6" />}
             />
+
+            </Link>
+
+            <Link
+                          href="https://wa.me/918595009640"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full sm:w-auto"
+                        >
             <Button
               label="Call Now"
               icon={<Phone className="w-6 h-6" />}
               variant="default"
               size="medium"
             />
+
+            </Link>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 text-center">
