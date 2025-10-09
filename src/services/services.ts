@@ -22,7 +22,7 @@ export const services = {
 
   pujaBooking: async (body: any) => {
     // await sendPujaBookingEmail(body);
-    await sendBookingEmails(body);
+    // await sendBookingEmails(body);
 
     return {
       success: true,
