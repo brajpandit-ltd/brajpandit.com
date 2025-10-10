@@ -33,10 +33,10 @@ const page = async ({ params }: any) => {
 
   return (
     <>
-      <section className="relative flex flex-col md:flex-row items-center justify-between py-16 md:py-20 px-6 md:px-8 gap-8">
+      <section className="bg-amber-100 relative flex flex-col md:flex-row items-center justify-between py-16 md:py-20 px-6 md:px-8 gap-8">
   {/* Left side - Content */}
   <div className="flex-1 max-w-xl">
-    <h1 className="text-2xl md:text-4xl font-bold">{data?.title}</h1>
+    <h1 className="text-primary text-2xl md:text-4xl font-bold">{data?.title}</h1>
 
     <p className="text-base md:text-lg font-medium mt-3 md:mt-6">
       {data?.subtitle}
@@ -81,15 +81,16 @@ const page = async ({ params }: any) => {
     <Image
       src={data?.bannerImage || "/assets/pujas/banner.jpg"}
       alt={data?.title || "banner"}
+
       width={500}       
       height={400}
-      className="w-full h-auto max-h-[400px] object-cover rounded-lg shadow-md"
+      className="lg:w-[600] h-auto max-h-[400px] object-cover rounded-lg shadow-md"
     />
   </div>
 </section>
 
 
-      <section className="packages-section relative py-12 px-4 md:px-8 bg-amber-50">
+      <section className="packages-section relative py-12 px-4 md:px-8 ">
         <div className="border-l-4 border-secondary pl-4 transition-all">
           <h2 className="text-xl font-bold">
             Select your package and experience the power of Vedic Rituals
@@ -129,7 +130,7 @@ const page = async ({ params }: any) => {
                   size="small"
                   icon={<IoIosArrowRoundForward size={20} />}
                   iconPosition="right"
-                  className="w-full"
+                  className="w-full  "
                 />
               </Link>
             </div>
