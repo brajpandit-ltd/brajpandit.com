@@ -7,6 +7,23 @@ import services from "@/services/services";
 import data from "@/constants/pujaServices.json";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { setFilters } from "@/store/features/pujaSeavicesSlice";
+// import Button  from "@/components/common/Button";
+
+const categoryMap: Record<string, string> = {
+  wealth: "Wealth & Prosperity Pujas",
+  career: "self Career",
+  study: "Education & Knowledge Pujas",
+  health: "Health & Wellbeing Pujas",
+  business: "Career, Business & Financial Astrology",
+  relationship: "Relationship & Personal Life Astrology",
+  family: "Family & Harmony Pujas",
+  rudra: "Rudrakshya & Lord Shiva Pujas",
+  tantra: "Tantra & Protection Pujas",
+  zodiac: "Zodiac Based Pujas",
+  others: "Miscellaneous Pujas",
+};
+
+
 
 const PersonalisedPuja = () => {
   const { pujaCategories } = data;
@@ -22,10 +39,8 @@ const PersonalisedPuja = () => {
     setLoading(true);
 
     try {
-      const response: any = await services.personalisedPujas(
-        `?category=${category}`,
-        false
-      );
+      const mappedCategory = categoryMap[category] || "";
+  const response: any = await services.personalisedPujas(`?category=${mappedCategory}`, false);
       setPujas(response.data);
       setLoading(false);
     } catch (error) {
@@ -115,7 +130,7 @@ const PersonalisedPuja = () => {
                     <h3 className="text-sm font-bold line-clamp-1">
                       {puja?.title}
                     </h3>
-                    <p className="text-xs line-clamp-1">{puja.description}</p>
+                    <p className="text-xs line-clamp-2">{puja.description}</p>
                   </div>
                 </Link>
               </div>
