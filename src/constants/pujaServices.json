@@ -84,7 +84,7 @@
     },
     {
       "title": "Rudrakshya",
-      "slug": "rudrakshya",
+      "slug": "rudra",
       "image": "/assets/pujas/Rudrakshaya2.jpeg"
     },
     {
@@ -140,46 +140,7 @@
   ],
 
   "poojaServices": [
-    {
-      "title": "Janmastami Puja",
-      "slug": "janmastami-puja",
-      "category": "Horoscope & Kundli Services",
-      "trending": ["All Pujas"],
-      "tags": ["Griha Pravesh Puja"],
-      "description": "Janmastami is the festival of Krishna, the God of wealth and prosperity. People perform special puja to invite Him into their homes. Invite prosperity by booking a traditional Krishna-Puja.",
-
-      "bannerImage": "/assets/personalized_puja/janmmastami.jpg",
-      "images": [],
-      "count": 120,
-      "price": 500,
-      "duration": "1 hour",
-      "popular": true,
-      "rating": 5,
-      "packages": [
-        {
-          "id": "basic",
-          "title": "Abhishek Participation",
-          "price": "₹751",
-          "description": "Participate in temple abhishek remotely with name gotra sankalp.",
-          "features": [
-            "Gotra Sankalp by temple Pandit",
-            "Name included in puja",
-            "Abhishek video shared"
-          ]
-        },
-        {
-          "id": "premium",
-          "title": "Live Puja + Prasad",
-          "price": "₹1501",
-          "description": "Attend live puja via Zoom with special Braj prasad delivery.",
-          "features": [
-            "Live darshan",
-            "Temple prasadam delivery",
-            "Exclusive blessings from Braj Pandits"
-          ]
-        }
-      ]
-    },
+    
     {
       "title": "Diwali Pooja",
       "slug": "diwali-pooja",
@@ -187,7 +148,7 @@
       "trending": ["All Pujas"],
       "tags": ["Griha Pravesh Puja"],
       "description": "Diwali is the festival of lights, celebrated with joy and devotion. Book a Diwali Pooja to seek blessings for prosperity and happiness.",
-       "bannerImage": "/assets/personalized_puja/diwali.jpg",
+       "bannerImage": "https://cdn.99pandit.com/images/blogsimg/Diwali-Puja-in-Hyderabad-1.webp",
       "images": [],
       "count": 120,
       "price": 500,
@@ -219,6 +180,317 @@
         }
       ]
     },
+    {
+      "title": "Puja for career Growth",
+      "slug": "career",
+      "category": "self Career",
+      "trending": ["All Pujas"],
+      "tags": ["Griha Pravesh Puja"],
+      "description": "Book puja for career growth",
+
+      "bannerImage": "https://www.springboard.com/blog/wp-content/uploads/2022/01/sales-engineer-career-path-guide-for-2022-scaled-1-scaled.jpeg",
+      "images": [],
+      "count": 120,
+      "price": 500,
+      "duration": "1 hour",
+      "popular": true,
+      "rating": 5,
+      "packages": [
+        {
+          "id": "basic",
+          "title": "Abhishek Participation",
+          "price": "₹751",
+          "description": "Participate in temple abhishek remotely with name gotra sankalp.",
+          "features": [
+            "Gotra Sankalp by temple Pandit",
+            "Name included in puja",
+            "Abhishek video shared"
+          ]
+        },
+        {
+          "id": "premium",
+          "title": "Live Puja + Prasad",
+          "price": "₹1501",
+          "description": "Attend live puja via Zoom with special Braj prasad delivery.",
+          "features": [
+            "Live darshan",
+            "Temple prasadam delivery",
+            "Exclusive blessings from Braj Pandits"
+          ]
+        }
+      ]
+    },
+    {
+    "title": "Lakshmi Puja",
+    "slug": "wealth",
+    "category": "Wealth & Prosperity Pujas",
+    "description": "Performed to invite Goddess Lakshmi’s",
+    "bannerImage": "/assets/personalized_puja/wealth_puja.jpg",
+    "price": 501,
+    "duration": "1 hour",
+    "popular": true,
+    "rating": 5,
+    "packages": [
+      {
+        "id": "basic",
+        "title": "Remote Participation",
+        "price": "₹751",
+        "description": "Participate remotely with name–gotra sankalp.",
+        "features": ["Name included in puja", "Sankalp by temple pandit", "Video recording shared"]
+      },
+      {
+        "id": "premium",
+        "title": "Live Puja + Prasad",
+        "price": "₹1501",
+        "description": "Join live via Zoom and receive temple prasadam.",
+        "features": ["Live darshan", "Prasad delivery", "Personal blessings from pandits"]
+      }
+    ]
+  },
+  {
+    "title": "Office Puja",
+    "slug": "career",
+    "category": "Career, Business & Financial Astrology",
+    "description": "Book Puja for Office Opening",
+    "bannerImage": "https://www.panditjeeonline.in/wp-content/uploads/2022/12/office-pooja-768x576.jpg",
+    "price": 500,
+    "duration": "1 hour",
+    "popular": true,
+    "rating": 5,
+    "packages": [
+      {
+        "id": "basic",
+        "title": "Abhishek Participation",
+        "price": "₹751",
+        "description": "Participate remotely with name–gotra sankalp.",
+        "features": ["Gotra Sankalp", "Name included", "Video shared"]
+      },
+      {
+        "id": "premium",
+        "title": "Live Puja + Prasad",
+        "price": "₹1501",
+        "description": "Attend live puja via Zoom with prasad delivery.",
+        "features": ["Live darshan", "Prasadam delivery", "Exclusive blessings"]
+      }
+    ]
+  },
+  {
+    "title": "Saraswati Puja",
+    "slug": "study",
+    "category": "Education & Knowledge Pujas",
+    "description": "Saraswati is the godess of Knowledge",
+    "bannerImage": "/assets/personalized_puja/study1.jpg",
+    "price": 401,
+    "duration": "45 minutes",
+    "popular": false,
+    "rating": 4.8,
+    "packages": [
+      {
+        "id": "basic",
+        "title": "Remote Participation",
+        "price": "₹501",
+        "description": "Basic offering for knowledge seekers.",
+        "features": ["Name Sankalp", "Blessings for wisdom"]
+      },
+      {
+        "id": "premium",
+        "title": "Live Puja + Prasad",
+        "price": "₹1101",
+        "description": "Join live puja for study success.",
+        "features": ["Live darshan", "Prasadam", "Study success blessings"]
+      }
+    ]
+  },
+  {
+    "title": "Dhanvantri Puja",
+    "slug": "health",
+    "category": "Health & Wellbeing Pujas",
+    "description": "To promote good health, vitality",
+    "bannerImage": "/assets/personalized_puja/health1.jpeg",
+    "price": 601,
+    "duration": "1 hour",
+    "popular": true,
+    "rating": 4.9,
+    "packages": [
+      {
+        "id": "basic",
+        "title": "Sankalp Puja",
+        "price": "₹701",
+        "description": "Simple ritual for good health.",
+        "features": ["Name Sankalp", "Health mantra chanting"]
+      },
+      {
+        "id": "premium",
+        "title": "Live Puja + Prasad",
+        "price": "₹1301",
+        "description": "Comprehensive Dhanvantri Puja.",
+        "features": ["Live darshan", "Temple prasad", "Protection rituals"]
+      }
+    ]
+  },
+  {
+    "title": "Rudrabhishek Puja",
+    "slug": "rudra",
+    "category": "Rudrakshya & Lord Shiva Pujas",
+    "description": "Dedicated to Lord Shiva for peace",
+    "bannerImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUfnI9X7mz5B6ItvtL6uQOFJloozNrEuR0Bw&s",
+    "price": 751,
+    "duration": "1 hour 30 minutes",
+    "popular": true,
+    "rating": 5,
+    "packages": [
+      {
+        "id": "basic",
+        "title": "Temple Offering",
+        "price": "₹751",
+        "description": "Remote Rudrabhishek ritual.",
+        "features": ["Gotra Sankalp", "Abhishek by Pandit"]
+      },
+      {
+        "id": "premium",
+        "title": "Live Puja + Rudraksha",
+        "price": "₹1801",
+        "description": "Attend live and receive sacred Rudraksha.",
+        "features": ["Live Zoom darshan", "Rudraksha delivery"]
+      }
+    ]
+  },
+  {
+    "title": "Business Success Puja",
+    "slug": "business",
+    "category": "Career, Business & Financial Astrology",
+    "description": "Puja for stability, profit in business.",
+    "bannerImage": "/assets/personalized_puja/business.jpeg",
+    "price": 901,
+    "duration": "1 hour",
+    "popular": false,
+    "rating": 4.7,
+    "packages": [
+      {
+        "id": "basic",
+        "title": "Business Prosperity Sankalp",
+        "price": "₹1001",
+        "description": "Basic puja for success in ventures.",
+        "features": ["Name Sankalp", "Lakshmi-Ganesh mantra chanting"]
+      },
+      {
+        "id": "premium",
+        "title": "Live Puja + Prasad",
+        "price": "₹2001",
+        "description": "Comprehensive live puja for entrepreneurs.",
+        "features": ["Live puja access", "Business prasad delivery"]
+      }
+    ]
+  },
+  {
+    "title": "Relationship Harmony Puja",
+    "slug": "relationship",
+    "category": "Relationship & Personal Life Astrology",
+    "description": "Improves harmony between partners",
+    "bannerImage": "/assets/personalized_puja/relationship2.jpeg",
+    "price": 601,
+    "duration": "45 minutes",
+    "popular": true,
+    "rating": 4.9,
+    "packages": [
+      {
+        "id": "basic",
+        "title": "Harmony Sankalp",
+        "price": "₹701",
+        "description": "Ritual for improving relationships.",
+        "features": ["Love & peace blessings"]
+      },
+      {
+        "id": "premium",
+        "title": "Live Puja + Prasad",
+        "price": "₹1301",
+        "description": "Comprehensive puja for relationship peace.",
+        "features": ["Live darshan", "Temple prasad"]
+      }
+    ]
+  },
+  {
+    "title": "Family Happiness Puja",
+    "slug": "family",
+    "category": "Family & Harmony Pujas",
+    "description": "Performed for peace, happiness in family life.",
+    "bannerImage": "/assets/personalized_puja/family.jpg",
+    "price": 701,
+    "duration": "1 hour",
+    "popular": false,
+    "rating": 4.8,
+    "packages": [
+      {
+        "id": "basic",
+        "title": "Family Unity Puja",
+        "price": "₹801",
+        "description": "Simple family welfare puja.",
+        "features": ["Family sankalp", "Unity blessings"]
+      },
+      {
+        "id": "premium",
+        "title": "Live Puja + Prasad",
+        "price": "₹1601",
+        "description": "Special puja for harmony and wellbeing.",
+        "features": ["Live puja", "Temple prasad"]
+      }
+    ]
+  },
+  {
+    "title": "Tantra Protection Puja",
+    "slug": "tantra",
+    "category": "Tantra & Protection Pujas",
+    "description": "remove negative energies and evil influences.",
+    "bannerImage": "/assets/personalized_puja/tantra.jpeg",
+    "price": 1201,
+    "duration": "2 hours",
+    "popular": true,
+    "rating": 5,
+    "packages": [
+      {
+        "id": "basic",
+        "title": "Protection Sankalp",
+        "price": "₹1301",
+        "description": "Basic protection ritual.",
+        "features": ["Protection mantras", "Negativity removal"]
+      },
+      {
+        "id": "premium",
+        "title": "Live Puja + Yantra",
+        "price": "₹2501",
+        "description": "Powerful tantra ritual with yantra delivery.",
+        "features": ["Live Zoom puja", "Tantra yantra sent home"]
+      }
+    ]
+  },
+  {
+    "title": "Zodiac Puja",
+    "slug": "zodiac",
+    "category": "Zodiac Based Pujas",
+    "description": "Puja based on individual Rashi.",
+    "bannerImage": "/assets/personalized_puja/zodiac.jpg",
+    "price": 501,
+    "duration": "45 minutes",
+    "popular": true,
+    "rating": 4.8,
+    "packages": [
+      {
+        "id": "basic",
+        "title": "Rashi Puja",
+        "price": "₹601",
+        "description": "Ritual based on moon sign.",
+        "features": ["Gotra Sankalp", "Rashi specific mantra"]
+      },
+      {
+        "id": "premium",
+        "title": "Live Zodiac Puja",
+        "price": "₹1201",
+        "description": "Comprehensive zodiac blessings.",
+        "features": ["Live darshan", "Customized zodiac prasad"]
+      }
+    ]
+  },
+ 
     {
       "title": "Ganesh Chaturthi Pooja",
       "slug": "ganesh-chaturthi-pooja",
@@ -297,6 +569,7 @@
         }
       ]
     },
+
     {
       "title": "Maha Shivaratri Pooja",
       "slug": "maha-shivaratri-pooja",
@@ -491,6 +764,73 @@
           ]
         }
       ]
-    }
+    },
+    {
+      "title": "Janmastami Puja",
+      "slug": "janmastami-puja",
+      "category": "Horoscope & Kundli Services",
+      "trending": ["All Pujas"],
+      "tags": ["Griha Pravesh Puja"],
+      "description": "Janmastami is the festival of Krishna, the God of wealth and prosperity. People perform special puja to invite Him into their homes. Invite prosperity by booking a traditional Krishna-Puja.",
+
+      "bannerImage": "/assets/personalized_puja/janmmastami.jpg",
+      "images": [],
+      "count": 120,
+      "price": 500,
+      "duration": "1 hour",
+      "popular": true,
+      "rating": 5,
+      "packages": [
+        {
+          "id": "basic",
+          "title": "Abhishek Participation",
+          "price": "₹751",
+          "description": "Participate in temple abhishek remotely with name gotra sankalp.",
+          "features": [
+            "Gotra Sankalp by temple Pandit",
+            "Name included in puja",
+            "Abhishek video shared"
+          ]
+        },
+        {
+          "id": "premium",
+          "title": "Live Puja + Prasad",
+          "price": "₹1501",
+          "description": "Attend live puja via Zoom with special Braj prasad delivery.",
+          "features": [
+            "Live darshan",
+            "Temple prasadam delivery",
+            "Exclusive blessings from Braj Pandits"
+          ]
+        }
+      ]
+    },
+     {
+    "title": "General Blessing Puja",
+    "slug": "others",
+    "category": "Miscellaneous Pujas",
+    "description": "Performed for overall wellbeing, peace, and positivity.",
+    "bannerImage": "/assets/personalized_puja/others.jpg",
+    "price": 401,
+    "duration": "30 minutes",
+    "popular": false,
+    "rating": 4.6,
+    "packages": [
+      {
+        "id": "basic",
+        "title": "General Blessing Sankalp",
+        "price": "₹501",
+        "description": "Simple ritual for blessings.",
+        "features": ["Gotra Sankalp", "Positive energy"]
+      },
+      {
+        "id": "premium",
+        "title": "Live Puja + Prasad",
+        "price": "₹901",
+        "description": "Attend live puja for overall prosperity.",
+        "features": ["Live Zoom access", "Temple prasad"]
+      }
+    ]
+  }
   ]
 }
