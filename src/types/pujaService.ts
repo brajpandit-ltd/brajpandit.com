@@ -2,12 +2,12 @@ export interface PujaService {
   title: string;
   slug: string;
   category: string;
-  trending: string[];
-  tags: string[];
+  trending?: string[];
+  tags?: string[];
   description: string | any;
   bannerImage: string;
-  images: string[];
-  count: number;
+  images?: string[];
+  count?: number;
   price: number;
   duration: string;
   popular: boolean;

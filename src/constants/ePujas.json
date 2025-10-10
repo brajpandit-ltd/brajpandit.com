@@ -6,9 +6,9 @@
   "subtitle": "Dhanteras marks the beginning of Diwali, symbolizing the arrival of abundance, good fortune, and spiritual prosperity. It is not only about material wealth but also inner light and divine blessings.",
   "bannerImage": "/assets/pujas/dhanteras1.jpg",
   "slug": "dhanteras",
-  "location": "Delhi NCR",
-  "date": "2025-10-20",
-  "time": "07:00 PM",
+  "location": "Mathura",
+  "date": "18-10-2025",
+  "time": "04:00 PM",
 
   "category": ["upcoming-pujas", "puja"],
   "tags": ["Dhanteras", "Lakshmi Puja", "Prosperity Rituals"],
@@ -93,8 +93,8 @@
   "bannerImage": "/assets/pujas/diwali puja.jpg",
   "slug": "diwali-puja",
   "location": "Mathura",
-  "date": "2025-10-29",
-  "time": "07:00 PM",
+  "date": "20-10-2025",
+  "time": "06:00 PM ",
 
   "category": ["upcoming-pujas", "puja", "lakshmi-ganesh-puja"],
   "tags": ["Diwali", "Lakshmi Puja", "Ganesh Puja", "Festival of Lights"],
@@ -202,6 +202,92 @@
   }
 }
 ,
+{
+  "title": "Govardhan Puja",
+  "subtitle": "Celebrate the divine act of Lord Krishna lifting the sacred Govardhan mountain to protect devotees.",
+  "bannerImage": "/assets/pujas/govardhan.jpg",
+  "slug": "govardhan-puja",
+  "location": "Delhi NCR",
+  "date": "22-10-2025",
+  "time": "06:00 PM",
+
+  "category": ["upcoming-pujas", "puja"],
+  "tags": ["Govardhan Puja", "Krishna", "Braj Tradition", "Nature Worship"],
+
+  "benefits": {
+    "heading": "Benefits of Govardhan Puja",
+    "description": "Govardhan Puja, also known as Annakut Puja, commemorates the day when Lord Krishna lifted the Govardhan mountain to protect the people of Braj from torrential rain. Performing this puja brings divine protection, prosperity, and harmony with nature.",
+    "points": [
+      "Invokes blessings of Lord Krishna for protection and prosperity",
+      "Removes obstacles and negative energies from home and life",
+      "Promotes gratitude towards nature and divine forces",
+      "Ensures good health, wealth, and happiness in the household",
+      "Brings divine grace and strengthens family unity"
+    ]
+  },
+
+  "packages": [
+    {
+      "id": "basic",
+      "title": "Basic Govardhan Puja",
+      "price": "₹501",
+      "description": "Simple Govardhan Puja performed with essential samagri and online pandit guidance.",
+      "features": [
+        "Essential samagri for puja",
+        "Pandit guidance via video call",
+        "Prasad from Govardhan temple"
+      ]
+    },
+    {
+      "id": "standard",
+      "title": "Complete Annakut Poojan",
+      "price": "₹1101",
+      "description": "Full Govardhan and Annakut Puja including havan, Govardhan parikrama, and prasad.",
+      "features": [
+        "Complete samagri set",
+        "In-person or on-site Pandit",
+        "Govardhan Havan and Annakut rituals",
+        "Temple prasad & blessings from Vrindavan"
+      ]
+    }
+  ],
+
+  "comparisonTable": {
+    "columns": ["Package", "Price", "Features", "Delivery"],
+    "rows": [
+      {
+        "package": "Basic",
+        "price": "₹501",
+        "features": "Video Call Puja + Samagri + Temple Prasad",
+        "delivery": "Yes"
+      },
+      {
+        "package": "Standard",
+        "price": "₹1101",
+        "features": "Full Puja + Havan + Annakut Offering + Prasad",
+        "delivery": "Yes"
+      }
+    ]
+  },
+
+  "templeDetails": {
+    "heading": "Our Temple Network",
+    "highlights": [
+      "Connected with sacred Govardhan Hill temples in Braj region",
+      "Rituals performed as per Vaishnav tradition",
+      "Prasad from Shri Giriraj Ji temples in Govardhan and Vrindavan"
+    ],
+    "temples": [
+      "Shri Giriraj Ji Temple (Govardhan)",
+      "Radha Kund Temple",
+      "ISKCON Temple (Vrindavan)",
+      "Banke Bihari Ji Temple (Vrindavan)",
+      "Radha Raman Mandir",
+      "Prem Mandir, Vrindavan"
+    ]
+  }
+}
+,
 
    {
   "title": "Bhai Dooj Poojan – Celebrating the Sacred Bond of Siblings",
@@ -209,7 +295,7 @@
         "bannerImage": "/assets/pujas/rakha_bandhan.jpg",
   "slug": "bhai-dooj-poojan",
   "location": "Delhi NCR",
-  "date": "2025-11-02",
+  "date": "23-10-2025",
   "time": "10:00 AM",
 
   "category": ["upcoming-pujas", "puja"],
@@ -289,92 +375,7 @@
   }
 }
 ,
-   {
-  "title": "Govardhan Puja",
-  "subtitle": "Celebrate the divine act of Lord Krishna lifting the sacred Govardhan mountain to protect devotees.",
-  "bannerImage": "/assets/pujas/govardhan.jpg",
-  "slug": "govardhan-puja",
-  "location": "Delhi NCR",
-  "date": "2025-10-23",
-  "time": "08:00 AM",
-
-  "category": ["upcoming-pujas", "puja"],
-  "tags": ["Govardhan Puja", "Krishna", "Braj Tradition", "Nature Worship"],
-
-  "benefits": {
-    "heading": "Benefits of Govardhan Puja",
-    "description": "Govardhan Puja, also known as Annakut Puja, commemorates the day when Lord Krishna lifted the Govardhan mountain to protect the people of Braj from torrential rain. Performing this puja brings divine protection, prosperity, and harmony with nature.",
-    "points": [
-      "Invokes blessings of Lord Krishna for protection and prosperity",
-      "Removes obstacles and negative energies from home and life",
-      "Promotes gratitude towards nature and divine forces",
-      "Ensures good health, wealth, and happiness in the household",
-      "Brings divine grace and strengthens family unity"
-    ]
-  },
-
-  "packages": [
-    {
-      "id": "basic",
-      "title": "Basic Govardhan Puja",
-      "price": "₹501",
-      "description": "Simple Govardhan Puja performed with essential samagri and online pandit guidance.",
-      "features": [
-        "Essential samagri for puja",
-        "Pandit guidance via video call",
-        "Prasad from Govardhan temple"
-      ]
-    },
-    {
-      "id": "standard",
-      "title": "Complete Annakut Poojan",
-      "price": "₹1101",
-      "description": "Full Govardhan and Annakut Puja including havan, Govardhan parikrama, and prasad.",
-      "features": [
-        "Complete samagri set",
-        "In-person or on-site Pandit",
-        "Govardhan Havan and Annakut rituals",
-        "Temple prasad & blessings from Vrindavan"
-      ]
-    }
-  ],
-
-  "comparisonTable": {
-    "columns": ["Package", "Price", "Features", "Delivery"],
-    "rows": [
-      {
-        "package": "Basic",
-        "price": "₹501",
-        "features": "Video Call Puja + Samagri + Temple Prasad",
-        "delivery": "Yes"
-      },
-      {
-        "package": "Standard",
-        "price": "₹1101",
-        "features": "Full Puja + Havan + Annakut Offering + Prasad",
-        "delivery": "Yes"
-      }
-    ]
-  },
-
-  "templeDetails": {
-    "heading": "Our Temple Network",
-    "highlights": [
-      "Connected with sacred Govardhan Hill temples in Braj region",
-      "Rituals performed as per Vaishnav tradition",
-      "Prasad from Shri Giriraj Ji temples in Govardhan and Vrindavan"
-    ],
-    "temples": [
-      "Shri Giriraj Ji Temple (Govardhan)",
-      "Radha Kund Temple",
-      "ISKCON Temple (Vrindavan)",
-      "Banke Bihari Ji Temple (Vrindavan)",
-      "Radha Raman Mandir",
-      "Prem Mandir, Vrindavan"
-    ]
-  }
-}
-,
+   
  
    {
   "title": "Durga Puja – Invoke Divine Strength and Protection",
@@ -468,7 +469,7 @@
   "bannerImage": "/assets/pujas/lakshami puja.jpg",
   "slug": "shree-lakshmi-puja",
   "location": "Mathura",
-  "date": "2025-10-01",
+  "date": "01-10-2025",
   "time": "10:00 AM",
 
   "category": ["upcoming-pujas", "puja"],
@@ -554,7 +555,7 @@
   "bannerImage": "/assets/pujas/dushera.jpg",
   "slug": "dussehra-puja",
   "location": "Mathura",
-  "date": "2025-10-01",
+  "date": "01-10-2025",
   "time": "10:00 AM",
 
   "category": ["upcoming-pujas", "puja", "festival"],
@@ -664,7 +665,7 @@
   "bannerImage": "/assets/pujas/chhat puja.jpg",
   "slug": "chhath-puja",
   "location": "Mathura",
-  "date": "2025-10-27",
+  "date": "27-10-2025",
   "time": "5:00 PM",
   "category": ["upcoming-pujas", "rudrabhishek"],
   "tags": ["Chhath Puja", "Surya Dev", "Sun Worship", "Prosperity"],
