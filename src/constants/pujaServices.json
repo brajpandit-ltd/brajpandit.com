@@ -490,33 +490,7 @@
       }
     ]
   },
-  {
-    "title": "General Blessing Puja",
-    "slug": "others",
-    "category": "Miscellaneous Pujas",
-    "description": "Performed for overall wellbeing, peace, and positivity.",
-    "bannerImage": "/assets/personalized_puja/other.jpeg",
-    "price": 401,
-    "duration": "30 minutes",
-    "popular": false,
-    "rating": 4.6,
-    "packages": [
-      {
-        "id": "basic",
-        "title": "General Blessing Sankalp",
-        "price": "₹501",
-        "description": "Simple ritual for blessings.",
-        "features": ["Gotra Sankalp", "Positive energy"]
-      },
-      {
-        "id": "premium",
-        "title": "Live Puja + Prasad",
-        "price": "₹901",
-        "description": "Attend live puja for overall prosperity.",
-        "features": ["Live Zoom access", "Temple prasad"]
-      }
-    ]
-  },
+ 
     {
       "title": "Ganesh Chaturthi Pooja",
       "slug": "ganesh-chaturthi-pooja",
@@ -830,6 +804,33 @@
           ]
         }
       ]
-    }
+    },
+     {
+    "title": "General Blessing Puja",
+    "slug": "others",
+    "category": "Miscellaneous Pujas",
+    "description": "Performed for overall wellbeing, peace, and positivity.",
+    "bannerImage": "/assets/personalized_puja/others.jpg",
+    "price": 401,
+    "duration": "30 minutes",
+    "popular": false,
+    "rating": 4.6,
+    "packages": [
+      {
+        "id": "basic",
+        "title": "General Blessing Sankalp",
+        "price": "₹501",
+        "description": "Simple ritual for blessings.",
+        "features": ["Gotra Sankalp", "Positive energy"]
+      },
+      {
+        "id": "premium",
+        "title": "Live Puja + Prasad",
+        "price": "₹901",
+        "description": "Attend live puja for overall prosperity.",
+        "features": ["Live Zoom access", "Temple prasad"]
+      }
+    ]
+  }
   ]
 }
