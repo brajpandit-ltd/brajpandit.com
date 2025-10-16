@@ -11,6 +11,39 @@
       { "label": "About Us", "link": "/about-us", "subMenu": [] }
     ]
   },
+  "footer": {
+    "logo": "/assets/braj-pandit-logo.svg",
+    "quickLinks": [
+      { "label": "Home", "link": "/" },
+      { "label": "E Puja", "link": "/services/e-puja" },
+      { "label": "Our Premium Services", "link": "/services" },
+      { "label": "Braj Yatra", "link": "/braj-yatra" },
+      { "label": "About Us", "link": "/about-us" }
+    ],
+    "contactInfo": [
+      { "label": "📞 +91 8595009640", "link": "tel:+918595009640" },
+      { "label": "📞 +91 8979923233", "link": "tel:+918979923233" },
+      {
+        "label": "📧 brajpandit123@gmail.com",
+        "link": "mailto:brajpandit123@gmail.com"
+      }
+    ],
+    "socialLinks": [
+      {
+        "label": "facebook",
+        "link": "https://www.facebook.com/profile.php?id=100085599595898"
+      },
+      { "label": "instagram", "link": "https://www.instagram.com/brajpandit0" },
+
+      { "label": "threads", "link": "https://www.threads.com/@brajpandit0" },
+
+      {
+        "label": "linkedin",
+        "link": "https://www.linkedin.com/company/brajpandit/"
+      },
+      { "label": "youtube", "link": "https://www.youtube.com/@Brajpandit0" }
+    ]
+  },
   "bookingSteps": [
     {
       "icon": "step1.png",
