@@ -16,12 +16,12 @@ export default function TopHeader() {
         {/* Left Content */}
         <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-center">
           <span className="text-primary font-medium text-sm md:text-base">
-            Book Online Pandit For
+            Book Braj Yatra sathi
           </span>
 
           <div className="flex items-center gap-2 border border-dotted border-secondary rounded-full px-4 py-1 bg-white/10">
             <span className="font-semibold text-secondary text-sm md:text-base">
-              Dhan-Teras e-Puja 
+              🚩 yatra
             </span>
           </div>
         </div>
@@ -32,7 +32,7 @@ export default function TopHeader() {
             href="/services/group-puja"
             className="bg-secondary text-white px-5 py-1.5 rounded-full font-medium shadow-md hover:scale-105 hover:bg-primary transition text-sm md:text-base"
           >
-            200 /- Book Now
+            Book Now
           </Link>
         </div>
 
