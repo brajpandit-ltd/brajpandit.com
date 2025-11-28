@@ -308,11 +308,13 @@ and receive the blessings of Braj Dham directly from verified Braj Pandits.
           </button>
         </div>
 
+        
+
         {/* Right Image → Replace after you send images */}
         <div className="flex-1 flex flex-col items-center w-full">
           <div className="relative w-full aspect-[16/20] md:aspect-[16/21] ">
             <Image
-              src="/assets/group-puja/mainyatra.jpeg"
+               src="/assets/group-puja/brij-84-kos.jpg"
               alt="Braj Yatra"
               fill
               className="object-cover rounded-lg"
@@ -341,7 +343,7 @@ and receive the blessings of Braj Dham directly from verified Braj Pandits.
         {/* Left Image → Replace after you send images */}
         <div className="relative w-full aspect-[4/3] ">
           <Image
-            src="/assets/group-puja/yatra1.jpeg"
+            src="/assets/group-puja/yatra1.jpg"
             alt="Braj Yatra"
             fill
             className="object-cover rounded-lg"
