@@ -6,6 +6,7 @@ import Link from "next/link";
 import Button from "@/components/common/Button";
 import { IoIosShareAlt } from "react-icons/io";
 import { notFound } from "next/navigation";
+import GoogleAd1 from "@/components/google-ads/GoogleAds1";
 
 export default function PanditDetailPage({ params }: { params: any }) {
   const panditSlug = params?.panditSlug;
@@ -75,7 +76,10 @@ export default function PanditDetailPage({ params }: { params: any }) {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mt-6 justify-center md:justify-start">
-            <Link href={`/pandits/${pandit.slug}/book`} className="w-full sm:w-auto">
+            <Link
+              href={`/pandits/${pandit.slug}/book`}
+              className="w-full sm:w-auto"
+            >
               <Button
                 label="Book Your Session"
                 variant="primary"
@@ -102,6 +106,8 @@ export default function PanditDetailPage({ params }: { params: any }) {
         </div>
       </div>
 
+      <GoogleAd1 slot="7350714271" />
+
       {/* About Me Section */}
       <div className="mt-14">
         <h2 className="text-lg sm:text-xl font-semibold mb-4 text-center md:text-left">
@@ -111,6 +117,8 @@ export default function PanditDetailPage({ params }: { params: any }) {
           {pandit.aboutMe}
         </p>
       </div>
+
+      <GoogleAd1 slot="7350714271" />
 
       {/* Reviews Section */}
       <div className="mt-14 mb-20">
@@ -147,7 +155,8 @@ export default function PanditDetailPage({ params }: { params: any }) {
           ))}
         </div>
       </div>
+
+      <GoogleAd1 slot="7350714271" />
     </section>
-    
   );
 }

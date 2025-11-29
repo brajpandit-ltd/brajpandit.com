@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { C2APrefooter } from "@/components/layout";
+import GoogleAd1 from "@/components/google-ads/GoogleAds1";
 
 const teamMembers = [
   {
@@ -53,9 +54,7 @@ export default function AboutUsPage() {
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-snug md:leading-tight">
             <span className="text-primary"></span>
           </h1>
-          <p className="mt-4 text-sm sm:text-lg md:text-xl">
-           
-          </p>
+          <p className="mt-4 text-sm sm:text-lg md:text-xl"></p>
         </div>
       </section>
 
@@ -71,7 +70,9 @@ export default function AboutUsPage() {
                 Our Mission
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                To simplify access to Vedic rituals, pujas, and astrological consultations, ensuring authenticity while making it available online for everyone across the globe.
+                To simplify access to Vedic rituals, pujas, and astrological
+                consultations, ensuring authenticity while making it available
+                online for everyone across the globe.
               </p>
             </div>
             <div className="bg-white border border-primary/20 p-6 rounded-xl shadow-sm hover:shadow-md transition">
@@ -79,12 +80,16 @@ export default function AboutUsPage() {
                 Our Vision
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                To become the most trusted spiritual platform, helping millions reconnect with their roots and divine traditions with ease and transparency.
+                To become the most trusted spiritual platform, helping millions
+                reconnect with their roots and divine traditions with ease and
+                transparency.
               </p>
             </div>
           </div>
         </div>
       </section>
+
+      <GoogleAd1 slot="7350714271" />
 
       {/* Our Story */}
       <section className="bg-white py-16 sm:py-20 border-t border-gray-100">
@@ -93,7 +98,10 @@ export default function AboutUsPage() {
             Our Story
           </h2>
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
-            Braj Pandit was founded with the vision of reviving the sacred traditions of Vedic culture. From Mathura to Delhi NCR, we have served thousands of devotees by performing authentic pujas, providing astrology guidance, and supporting temple communities.
+            Braj Pandit was founded with the vision of reviving the sacred
+            traditions of Vedic culture. From Mathura to Delhi NCR, we have
+            served thousands of devotees by performing authentic pujas,
+            providing astrology guidance, and supporting temple communities.
           </p>
         </div>
       </section>
@@ -118,13 +126,17 @@ export default function AboutUsPage() {
                     className="object-cover object-center rounded-full border-4 border-primary/30"
                   />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
+                <h3 className="text-lg font-semibold text-gray-900">
+                  {member.name}
+                </h3>
                 <p className="text-gray-600 text-sm">{member.role}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      <GoogleAd1 slot="7350714271" />
 
       {/* Call to Action */}
       <C2APrefooter />
