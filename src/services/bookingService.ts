@@ -1,6 +1,3 @@
-
-
-
 // src/services/bookingService.ts
 "use server";
 
@@ -58,23 +55,6 @@ export async function sendPujaBookingEmail(bookingDetails: any) {
     throw new Error("Failed to send booking emails");
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // "use server";
 // //src/services/bookingService.ts
@@ -136,9 +116,3 @@ export async function sendPujaBookingEmail(bookingDetails: any) {
 //     throw new Error("Failed to send email");
 //   }
 // }
-
-
-
-
-
-
