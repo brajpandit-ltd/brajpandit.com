@@ -229,7 +229,14 @@ const NaamJapCounter = () => {
                 label="Save My Jap"
                 icon={<FaSave />}
                 onClick={() => setIsSaveModalOpen(true)}
-                className="w-full bg-orange-50 text-orange-700 hover:bg-orange-100 border-none shadow-sm"
+                className="w-full bg-orange-50 text-orange-700 hover:bg-orange-100 border-none shadow-sm mb-3"
+            />
+
+            <Button
+                variant="primary"
+                label="🔥 Join Now Streak Challenge"
+                onClick={() => document.getElementById('streak-challenge')?.scrollIntoView({ behavior: 'smooth' })}
+                className="w-full shadow-lg shadow-orange-200 animate-bounce-slow"
             />
 
             {/* Save Modal */}

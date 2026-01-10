@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import React from "react";
 import NaamJapCounter from "@/components/naam-jap/NaamJapCounter";
-import ChallengeBanner from "@/components/naam-jap/ChallengeBanner";
+import StreakChallengeSection from "@/components/naam-jap/StreakChallengeSection";
 import AboutSection from "@/components/naam-jap/AboutSection";
-import AppPromo from "@/components/naam-jap/AppPromo";
 
 export const metadata: Metadata = {
     title: "राधा नाम जप | Radha Naam Jap Counter",
@@ -26,9 +25,8 @@ const NaamJapPage = () => {
                 <NaamJapCounter />
 
                 {/* Sections Below */}
-                <div className="w-full space-y-12">
-                    <ChallengeBanner />
-                    <AppPromo />
+                <div className="w-full space-y-12 mt-16">
+                    <StreakChallengeSection />
                     <AboutSection />
                 </div>
             </main>
