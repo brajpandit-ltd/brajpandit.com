@@ -12,4 +12,5 @@ export default function ThemeToggle() {
       {theme === "light" ? "🌙" : "☀️"}
     </button>
   );
+  
 }
