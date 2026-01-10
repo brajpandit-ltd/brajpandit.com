@@ -57,6 +57,10 @@ export const metadata: Metadata = {
     follow: true,
     nocache: true,
   },
+
+  other: {
+    "google-adsense-account": "ca-pub-8480200911703454", // your meta tag here
+  },
 };
 
 export default function RootLayout({
@@ -68,6 +72,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* Google AdSense Script */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8480200911703454"
+          crossOrigin="anonymous"
+        ></script>
+
+        {/* horizontal ad 1 */}
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8480200911703454"

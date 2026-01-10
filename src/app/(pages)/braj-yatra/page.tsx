@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { BrajYatraPlace } from "@/types/brajYatra";
 import brajYatraJson from "@/constants/brajYatra.json";
+import GoogleAd1 from "@/components/google-ads/GoogleAds1";
 
 export default function BrajYatraPage() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -20,7 +21,6 @@ export default function BrajYatraPage() {
 
   return (
     <div className="flex flex-col w-full overflow-hidden">
-
       {/* ⭐ FULLY RESPONSIVE VIDEO SECTION */}
       <div className="relative w-full h-[40vh] sm:h-[55vh] md:h-[65vh] lg:h-[90vh] overflow-hidden">
         <video
@@ -46,6 +46,8 @@ export default function BrajYatraPage() {
           {isMuted ? "Unmute" : "Mute"}
         </button>
       </div>
+
+      <GoogleAd1 slot="7350714271" />
 
       {/* ⭐ TEMPLE CARDS */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-14 lg:py-20 space-y-10 lg:space-y-16">
@@ -82,8 +84,12 @@ export default function BrajYatraPage() {
 
               {/* Seasonal Info */}
               <div className="text-xs sm:text-sm text-gray-700 mb-4 space-y-1">
-                <p><strong>🌞 Summer:</strong> {place.summer || "N/A"}</p>
-                <p><strong>❄️ Winter:</strong> {place.winter || "N/A"}</p>
+                <p>
+                  <strong>🌞 Summer:</strong> {place.summer || "N/A"}
+                </p>
+                <p>
+                  <strong>❄️ Winter:</strong> {place.winter || "N/A"}
+                </p>
               </div>
 
               {/* Map Link */}
@@ -104,6 +110,8 @@ export default function BrajYatraPage() {
           </div>
         ))}
       </section>
+
+      <GoogleAd1 slot="7350714271" />
     </div>
   );
 }

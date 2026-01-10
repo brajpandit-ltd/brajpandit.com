@@ -4,6 +4,7 @@ import {
   getPersonalisedPuja,
 } from "./personalisedPujaService";
 import { sendBookingEmails } from "./bookingByEmailjs";
+import { sendPujaBookingEmail } from "./bookingService";
 
 export const services = {
   ePujas: async (search: string = "", isServer = true) => {
@@ -21,14 +22,23 @@ export const services = {
   },
 
   pujaBooking: async (body: any) => {
-    // await sendPujaBookingEmail(body);
-    // await sendBookingEmails(body);
+    try {
+      await sendPujaBookingEmail(body);
+      await sendBookingEmails(body);
 
-    return {
-      success: true,
-      message: "Puja booking service is not implemented yet.",
-      data: null,
-    };
+      return {
+        success: true,
+        message: "Puja booking successful and emails sent.",
+        data: null,
+      };
+    } catch (error) {
+      console.log("error:", error);
+      return {
+        success: false,
+        message: "Puja booking service is not implemented yet.",
+        data: null,
+      };
+    }
   },
 
   // ePujas: (search: string = "", isServer = true) =>

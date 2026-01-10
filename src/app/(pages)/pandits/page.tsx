@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import pandits from "@/constants/pandits.json";
 import { Pandit } from "@/types/pandit";
 import PanditCard from "./PanditCard";
+import GoogleAd1 from "@/components/google-ads/GoogleAds1";
 
 export const metadata: Metadata = {
   title: "Pandits | Braj Pandit Ji",
@@ -96,6 +97,8 @@ async function PanditsPage({
           ))}
         </div>
       </section>
+
+      <GoogleAd1 slot="7350714271" />
     </main>
   );
 }
