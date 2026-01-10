@@ -13,6 +13,7 @@ import Link from "next/link";
 
 import VerifiedPanditsSection from "@/components/layout/home/PanditCard/VerifiedPandits";
 import Why_Choose_Us from "@/components/layout/home/Why_Choose_Us";
+import GoogleAd1 from "@/components/google-ads/GoogleAds1";
 
 export const metadata = {
   title: "Braj Pandit Ji",
@@ -98,26 +99,21 @@ export default async function HomePage() {
           </p>
 
           <div className="flex items-center justify-center flex-col md:flex-row mt-8 gap-6 md:gap-14">
-
-
             <Link href="/services/e-puja" scroll={true}>
-  <Button label="Book Your Pooja" variant="primary" />
-</Link>
+              <Button label="Book Your Pooja" variant="primary" />
+            </Link>
 
-
-             <Link  href="/services">
-            <Button label="See All Pooja Services" variant="default" />
-               </Link>
-
-            
-
-           
+            <Link href="/services">
+              <Button label="See All Pooja Services" variant="default" />
+            </Link>
           </div>
         </div>
       </section>
 
       {/* VEDIC BRAJ-PANDIT UPCOMING POOJAS */}
       <UpcommingPujas />
+
+      <GoogleAd1 slot="7350714271" />
 
       {/* VEDIC Braj Pandit'S PERSONALIZE POOJA */}
       <PersonalisedPujas />
@@ -129,12 +125,15 @@ export default async function HomePage() {
       {/* <LiveBhajans /> */}
 
       <BookingProcess />
-        {/* <WhyChooseUs />  */}
-        
+      {/* <WhyChooseUs />  */}
+      <GoogleAd1 slot="7350714271" />
 
-      <Why_Choose_Us/>
+      <Why_Choose_Us />
       <Testimonials />
       <FAQs />
+
+      <GoogleAd1 slot="7350714271" />
+
       <C2APrefooter />
 
       {/* Dynamic Sections */}

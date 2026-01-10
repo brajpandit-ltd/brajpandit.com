@@ -12,10 +12,10 @@ export async function sendBookingEmails(bookingDetails: any) {
       {
         order_id: bookingDetails.orderNumber,
         email: bookingDetails.email,
-        phone:bookingDetails.phone,
+        phone: bookingDetails.phone,
         name: bookingDetails.name,
         puja: bookingDetails.puja.label,
-        date: bookingDetails.date,       //  add date
+        date: bookingDetails.date, //  add date
         time: bookingDetails.time,
         package: bookingDetails.packageId,
         address: bookingDetails.address,
@@ -33,9 +33,9 @@ export async function sendBookingEmails(bookingDetails: any) {
         order_id: bookingDetails.orderNumber,
         email: process.env.NEXT_PUBLIC_ADMIN_EMAIL,
         name: bookingDetails.name,
-        phone:bookingDetails.phone,
+        phone: bookingDetails.phone,
         puja: bookingDetails.puja.label,
-        date: bookingDetails.date,       //  add date
+        date: bookingDetails.date, //  add date
         time: bookingDetails.time,
         package: bookingDetails.packageId,
         address: bookingDetails.address,
@@ -51,9 +51,6 @@ export async function sendBookingEmails(bookingDetails: any) {
     return { success: false, error };
   }
 }
-
-
-
 
 // //src/services/bookingByEmailjs.ts
 

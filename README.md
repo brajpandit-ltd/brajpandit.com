@@ -1,23 +1,16 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
-
-First, run the development server:
 
 
-React App - 10MB (Build)
-    - 
+## Vercel Links:
+ dev : https://dev-brajpandit.vercel.app/
+ test : https://test-brajpandit.vercel.app/
+ main : https://www.brajpandit.com/
+## brajpandit.com demo :
+<img src='/brajpandit.com.png'/>
 
 
 
-Browser   ---/home------> SERVER (BUILD) [ X ]
-                        + - build banayega client compoents - 200Kb
-                            |
-                            |
-BROWSER BUILD(10MB)   <------------- response - 10s
-1MB 200Kb <----------- 200Kb (1s) + 800KB (2s) = 3s
-
-Browser <----> /home --- BUILD(10MB)
 
 
 // Next.Js - frontend framework - full stack framework - React (Client) + node (Server)

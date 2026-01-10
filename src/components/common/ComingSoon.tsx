@@ -5,6 +5,7 @@ const ComingSoon = () => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-[#f5e9d7] to-[#e2c7a7]">
       <div className="bg-white/80 rounded-xl shadow-lg p-10 flex flex-col items-center">
         <svg
+        
           className="w-16 h-16 text-[#bfa05a] mb-6"
           fill="none"
           stroke="currentColor"

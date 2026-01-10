@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useParams, notFound } from "next/navigation";
@@ -7,12 +6,11 @@ import { Button } from "@/components/common";
 import { Testimonials } from "@/components/layout";
 import { useRef } from "react";
 import pandits from "@/constants/pandits.json"; // your pandit data
+import GoogleAd1 from "@/components/google-ads/GoogleAds1";
 
 export default function PanditBookingPage() {
   const { panditSlug } = useParams(); // get slug from URL
-  const pandit = (pandits as any[]).find(
-    (p) => p.slug === panditSlug
-  );
+  const pandit = (pandits as any[]).find((p) => p.slug === panditSlug);
 
   if (!pandit) {
     return notFound();
@@ -27,31 +25,30 @@ export default function PanditBookingPage() {
     <main className="w-full overflow-hidden">
       {/* Hero Section */}
       <section className="relative py-16 md:py-24">
-  <Image
-    src="/assets/pandits/pandithero.jpg"
-    alt="Braj Pandit booking hero"
-    fill
-    priority
-    loading="eager"
-    className="object-cover -z-1"
-  />
+        <Image
+          src="/assets/pandits/pandithero.jpg"
+          alt="Braj Pandit booking hero"
+          fill
+          priority
+          loading="eager"
+          className="object-cover -z-1"
+        />
 
-  <div className="max-w-[350px] md:max-w-[650px] px-8">
-    <h4 className="text-sm md:text-base font-normal">
-      Book Pandit Ji in Brajdham
-    </h4>
-    <h1 className="text-2xl md:text-5xl font-bold">
-      <span className="text-primary">Trusted</span> Pandits for Your{" "}
-      <span className="text-secondary">Sacred Ceremonies</span>
-    </h1>
-    <p className="text-sm md:text-xl font-medium mt-3 md:mt-6">
-      Perform every ritual the authentic Vedic way. Book verified Pandits for
-      Poojas, Havans, and Sanskars in Mathura, Vrindavan & beyond.
-    </p>
-    <p className="mt-4">Scroll Down </p>
-  </div>
-</section>
-
+        <div className="max-w-[350px] md:max-w-[650px] px-8">
+          <h4 className="text-sm md:text-base font-normal">
+            Book Pandit Ji in Brajdham
+          </h4>
+          <h1 className="text-2xl md:text-5xl font-bold">
+            <span className="text-primary">Trusted</span> Pandits for Your{" "}
+            <span className="text-secondary">Sacred Ceremonies</span>
+          </h1>
+          <p className="text-sm md:text-xl font-medium mt-3 md:mt-6">
+            Perform every ritual the authentic Vedic way. Book verified Pandits
+            for Poojas, Havans, and Sanskars in Mathura, Vrindavan & beyond.
+          </p>
+          <p className="mt-4">Scroll Down </p>
+        </div>
+      </section>
 
       {/* Booking Form Section */}
       <section
@@ -61,9 +58,7 @@ export default function PanditBookingPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left: Booking Form */}
           <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-bold mb-6">
-              Book {pandit.name}
-            </h2>
+            <h2 className="text-2xl font-bold mb-6">Book {pandit.name}</h2>
             <form className="space-y-4">
               <div>
                 <label className="block text-gray-700 font-medium mb-1">
@@ -96,26 +91,26 @@ export default function PanditBookingPage() {
                 />
               </div>
               <div className="flex gap-4">
-  <div className="w-1/2">
-    <label className="block text-gray-700 font-medium mb-1">
-      Date of Pooja
-    </label>
-    <input
-      type="date"
-      className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-    />
-  </div>
+                <div className="w-1/2">
+                  <label className="block text-gray-700 font-medium mb-1">
+                    Date of Pooja
+                  </label>
+                  <input
+                    type="date"
+                    className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
 
-  <div className="w-1/2">
-    <label className="block text-gray-700 font-medium mb-1">
-      Time of Pooja
-    </label>
-    <input
-      type="time"
-      className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-    />
-  </div>
-</div>
+                <div className="w-1/2">
+                  <label className="block text-gray-700 font-medium mb-1">
+                    Time of Pooja
+                  </label>
+                  <input
+                    type="time"
+                    className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+              </div>
 
               <div>
                 <label className="block text-gray-700 font-medium mb-1">
@@ -147,8 +142,8 @@ export default function PanditBookingPage() {
             </div>
             <h3 className="text-xl font-bold mb-2">{pandit.name}</h3>
             <p className="mt-2 text-lg md:text-xl text-primary max-w-2xl mx-auto">
-            {pandit.experience} years of experience • {pandit.speciality}
-          </p>
+              {pandit.experience} years of experience • {pandit.speciality}
+            </p>
             <p className="text-gray-700 mb-4">{pandit.bio}</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -170,12 +165,12 @@ export default function PanditBookingPage() {
         </div>
       </section>
 
+      <GoogleAd1 slot="7350714271" />
+
       <Testimonials />
     </main>
   );
 }
-
-
 
 // "use client";
 
@@ -220,7 +215,6 @@ export default function PanditBookingPage() {
 //     <p className="mt-4">Scroll Down 🔻</p>
 //   </div>
 // </section>
-
 
 //       {/* Booking Form Section */}
 //       <section
@@ -328,6 +322,3 @@ export default function PanditBookingPage() {
 //     </main>
 //   );
 // }
-
-
-
