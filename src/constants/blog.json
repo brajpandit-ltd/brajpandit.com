@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "title": "Experiencing the Divine in Vrindavan: A Pilgrim's Guide",
+        "slug": "experiencing-divine-vrindavan",
+        "category": "Vrindavan",
+        "image": "/assets/blog/Mathura.png",
+        "excerpt": "Discover the sacred streets of Vrindavan, where every speck of dust tells a story of Radha and Krishna's eternal love.",
+        "date": "Jan 10, 2026",
+        "author": "Braj Pandit Team",
+        "content": "Full content would go here..."
+    },
+    {
+        "id": 2,
+        "title": "History and Significance of Dwarkadhish Temple, Mathura",
+        "slug": "dwarkadhish-temple-mathura",
+        "category": "Mathura's Temples",
+        "image": "/assets/blog/Mathura.png",
+        "excerpt": "Explore the rich history and architectural marvel of the Dwarkadhish Temple, a cornerstone of Mathura's spiritual heritage.",
+        "date": "Jan 05, 2026",
+        "author": "Acharya Sharma",
+        "content": "Full content would go here..."
+    },
+    {
+        "id": 3,
+        "title": "The Eternal Bond: Understanding Radha and Krishna",
+        "slug": "radha-krishna-bond",
+        "category": "Krishna & Radha",
+        "image": "/assets/blog/Mathura.png",
+        "excerpt": "Delve into the theology and emotion behind the worship of Radha and Krishna as the supreme divine couple.",
+        "date": "Dec 28, 2025",
+        "author": "Braj Pandit Team",
+        "content": "Full content would go here..."
+    },
+    {
+        "id": 4,
+        "title": "Top 5 Temples to Visit in Vrindavan",
+        "slug": "top-5-temples-vrindavan",
+        "category": "Vrindavan Temple",
+        "image": "/assets/blog/Mathura.png",
+        "excerpt": "A curated list of must-visit temples in Vrindavan including Banke Bihari, Iskcon, and Prem Mandir.",
+        "date": "Dec 15, 2025",
+        "author": "Travel Desk",
+        "content": "Full content would go here..."
+    },
+    {
+        "id": 5,
+        "title": "Spiritual Significance of Govardhan Parikrama",
+        "slug": "govardhan-parikrama-significance",
+        "category": "Religious",
+        "image": "/assets/blog/Mathura.png",
+        "excerpt": "Why millions of devotees walk around Govardhan Hill and the blessings associated with this sacred circumambulation.",
+        "date": "Dec 01, 2025",
+        "author": "Braj Pandit Team",
+        "content": "Full content would go here..."
+    },
+    {
+        "id": 6,
+        "title": "Mathura: The Birthplace of Lord Krishna",
+        "slug": "mathura-birthplace-krishna",
+        "category": "Mathura",
+        "image": "/assets/blog/Mathura.png",
+        "excerpt": "A journey through the lanes of Mathura, exploring the Krishna Janmabhoomi and the city's vibrant culture.",
+        "date": "Nov 20, 2025",
+        "author": "Braj Pandit Team",
+        "content": "Full content would go here..."
+    }
+]
