@@ -29,6 +29,7 @@ const NaamJapCounter = () => {
   // Save Modal State
   const [isSaveModalOpen, setIsSaveModalOpen] = useState(false);
   const [username, setUsername] = useState("");
+  const [userNumber, setUserNumber] = useState("");
   const [isSaving, setIsSaving] = useState(false);
 
   const timerRef = useRef<NodeJS.Timeout | null>(null);
@@ -68,7 +69,9 @@ const NaamJapCounter = () => {
     localStorage.setItem("naamjap_total", totalCount.toString());
     localStorage.setItem("naamjap_today", todayCount.toString());
     localStorage.setItem("naamjap_date", new Date().toDateString());
-  }, [totalCount, todayCount]);
+    localStorage.setItem("naamjap_username", username.trim());
+    localStorage.setItem("naamjap_userNumber", userNumber.trim());
+  }, [totalCount, todayCount, username, userNumber]);
 
   // Timer Logic
   useEffect(() => {
@@ -148,12 +151,14 @@ const NaamJapCounter = () => {
           username: username.trim(),
           jap: todayCount,
           malas: malasCompleted,
+          userNumber: userNumber.trim(),
         }),
       });
 
       if (response.ok) {
         toast.success("Jap Saved Successfully! 🕉️");
         localStorage.setItem("naamjap_username", username.trim());
+        localStorage.setItem("naamjap_userNumber", userNumber.trim());
         setIsSaveModalOpen(false);
       } else {
         toast.error("Failed to save. Please try again.");
@@ -196,9 +201,13 @@ const NaamJapCounter = () => {
 
           <div
             className="absolute top-0 left-0 w-full h-full rounded-full pointer-events-none transition-transform duration-300 ease-out"
-            style={{ transform: `rotate(${beadPosition}deg)` }}
+            style={{
+              transform: `rotate(${beadPosition}deg)`,
+              transformOrigin: "center",
+              zIndex: 1,
+            }}
           >
-            <div className="absolute top-[-12px] left-1/2 -translate-x-1/2 w-6 h-6 bg-orange-500 rounded-full shadow-md border-2 border-white z-10"></div>
+            <div className="absolute top-[-5px] left-1/2 -translate-x-1/2 w-6 h-6 bg-orange-500 rounded-full shadow-md border-2 border-white z-10"></div>
           </div>
         </div>
 
@@ -293,7 +302,7 @@ const NaamJapCounter = () => {
 
           <div className="space-y-4">
             <div>
-              <label className="block text-xs font-medium text-gray-700 mb-1">
+              <label className="block text-xs font-normal text-gray-700 mb-1">
                 Your Name
               </label>
               <input
@@ -301,7 +310,20 @@ const NaamJapCounter = () => {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="e.g. Rohit Krishna"
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-100 transition-all font-medium"
+                className="w-full px-3 py-1 rounded-lg border border-gray-200 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-100 transition-all font-normal"
+                autoFocus
+              />
+            </div>
+            <div>
+              <label className="block text-xs font-normal text-gray-700 mb-1">
+                Your Contact Phone
+              </label>
+              <input
+                type="tel"
+                value={userNumber}
+                onChange={(e) => setUserNumber(e.target.value)}
+                placeholder="e.g. +1234567890"
+                className="w-full px-3 py-1 rounded-lg border border-gray-200 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-100 transition-all font-normal"
                 autoFocus
               />
             </div>
@@ -315,7 +337,7 @@ const NaamJapCounter = () => {
               />
               <Button
                 variant="primary"
-                label={isSaving ? "Saving..." : "Confirm Save"}
+                label={"Confirm Save"}
                 onClick={handleSaveJap}
                 loading={isSaving}
                 disabled={isSaving || !username.trim()}
