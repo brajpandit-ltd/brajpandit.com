@@ -224,7 +224,7 @@ const NaamJapCounter = () => {
 
             {/* Main Counter Ring */}
             <div
-                className="relative w-60 h-60 md:w-70 md:h-70 rounded-full border-8 border-red-200 bg-white shadow-[0_0_40px_rgba(255,165,0,0.15)] flex items-center justify-center cursor-pointer select-none transition-transform active:scale-95 touch-manipulation tap-highlight-transparent"
+                className="relative w-60 h-60 md:w-70 md:h-70 rounded-full border-8 border-orange-300 bg-white shadow-[0_0_40px_rgba(255,165,0,0.15)] flex items-center justify-center cursor-pointer select-none transition-transform active:scale-95 touch-manipulation tap-highlight-transparent"
                 onClick={handleIncrement}
                 style={{ WebkitTapHighlightColor: "transparent" }}
             >
