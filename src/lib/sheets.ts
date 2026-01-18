@@ -35,33 +35,85 @@ export interface JapEntry {
 }
 
 /**
- * Append a new jap count entry to Google Sheets
+ * Save or update jap count entry in Google Sheets
+ * If user exists for today, update their row. Otherwise, create new row.
  */
-export async function appendJapEntry(entry: JapEntry): Promise<void> {
+export async function saveOrUpdateJapEntry(entry: JapEntry): Promise<void> {
     try {
         const sheets = getGoogleSheetsClient();
 
-        const values = [
-            [
-                entry.username,
-                entry.mobile || '',
-                entry.jap,
-                entry.malas,
-                entry.date,
-                entry.lastUpdated,
-            ],
-        ];
-
-        await sheets.spreadsheets.values.append({
+        // First, get all existing data
+        const response = await sheets.spreadsheets.values.get({
             spreadsheetId: SHEET_ID,
             range: `${SHEET_NAME}!A:F`,
-            valueInputOption: 'USER_ENTERED',
-            requestBody: {
-                values,
-            },
         });
+
+        const rows = response.data.values || [];
+        let userRowIndex = -1;
+        let existingJap = 0;
+
+        // Find if user already has an entry for today
+        const currentDate = new Date().toISOString().split('T')[0];
+
+        for (let i = 1; i < rows.length; i++) { // Skip header row
+            const row = rows[i];
+            const rowUsername = row[0];
+            const rowMobile = row[1];
+            const rowDate = row[4];
+
+            // Match by username (and mobile if provided)
+            const usernameMatch = rowUsername === entry.username;
+            const mobileMatch = !entry.mobile || !rowMobile || rowMobile === entry.mobile;
+            const dateMatch = rowDate === currentDate;
+
+            if (usernameMatch && mobileMatch && dateMatch) {
+                userRowIndex = i;
+                existingJap = parseInt(row[2], 10) || 0;
+                break;
+            }
+        }
+
+        if (userRowIndex !== -1) {
+            // Update existing row - ADD to existing count
+            const updatedJap = existingJap + entry.jap;
+            const updatedMalas = Math.floor(updatedJap / 108);
+
+            const rowNumber = userRowIndex + 1; // Convert to 1-indexed
+            await sheets.spreadsheets.values.update({
+                spreadsheetId: SHEET_ID,
+                range: `${SHEET_NAME}!A${rowNumber}:F${rowNumber}`,
+                valueInputOption: 'USER_ENTERED',
+                requestBody: {
+                    values: [[
+                        entry.username,
+                        entry.mobile || '',
+                        updatedJap,
+                        updatedMalas,
+                        currentDate,
+                        entry.lastUpdated,
+                    ]],
+                },
+            });
+        } else {
+            // Create new row
+            await sheets.spreadsheets.values.append({
+                spreadsheetId: SHEET_ID,
+                range: `${SHEET_NAME}!A:F`,
+                valueInputOption: 'USER_ENTERED',
+                requestBody: {
+                    values: [[
+                        entry.username,
+                        entry.mobile || '',
+                        entry.jap,
+                        entry.malas,
+                        currentDate,
+                        entry.lastUpdated,
+                    ]],
+                },
+            });
+        }
     } catch (error) {
-        console.error('Error appending to Google Sheets:', error);
+        console.error('Error saving to Google Sheets:', error);
         throw new Error('Failed to save data to Google Sheets');
     }
 }

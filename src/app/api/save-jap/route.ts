@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { appendJapEntry, initializeSheet } from "@/lib/sheets";
+import { saveOrUpdateJapEntry, initializeSheet } from "@/lib/sheets";
 
 export async function POST(req: Request) {
     try {
@@ -36,8 +36,8 @@ export async function POST(req: Request) {
             lastUpdated: new Date().toISOString(),
         };
 
-        // Append to Google Sheets
-        await appendJapEntry(entry);
+        // Save or update in Google Sheets
+        await saveOrUpdateJapEntry(entry);
 
         return NextResponse.json({
             message: "Jap saved successfully! 🕉️",
