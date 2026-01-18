@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Area, AreaChart } from "recharts";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import { FaChartLine, FaArrowUp, FaArrowDown, FaMinus } from "react-icons/fa";
 
 interface DailyStat {
@@ -16,7 +16,7 @@ interface JapStatisticsProps {
     days?: number;
 }
 
-const JapStatistics: React.FC<JapStatisticsProps> = ({ username, mobile, days = 7 }) => {
+const JapStatistics: React.FC<JapStatisticsProps> = ({ username, mobile, days = 30 }) => {
     const [stats, setStats] = useState<DailyStat[]>([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -68,21 +68,42 @@ const JapStatistics: React.FC<JapStatisticsProps> = ({ username, mobile, days = 
     const trend = getTrend();
     const totalJaps = stats.reduce((sum, stat) => sum + stat.jap, 0);
     const avgJaps = stats.length > 0 ? Math.round(totalJaps / stats.length) : 0;
+    const maxJap = stats.length > 0 ? Math.max(...stats.map(s => s.jap)) : 0;
 
-    // Format data for chart
-    const chartData = stats.map(stat => ({
-        date: new Date(stat.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
-        jap: stat.jap,
-        malas: stat.malas,
-    }));
+    // Format data for chart - fill in missing dates with 0
+    const fillMissingDates = () => {
+        if (stats.length === 0) return [];
+
+        const filledData: any[] = [];
+        const today = new Date();
+
+        for (let i = days - 1; i >= 0; i--) {
+            const date = new Date(today);
+            date.setDate(date.getDate() - i);
+            const dateStr = date.toISOString().split('T')[0];
+
+            const existingStat = stats.find(s => s.date === dateStr);
+
+            filledData.push({
+                date: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+                fullDate: dateStr,
+                jap: existingStat ? existingStat.jap : 0,
+                malas: existingStat ? existingStat.malas : 0,
+            });
+        }
+
+        return filledData;
+    };
+
+    const chartData = fillMissingDates();
 
     if (!username && !mobile) {
         return (
-            <div className="bg-gradient-to-br from-orange-50 to-white rounded-3xl p-8 shadow-lg border border-orange-100">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
                 <div className="text-center">
-                    <FaChartLine className="text-5xl text-orange-300 mx-auto mb-4" />
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">Track Your Progress</h3>
-                    <p className="text-gray-600 text-sm">
+                    <FaChartLine className="text-6xl text-orange-300 mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-gray-800 mb-2">Track Your Progress</h3>
+                    <p className="text-gray-600">
                         Save your jap count to view daily statistics and track your spiritual journey! 🕉️
                     </p>
                 </div>
@@ -92,7 +113,7 @@ const JapStatistics: React.FC<JapStatisticsProps> = ({ username, mobile, days = 
 
     if (isLoading) {
         return (
-            <div className="bg-gradient-to-br from-orange-50 to-white rounded-3xl p-8 shadow-lg border border-orange-100">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
                 <div className="text-center">
                     <div className="animate-spin rounded-full h-12 w-12 border-4 border-orange-500 border-t-transparent mx-auto mb-4"></div>
                     <p className="text-gray-600">Loading your statistics...</p>
@@ -103,7 +124,7 @@ const JapStatistics: React.FC<JapStatisticsProps> = ({ username, mobile, days = 
 
     if (error) {
         return (
-            <div className="bg-gradient-to-br from-orange-50 to-white rounded-3xl p-8 shadow-lg border border-orange-100">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
                 <div className="text-center">
                     <p className="text-red-600">{error}</p>
                 </div>
@@ -113,11 +134,11 @@ const JapStatistics: React.FC<JapStatisticsProps> = ({ username, mobile, days = 
 
     if (stats.length === 0) {
         return (
-            <div className="bg-gradient-to-br from-orange-50 to-white rounded-3xl p-8 shadow-lg border border-orange-100">
+            <div className="bg-white rounded-2xl p-10 shadow-lg border border-gray-200">
                 <div className="text-center">
-                    <FaChartLine className="text-5xl text-orange-300 mx-auto mb-4" />
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">No Data Yet</h3>
-                    <p className="text-gray-600 text-sm">
+                    <FaChartLine className="text-6xl text-orange-300 mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-gray-800 mb-2">No Data Yet</h3>
+                    <p className="text-gray-600">
                         Start chanting and saving your progress to see statistics! 📿
                     </p>
                 </div>
@@ -126,102 +147,106 @@ const JapStatistics: React.FC<JapStatisticsProps> = ({ username, mobile, days = 
     }
 
     return (
-        <div className="bg-gradient-to-br from-orange-50 to-white rounded-3xl p-6 md:p-8 shadow-lg border border-orange-100">
+        <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 w-full">
             {/* Header */}
-            <div className="flex items-center justify-between mb-6">
-                <div>
-                    <h3 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
-                        <FaChartLine className="text-orange-500" />
-                        Your Progress
-                    </h3>
-                    <p className="text-sm text-gray-600 mt-1">Last {days} days</p>
-                </div>
-
-                {/* Trend Indicator */}
-                <div className={`flex items-center gap-2 px-4 py-2 rounded-full ${trend === "up" ? "bg-green-100 text-green-700" :
-                        trend === "down" ? "bg-red-100 text-red-700" :
-                            "bg-gray-100 text-gray-700"
-                    }`}>
-                    {trend === "up" && <FaArrowUp />}
-                    {trend === "down" && <FaArrowDown />}
-                    {trend === "neutral" && <FaMinus />}
-                    <span className="font-semibold text-sm">
-                        {trend === "up" ? "Trending Up" : trend === "down" ? "Trending Down" : "Steady"}
-                    </span>
-                </div>
-            </div>
-
-            {/* Stats Summary */}
-            <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-white rounded-2xl p-4 shadow-sm border border-orange-100">
-                    <div className="text-sm text-gray-600 mb-1">Total Japs</div>
-                    <div className="text-3xl font-bold text-orange-600">{totalJaps.toLocaleString()}</div>
-                </div>
-                <div className="bg-white rounded-2xl p-4 shadow-sm border border-orange-100">
-                    <div className="text-sm text-gray-600 mb-1">Daily Average</div>
-                    <div className="text-3xl font-bold text-orange-600">{avgJaps.toLocaleString()}</div>
-                </div>
+            <div className="mb-6">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-2">
+                    Daily Japa Progress (Last {days} Days)
+                </h3>
             </div>
 
             {/* Chart */}
-            <div className="bg-white rounded-2xl p-4 shadow-sm border border-orange-100">
-                <ResponsiveContainer width="100%" height={250}>
-                    <AreaChart data={chartData}>
-                        <defs>
-                            <linearGradient id="colorJap" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="5%" stopColor="#f97316" stopOpacity={0.3} />
-                                <stop offset="95%" stopColor="#f97316" stopOpacity={0} />
-                            </linearGradient>
-                        </defs>
-                        <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
+            <div className="bg-gray-50 rounded-xl p-4 mb-6">
+                <ResponsiveContainer width="100%" height={350}>
+                    <LineChart data={chartData} margin={{ top: 20, right: 30, left: 10, bottom: 20 }}>
+                        <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" vertical={false} />
                         <XAxis
                             dataKey="date"
-                            tick={{ fontSize: 12, fill: '#6b7280' }}
+                            tick={{ fontSize: 11, fill: '#6b7280' }}
                             stroke="#d1d5db"
+                            angle={-45}
+                            textAnchor="end"
+                            height={60}
                         />
                         <YAxis
                             tick={{ fontSize: 12, fill: '#6b7280' }}
                             stroke="#d1d5db"
+                            domain={[0, maxJap > 0 ? maxJap + 5 : 20]}
                         />
                         <Tooltip
                             contentStyle={{
                                 backgroundColor: 'white',
-                                border: '1px solid #fed7aa',
-                                borderRadius: '12px',
-                                boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+                                border: '1px solid #e5e7eb',
+                                borderRadius: '8px',
+                                boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+                                padding: '8px 12px'
                             }}
-                            labelStyle={{ color: '#1f2937', fontWeight: 'bold' }}
+                            labelStyle={{ color: '#1f2937', fontWeight: 'bold', marginBottom: '4px' }}
+                            formatter={(value: any, name: string) => {
+                                if (name === 'jap') return [value + ' Japa', 'Daily Japa'];
+                                return [value, name];
+                            }}
                         />
-                        <Area
+                        <Line
                             type="monotone"
                             dataKey="jap"
                             stroke="#f97316"
-                            strokeWidth={3}
-                            fill="url(#colorJap)"
-                            name="Jap Count"
+                            strokeWidth={2.5}
+                            dot={{ fill: '#f97316', r: 4, strokeWidth: 2, stroke: '#fff' }}
+                            activeDot={{ r: 6, fill: '#ea580c', stroke: '#fff', strokeWidth: 2 }}
+                            name="Daily Japa"
                         />
-                    </AreaChart>
+                    </LineChart>
                 </ResponsiveContainer>
+                <div className="text-center mt-2">
+                    <span className="text-sm text-orange-600 font-medium">➜ Daily Japa</span>
+                </div>
+            </div>
+
+            {/* Stats Summary */}
+            <div className="grid grid-cols-3 gap-4 mb-6">
+                <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 text-center border border-orange-200">
+                    <div className="text-xs text-orange-700 mb-1 font-semibold uppercase tracking-wide">Total Japs</div>
+                    <div className="text-2xl md:text-3xl font-bold text-orange-600">{totalJaps.toLocaleString()}</div>
+                </div>
+                <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 text-center border border-orange-200">
+                    <div className="text-xs text-orange-700 mb-1 font-semibold uppercase tracking-wide">Daily Avg</div>
+                    <div className="text-2xl md:text-3xl font-bold text-orange-600">{avgJaps.toLocaleString()}</div>
+                </div>
+                <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 text-center border border-orange-200">
+                    <div className="text-xs text-orange-700 mb-1 font-semibold uppercase tracking-wide">Trend</div>
+                    <div className="flex items-center justify-center gap-1 mt-1">
+                        {trend === "up" && <FaArrowUp className="text-green-600 text-xl" />}
+                        {trend === "down" && <FaArrowDown className="text-red-600 text-xl" />}
+                        {trend === "neutral" && <FaMinus className="text-gray-600 text-xl" />}
+                        <span className={`text-sm font-bold ${trend === "up" ? "text-green-600" :
+                            trend === "down" ? "text-red-600" :
+                                "text-gray-600"
+                            }`}>
+                            {trend === "up" ? "Up" : trend === "down" ? "Down" : "Steady"}
+                        </span>
+                    </div>
+                </div>
             </div>
 
             {/* Daily Breakdown */}
-            <div className="mt-6">
-                <h4 className="text-sm font-semibold text-gray-700 mb-3 uppercase tracking-wide">Daily Breakdown</h4>
-                <div className="space-y-2 max-h-48 overflow-y-auto">
-                    {stats.slice().reverse().map((stat, index) => (
+            <div>
+                <h4 className="text-sm font-bold text-gray-700 mb-3 uppercase tracking-wide">Recent Activity</h4>
+                <div className="space-y-2 max-h-64 overflow-y-auto">
+                    {stats.slice().reverse().slice(0, 10).map((stat, index) => (
                         <div
                             key={index}
-                            className="flex items-center justify-between bg-white rounded-xl p-3 shadow-sm border border-gray-100 hover:border-orange-200 transition-colors"
+                            className="flex items-center justify-between bg-gray-50 rounded-lg p-3 hover:bg-orange-50 transition-colors border border-gray-100"
                         >
                             <div>
-                                <div className="font-medium text-gray-800">
+                                <div className="font-semibold text-gray-800 text-sm">
                                     {new Date(stat.date).toLocaleDateString('en-US', {
                                         weekday: 'short',
                                         month: 'short',
                                         day: 'numeric'
                                     })}
                                 </div>
-                                <div className="text-xs text-gray-500">{stat.malas} malas</div>
+                                <div className="text-xs text-gray-500">{stat.malas} malas completed</div>
                             </div>
                             <div className="text-xl font-bold text-orange-600">
                                 {stat.jap.toLocaleString()}

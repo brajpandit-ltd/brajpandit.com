@@ -21,7 +21,7 @@ const NaamJapPage = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-gradient-to-b from-orange-50/30 to-white">
             <main className="container mx-auto px-4 py-8 md:py-12 flex flex-col items-center">
                 {/* Page Title */}
                 <div className="text-center mb-10">
@@ -34,14 +34,19 @@ const NaamJapPage = () => {
                 {/* Counter Section */}
                 <NaamJapCounter />
 
-                {/* Statistics Section */}
-                <div className="w-full max-w-2xl mt-12">
-                    <JapStatistics username={username} mobile={mobile} days={7} />
+                <div className="w-full mt-8">
+                    <JapStatistics username={username} mobile={mobile} days={30} />
                 </div>
 
-                {/* Sections Below */}
-                <div className="w-full space-y-12 mt-16">
+                {/* Streak & Challenge Section */}
+                <div className="w-full mt-12 mb-12">
                     <StreakChallengeSection />
+                </div>
+
+               
+
+                {/* About Section */}
+                <div className="w-full mt-16">
                     <AboutSection />
                 </div>
             </main>
