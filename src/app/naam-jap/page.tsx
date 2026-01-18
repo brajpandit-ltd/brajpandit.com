@@ -1,17 +1,27 @@
+"use client";
+
 import type { Metadata } from "next";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import NaamJapCounter from "@/components/naam-jap/NaamJapCounter";
+import JapStatistics from "@/components/naam-jap/JapStatistics";
 import StreakChallengeSection from "@/components/naam-jap/StreakChallengeSection";
 import AboutSection from "@/components/naam-jap/AboutSection";
 
-export const metadata: Metadata = {
-    title: "राधा नाम जप | Radha Naam Jap Counter",
-    description: "Digital Radha Naam Jap Counter with stats, timer, and streak tracking. Chant daily and join the challenge.",
-};
-
 const NaamJapPage = () => {
+    const [username, setUsername] = useState<string>("");
+    const [mobile, setMobile] = useState<string>("");
+
+    // Load username and mobile from localStorage
+    useEffect(() => {
+        const storedUsername = localStorage.getItem("naamjap_username");
+        const storedMobile = localStorage.getItem("naamjap_mobile");
+
+        if (storedUsername) setUsername(storedUsername);
+        if (storedMobile) setMobile(storedMobile);
+    }, []);
+
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-gradient-to-b from-orange-50/30 to-white">
             <main className="container mx-auto px-4 py-8 md:py-12 flex flex-col items-center">
                 {/* Page Title */}
                 <div className="text-center mb-10">
@@ -24,9 +34,19 @@ const NaamJapPage = () => {
                 {/* Counter Section */}
                 <NaamJapCounter />
 
-                {/* Sections Below */}
-                <div className="w-full space-y-12 mt-16">
+                <div className="w-full mt-8">
+                    <JapStatistics username={username} mobile={mobile} days={30} />
+                </div>
+
+                {/* Streak & Challenge Section */}
+                <div className="w-full mt-12 mb-12">
                     <StreakChallengeSection />
+                </div>
+
+               
+
+                {/* About Section */}
+                <div className="w-full mt-16">
                     <AboutSection />
                 </div>
             </main>
@@ -35,3 +55,4 @@ const NaamJapPage = () => {
 };
 
 export default NaamJapPage;
+
