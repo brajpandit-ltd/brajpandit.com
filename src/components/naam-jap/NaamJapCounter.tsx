@@ -40,7 +40,26 @@ const NaamJapCounter = () => {
             if (storedUsername) setUsername(storedUsername);
             if (storedMobile) setMobile(storedMobile);
 
-            // Try to fetch user data from Google Sheets
+            // Load from localStorage first (always restore counts)
+            if (storedTotal) setTotalCount(parseInt(storedTotal, 10));
+
+            // Check date for Today reset
+            const currentDate = new Date().toDateString();
+            const storedDateStr = localStorage.getItem("naamjap_date");
+
+            if (storedDateStr === currentDate && storedToday) {
+                // Same day - restore today's count from localStorage
+                setTodayCount(parseInt(storedToday, 10));
+            } else if (storedDateStr && storedDateStr !== currentDate) {
+                // New day - reset today count to 0
+                setTodayCount(0);
+                localStorage.setItem("naamjap_date", currentDate);
+            } else {
+                // First time - set current date
+                localStorage.setItem("naamjap_date", currentDate);
+            }
+
+            // Try to fetch user data from Google Sheets (optional sync)
             if (storedUsername || storedMobile) {
                 setIsLoadingData(true);
                 try {
@@ -51,38 +70,29 @@ const NaamJapCounter = () => {
                     const response = await fetch(`/api/get-user-data?${params.toString()}`);
                     if (response.ok) {
                         const result = await response.json();
-                        // Only load if it's today's data
-                        const currentDate = new Date().toDateString();
+                        // Only sync if it's today's data and different from local
+                        const currentDateStr = new Date().toDateString();
                         const dataDate = new Date(result.data.date).toDateString();
 
-                        if (dataDate === currentDate) {
-                            setTodayCount(result.data.jap || 0);
-                            toast.info(`Welcome back, ${result.data.username}! 🙏`);
+                        if (dataDate === currentDateStr) {
+                            const sheetsJap = result.data.jap || 0;
+                            const localJap = parseInt(storedToday || "0", 10);
+
+                            // Use the higher count (in case user saved from another device)
+                            if (sheetsJap > localJap) {
+                                setTodayCount(sheetsJap);
+                                toast.info(`Synced from cloud: ${sheetsJap} japs! 🙏`);
+                            } else if (localJap > 0) {
+                                toast.info(`Welcome back, ${result.data.username}! 🙏`);
+                            }
                         }
                     }
                 } catch (error) {
                     console.error("Error loading user data:", error);
+                    // Silently fail - localStorage data is already loaded
                 } finally {
                     setIsLoadingData(false);
                 }
-            }
-
-            // Load from localStorage as fallback
-            if (storedTotal) setTotalCount(parseInt(storedTotal, 10));
-
-            // Check date for Today reset
-            const currentDate = new Date().toDateString();
-            const storedDateStr = localStorage.getItem("naamjap_date");
-            if (storedDateStr === currentDate && storedToday) {
-                const localToday = parseInt(storedToday, 10);
-                // Only use localStorage if we didn't get data from Sheets
-                setTodayCount(prev => prev || localToday);
-            } else {
-                // New day - reset today count
-                if (storedDateStr && storedDateStr !== currentDate) {
-                    setTodayCount(0);
-                }
-                localStorage.setItem("naamjap_date", currentDate);
             }
         };
 
