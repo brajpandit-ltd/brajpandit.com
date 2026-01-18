@@ -182,10 +182,14 @@ const JapStatistics: React.FC<JapStatisticsProps> = ({ username, mobile, days = 
                                 padding: '8px 12px'
                             }}
                             labelStyle={{ color: '#1f2937', fontWeight: 'bold', marginBottom: '4px' }}
-                            formatter={(value: any, name: string) => {
-                                if (name === 'jap') return [value + ' Japa', 'Daily Japa'];
-                                return [value, name];
-                            }}
+                            formatter={(value: any, name?: string) => {
+  if (name === 'jap') {
+    return [`${value} Japa`, 'Daily Japa'];
+  }
+
+  return [value, name ?? ''];
+}}
+
                         />
                         <Line
                             type="monotone"
