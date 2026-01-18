@@ -1,49 +1,54 @@
 import { NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
+import { appendJapEntry, initializeSheet } from "@/lib/sheets";
 
 export async function POST(req: Request) {
     try {
         const body = await req.json();
-        const { username, jap, malas } = body;
+        const { username, mobile, jap, malas } = body;
 
+        // Validation
         if (!username || typeof jap !== "number") {
             return NextResponse.json(
-                { message: "Invalid data provided" },
+                { message: "Invalid data provided. Username and jap count are required." },
                 { status: 400 }
             );
         }
 
-        const filePath = path.join(process.cwd(), "src", "data", "blogCount.json");
-
-        // Read existing data
-        let data: Record<string, any> = {};
-        if (fs.existsSync(filePath)) {
-            const fileContent = fs.readFileSync(filePath, "utf-8");
-            try {
-                data = JSON.parse(fileContent);
-            } catch (e) {
-                // If file is empty or corrupted, start with empty object
-                data = {};
-            }
+        // Optional mobile validation
+        if (mobile && typeof mobile !== "string") {
+            return NextResponse.json(
+                { message: "Invalid mobile number format" },
+                { status: 400 }
+            );
         }
 
-        // Update data
-        data[username] = {
+        // Initialize sheet with headers if needed
+        await initializeSheet();
+
+        // Prepare entry data
+        const currentDate = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+        const entry = {
+            username: username.trim(),
+            mobile: mobile?.trim(),
             jap,
-            malas,
+            malas: malas || 0,
+            date: currentDate,
             lastUpdated: new Date().toISOString(),
         };
 
-        // Write back
-        fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+        // Append to Google Sheets
+        await appendJapEntry(entry);
 
-        return NextResponse.json({ message: "Saved successfully", data: data[username] });
+        return NextResponse.json({
+            message: "Jap saved successfully! 🕉️",
+            data: entry
+        });
     } catch (error) {
         console.error("Error saving jap:", error);
         return NextResponse.json(
-            { message: "Internal server error" },
+            { message: "Failed to save data. Please try again." },
             { status: 500 }
         );
     }
 }
+
