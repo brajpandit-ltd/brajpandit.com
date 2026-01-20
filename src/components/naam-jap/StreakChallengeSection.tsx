@@ -81,52 +81,71 @@ const StreakChallengeSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Year End */}
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-            <h3 className="text-lg font-bold text-orange-700 mb-4 flex items-center gap-2">
-              <span>🏆</span> Year End Prizes
-            </h3>
-            <ul className="space-y-2 text-sm text-gray-700 font-medium">
-              <li className="flex justify-between items-center border-b border-gray-50 pb-2">
-                <span>🥇 1st:</span>
-                <span className="text-orange-600 font-bold">₹10,000</span>
-              </li>
-              <li className="flex justify-between items-center border-b border-gray-50 pb-2">
-                <span>🥈 2nd:</span>
-                <span className="text-orange-600 font-bold">₹5,000</span>
-              </li>
-              <li className="flex justify-between items-center border-b border-gray-50 pb-2">
-                <span>🥉 3rd:</span>
-                <span className="text-orange-600 font-bold">₹3,000</span>
-              </li>
-              <li className="flex justify-between items-center pt-1">
-                <span>🏅 4th–13th:</span>
-                <span className="text-gray-600">₹500 each</span>
-              </li>
-            </ul>
+            <div className="flex flex-col items-center gap-4">
+              <img
+                src="/assets/naam-jaap/radha naam jap daily.jpg"
+                alt="Year End Prizes"
+                className="w-full h-32 object-cover rounded-lg shadow-md"
+              />
+              <div className="text-center">
+                <h3 className="text-lg font-bold text-orange-700 mb-4 flex items-center justify-center gap-2">
+                  <span>🏆</span> Holi Special Challange
+                </h3>
+
+                <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
+                  <h4 className="font-bold text-orange-800 mb-2">
+                    🥇 21 Days Challange
+                  </h4>
+                  <p className="text-sm text-gray-700 mb-2">Top 11 Ranks</p>
+                  <p className="text-orange-600 font-semibold">
+                    Join Braj Holi (Free Stay, Food & Travel)
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Monthly */}
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-            <h3 className="text-lg font-bold text-orange-700 mb-4 flex items-center gap-2">
-              <span>🏆</span> Monthly Prizes
-            </h3>
-            <ul className="space-y-2 text-sm text-gray-700 font-medium">
-              <li className="flex justify-between items-center border-b border-gray-50 pb-2">
-                <span>🥇 1st:</span>
-                <span className="text-orange-600 font-bold">₹500</span>
-              </li>
-              <li className="flex justify-between items-center border-b border-gray-50 pb-2">
-                <span>🥈 2nd:</span>
-                <span className="text-orange-600 font-bold">₹300</span>
-              </li>
-              <li className="flex justify-between items-center border-b border-gray-50 pb-2">
-                <span>🥉 3rd:</span>
-                <span className="text-orange-600 font-bold">₹200</span>
-              </li>
-              <li className="flex justify-between items-center pt-1">
-                <span>🏅 4th–8th:</span>
-                <span className="text-gray-600">₹100 each</span>
-              </li>
-            </ul>
+            <div className="text-center mb-6">
+              <img
+                src="/assets/naam-jaap/naam japa counter online.jpg"
+                alt="Challenge Prizes"
+                className="w-24 h-24 object-cover rounded-full shadow-md mx-auto mb-4"
+              />
+              <h3 className="text-lg font-bold text-orange-700 flex items-center justify-center gap-2">
+                <span>🏆</span> Challenge Prizes
+              </h3>
+            </div>
+            <div className="space-y-4">
+              <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
+                <h4 className="font-bold text-orange-800 mb-2">
+                  🥇 1st Month Challenge
+                </h4>
+                <p className="text-sm text-gray-700 mb-2">Top 5 Ranks</p>
+                <p className="text-orange-600 font-semibold">
+                  Tulsi Mala & Prasad
+                </p>
+              </div>
+              <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
+                <h4 className="font-bold text-orange-800 mb-2">
+                  🥈 3 Month Challenge
+                </h4>
+                <p className="text-sm text-gray-700 mb-2">Top 3 Ranks</p>
+                <p className="text-orange-600 font-semibold">
+                  Mathura - Vrindavan Tour (Free Stay, Food & Travel)
+                </p>
+              </div>
+              <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
+                <h4 className="font-bold text-orange-800 mb-2">
+                  🥉 1 Year Challenge
+                </h4>
+                <p className="text-sm text-gray-700 mb-2">Top 3 Ranks</p>
+                <p className="text-orange-600 font-semibold">
+                  Braj 84 Kos Tour (Free Stay, Food & Travel)
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 

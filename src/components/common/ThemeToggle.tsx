@@ -5,6 +5,7 @@ export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
   return (
+    
     <button
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       className="p-2 rounded bg-primary text-white"
@@ -12,4 +13,5 @@ export default function ThemeToggle() {
       {theme === "light" ? "🌙" : "☀️"}
     </button>
   );
+
 }
