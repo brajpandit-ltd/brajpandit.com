@@ -106,10 +106,12 @@ const Button = ({
       {...props}
     >
       {icon && iconPosition === "left" && <span>{icon}</span>}
-      <span>
+      <div className="flex items-center gap-2">
         {(label && label) || children}{" "}
-        {loading && <span className="loading-spinner">Loading...</span>}
-      </span>
+        {loading && (
+          <span className="w-5 h-5 border-2 border-secondary-light border-t-transparent rounded-full animate-spin"></span>
+        )}
+      </div>
       {icon && iconPosition === "right" && <span>{icon}</span>}
     </button>
   );
