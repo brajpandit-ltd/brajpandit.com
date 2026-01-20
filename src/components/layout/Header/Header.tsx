@@ -25,34 +25,42 @@ const Header = () => {
   return (
 
     <>
-    <TopHeader/>
-    
-  
-    <header className="cursor-pointer sticky top-0 w-full py-4 px-4 z-9999 backdrop-blur-md bg-white/80 shadow-base">
+      <TopHeader />
 
-      <nav className="hidden items-center justify-between gap-6 text-sm font-medium md:flex">
-        <Logo />
 
-        <Menu
-          menuItems={menuItems || []}
-          wrapperClass="flex-1 justify-center"
-        />
+      <header className="cursor-pointer sticky top-0 w-full py-4 px-4 z-9999 backdrop-blur-md bg-white/80 shadow-base">
 
-        <Link href="/services">
-          <Button variant="primary" label="Book Your Pooja" size="small" />
-        </Link>
-      </nav>
+        <nav className="hidden items-center justify-between gap-6 text-sm font-medium md:flex">
+          <Logo />
 
-      <nav className="flex items-center justify-between gap-6 text-sm font-medium md:hidden">
-        <Logo />
+          <Menu
+            menuItems={menuItems || []}
+            wrapperClass="flex-1 justify-center"
+          />
 
-        <Menu
-          isMobile={true}
-          menuItems={menuItems || []}
-          wrapperClass="absolute top-0 right-0 flex items-start flex-col gap-4 max-w-[300px] w-full h-screen bg-white p-6 rounded-md shadow-base overflow-auto"
-        />
-      </nav>
-    </header>
+          <Link href="/naam-jap">
+            <Button variant="secondary" label="Naam Jap" size="small" />
+          </Link>
+
+          <Link href="/services">
+            <Button variant="primary" label="Book Your Pooja" size="small" />
+          </Link>
+        </nav>
+
+        <nav className="flex items-center justify-between gap-2 text-sm font-medium md:hidden">
+          <Logo />
+
+          <Link href="/naam-jap" className="ml-auto">
+            <Button variant="secondary" label="Jap" size="v-small" className="!px-3 !py-1" />
+          </Link>
+
+          <Menu
+            isMobile={true}
+            menuItems={menuItems || []}
+            wrapperClass="absolute top-0 right-0 flex items-start flex-col gap-4 max-w-[300px] w-full h-screen bg-white p-6 rounded-md shadow-base overflow-auto"
+          />
+        </nav>
+      </header>
 
     </>
   );

@@ -1,749 +1,810 @@
 {
   "ePujas": [
-
-      {
-  "title": "Dhanteras – Festival of Prosperity and Divine Wealth",
-  "subtitle": "Dhanteras marks the beginning of Diwali, symbolizing the arrival of abundance, good fortune, and spiritual prosperity. It is not only about material wealth but also inner light and divine blessings.",
-  "bannerImage": "/assets/pujas/dhanteras1.jpg",
-  "slug": "dhanteras",
-  "location": "Mathura",
-  "date": "18-10-2025",
-  "time": "04:00 PM",
-
-  "category": ["upcoming-pujas", "puja"],
-  "tags": ["Dhanteras", "Lakshmi Puja", "Prosperity Rituals"],
-
-  "benefits": {
-    "heading": "Benefits of Dhanteras Puja",
-    "description": "Dhanteras Puja invokes the blessings of Goddess Lakshmi and Lord Dhanvantari, bringing harmony, abundance, and good health. Performing this puja ensures that both spiritual and material prosperity flourish in your home.",
-    "points": [
-      "Invites wealth, prosperity, and positive energy into the home",
-      "Removes financial obstacles and ensures business growth",
-      "Brings blessings of Goddess Lakshmi for abundance and fortune",
-      "Promotes health and longevity with prayers to Lord Dhanvantari",
-      "Purifies the environment with divine light and Vedic mantras"
-    ]
-  },
-
-  "packages": [
     {
-      "id": "basic",
-      "title": "Basic Dhanteras Puja",
-      "price": "₹501",
-      "description": "Perform a simple yet auspicious Dhanteras Puja with all essential items and blessings from our pandits.",
-      "features": [
-        "Essential Puja Samagri",
-        "Pandit guidance via video call",
-        "Lakshmi mantra chanting and Prasad"
-      ]
-    },
-    {
-      "id": "standard",
-      "title": "Standard Dhanteras Mahapuja",
-      "price": "₹1101",
-      "description": "A complete in-person Dhanteras Mahapuja including Lakshmi-Ganesh worship, Dhanvantari invocation, and Havan.",
-      "features": [
-        "Complete Samagri with Deep Daan",
-        "In-person Pandit Puja",
-        "Lakshmi-Ganesh Havan and Sankalp",
-        "Temple Prasad and blessings for family"
-      ]
-    }
-  ],
-
-  "comparisonTable": {
-    "columns": ["Package", "Price", "Features", "Delivery"],
-    "rows": [
-      {
-        "package": "Basic",
-        "price": "₹501",
-        "features": "Video Call Puja + Samagri Kit + Prasad",
-        "delivery": "Yes"
-      },
-      {
-        "package": "Standard",
-        "price": "₹1101",
-        "features": "In-person Mahapuja + Havan + Deep Daan",
-        "delivery": "Yes"
-      }
-    ]
-  },
-
-  "templeDetails": {
-    "heading": "Our Temple Network for Dhanteras Blessings",
-    "highlights": [
-      "Associated with ancient Lakshmi temples for authentic rituals",
-      "Special blessings from Dhanvantari and Lakshmi temples in Varanasi and Vrindavan",
-      "Pure Prasad and sanctified coins from temple rituals delivered to devotees"
-    ],
-    "temples": [
-      "Shri Lakshmi Narayan Mandir (Delhi)",
-      "Banke Bihari Ji (Vrindavan)",
-      "ISKCON Temple (Mathura)",
-      "Kashi Vishwanath Temple (Varanasi)",
-      "Shree Dhanvantari Mandir (Ayodhya)",
-      "Shree Lakshmi Ganesh Temple (Mumbai)"
-    ]
-  }
-}
-,
-   {
-  "title": "Diwali Puja – Festival of Lights and Prosperity",
-  "subtitle": "Wishing you a Diwali that sparkles with joy, love, and divine blessings. Let the light of diyas remove darkness from your life and fill your heart with peace, kindness, and abundance.",
-  "bannerImage": "/assets/pujas/diwali puja.jpg",
-  "slug": "diwali-puja",
-  "location": "Mathura",
-  "date": "20-10-2025",
-  "time": "06:00 PM ",
-
-  "category": ["upcoming-pujas", "puja", "lakshmi-ganesh-puja"],
-  "tags": ["Diwali", "Lakshmi Puja", "Ganesh Puja", "Festival of Lights"],
-
-  "benefits": {
-    "heading": "Benefits of Performing Diwali Puja",
-    "points": [
-      "Invokes the blessings of Goddess Lakshmi for wealth and prosperity",
-      "Removes financial and emotional negativity from home and workplace",
-      "Brings peace, harmony, and happiness among family members",
-      "Ensures good fortune and success in upcoming endeavors",
-      "Strengthens spiritual growth through light and devotion"
-    ]
-  },
-
-  "packages": [
-    {
-      "id": "basic",
-      "title": "Basic Diwali Puja",
-      "price": "₹501",
-      "description": "A simple Diwali Puja with all essential samagri and blessings for your family.",
-      "features": [
-        "Includes essential puja samagri",
-        "Performed by certified Vedic pandit",
-        "Duration: 1 hour",
-        "Lakshmi-Ganesh mantra chanting",
-        "Prasad included"
+      "title": "Dhanteras – Festival of Prosperity and Divine Wealth",
+      "subtitle": "Dhanteras marks the beginning of Diwali, symbolizing the arrival of abundance, good fortune, and spiritual prosperity. It is not only about material wealth but also inner light and divine blessings.",
+      "bannerImage": "/assets/pujas/dhanteras1.jpg",
+      "slug": "dhanteras",
+      "location": "Mathura",
+      "date": "18-10-2025",
+      "time": "04:00 PM",
+      "category": [
+        "upcoming-pujas",
+        "puja"
       ],
-      "cta": "Select Package"
-    },
-    {
-      "id": "standard",
-      "title": "Standard Diwali Puja",
-      "price": "₹1101",
-      "description": "Extended Diwali Puja with Havan and Deep Daan for prosperity and protection.",
-      "features": [
-        "Complete puja samagri with Deep Daan set",
-        "Pandit + 1 assistant",
-        "Duration: 2 hours",
-        "Lakshmi-Ganesh Havan included",
-        "Prasad for 5 people"
+      "tags": [
+        "Dhanteras",
+        "Lakshmi Puja",
+        "Prosperity Rituals"
       ],
-      "cta": "Select Package"
-    },
-    {
-      "id": "premium",
-      "title": "Premium Diwali Maha Puja",
-      "price": "₹2101",
-      "description": "A grand Diwali celebration including Lakshmi-Ganesh Puja, Kuber Puja, and Havan.",
-      "features": [
-        "Full samagri with decorative setup",
-        "2 Pandits + 2 assistants",
-        "Duration: 3–4 hours",
-        "Lakshmi-Ganesh-Kuber Puja + Havan",
-        "Deep Daan & Prasad for 20 people",
-        "Temple Prasad from Mathura or Varanasi"
+      "benefits": {
+        "heading": "Benefits of Dhanteras Puja",
+        "description": "Dhanteras Puja invokes the blessings of Goddess Lakshmi and Lord Dhanvantari, bringing harmony, abundance, and good health. Performing this puja ensures that both spiritual and material prosperity flourish in your home.",
+        "points": [
+          "Invites wealth, prosperity, and positive energy into the home",
+          "Removes financial obstacles and ensures business growth",
+          "Brings blessings of Goddess Lakshmi for abundance and fortune",
+          "Promotes health and longevity with prayers to Lord Dhanvantari",
+          "Purifies the environment with divine light and Vedic mantras"
+        ]
+      },
+      "packages": [
+        {
+          "id": "basic",
+          "title": "Basic Dhanteras Puja",
+          "price": "₹501",
+          "description": "Perform a simple yet auspicious Dhanteras Puja with all essential items and blessings from our pandits.",
+          "features": [
+            "Essential Puja Samagri",
+            "Pandit guidance via video call",
+            "Lakshmi mantra chanting and Prasad"
+          ]
+        },
+        {
+          "id": "standard",
+          "title": "Standard Dhanteras Mahapuja",
+          "price": "₹1101",
+          "description": "A complete in-person Dhanteras Mahapuja including Lakshmi-Ganesh worship, Dhanvantari invocation, and Havan.",
+          "features": [
+            "Complete Samagri with Deep Daan",
+            "In-person Pandit Puja",
+            "Lakshmi-Ganesh Havan and Sankalp",
+            "Temple Prasad and blessings for family"
+          ]
+        }
       ],
-      "cta": "Select Package"
-    }
-  ],
-
-  "comparisonTable": {
-    "columns": ["Package", "Price", "Duration", "Features", "Prasad"],
-    "rows": [
-      {
-        "package": "Basic",
-        "price": "₹501",
-        "duration": "1 hr",
-        "features": "Essential Puja + Samagri",
-        "prasad": "For 2"
+      "comparisonTable": {
+        "columns": [
+          "Package",
+          "Price",
+          "Features",
+          "Delivery"
+        ],
+        "rows": [
+          {
+            "package": "Basic",
+            "price": "₹501",
+            "features": "Video Call Puja + Samagri Kit + Prasad",
+            "delivery": "Yes"
+          },
+          {
+            "package": "Standard",
+            "price": "₹1101",
+            "features": "In-person Mahapuja + Havan + Deep Daan",
+            "delivery": "Yes"
+          }
+        ]
       },
-      {
-        "package": "Standard",
-        "price": "₹1101",
-        "duration": "2 hrs",
-        "features": "Puja + Havan + Deep Daan",
-        "prasad": "For 5"
-      },
-      {
-        "package": "Premium",
-        "price": "₹2101",
-        "duration": "3–4 hrs",
-        "features": "Lakshmi-Ganesh-Kuber Puja + Havan",
-        "prasad": "For 20"
+      "templeDetails": {
+        "heading": "Our Temple Network for Dhanteras Blessings",
+        "highlights": [
+          "Associated with ancient Lakshmi temples for authentic rituals",
+          "Special blessings from Dhanvantari and Lakshmi temples in Varanasi and Vrindavan",
+          "Pure Prasad and sanctified coins from temple rituals delivered to devotees"
+        ],
+        "temples": [
+          "Shri Lakshmi Narayan Mandir (Delhi)",
+          "Banke Bihari Ji (Vrindavan)",
+          "ISKCON Temple (Mathura)",
+          "Kashi Vishwanath Temple (Varanasi)",
+          "Shree Dhanvantari Mandir (Ayodhya)",
+          "Shree Lakshmi Ganesh Temple (Mumbai)"
+        ]
       }
-    ]
-  },
-
-  "templeDetails": {
-    "heading": "Our Association with Prominent Temples",
-    "description": "Our Diwali Puja rituals are connected with sacred temples dedicated to Goddess Lakshmi and Lord Ganesha, ensuring the most authentic Vedic processions and blessings for devotees.",
-    "highlights": [
-      "Option for live darshan from participating temples",
-      "Temple Prasad delivery included in Premium package",
-      "Conducted by trained Vedic pandits from Mathura and Varanasi"
-    ],
-    "temples": [
-      "Shri Lakshmi Narayan Mandir (Delhi)",
-      "Banke Bihari Ji (Vrindavan)",
-      "ISKCON Temple (Mathura)",
-      "Kashi Vishwanath Temple (Varanasi)",
-      "Shree Siddhivinayak Temple (Mumbai)",
-      "Prem Mandir (Vrindavan)"
-    ]
-  }
-}
-,
-{
-  "title": "Govardhan Puja",
-  "subtitle": "Celebrate the divine act of Lord Krishna lifting the sacred Govardhan mountain to protect devotees.",
-  "bannerImage": "/assets/pujas/govardhan.jpg",
-  "slug": "govardhan-puja",
-  "location": "Delhi NCR",
-  "date": "22-10-2025",
-  "time": "06:00 PM",
-
-  "category": ["upcoming-pujas", "puja"],
-  "tags": ["Govardhan Puja", "Krishna", "Braj Tradition", "Nature Worship"],
-
-  "benefits": {
-    "heading": "Benefits of Govardhan Puja",
-    "description": "Govardhan Puja, also known as Annakut Puja, commemorates the day when Lord Krishna lifted the Govardhan mountain to protect the people of Braj from torrential rain. Performing this puja brings divine protection, prosperity, and harmony with nature.",
-    "points": [
-      "Invokes blessings of Lord Krishna for protection and prosperity",
-      "Removes obstacles and negative energies from home and life",
-      "Promotes gratitude towards nature and divine forces",
-      "Ensures good health, wealth, and happiness in the household",
-      "Brings divine grace and strengthens family unity"
-    ]
-  },
-
-  "packages": [
-    {
-      "id": "basic",
-      "title": "Basic Govardhan Puja",
-      "price": "₹501",
-      "description": "Simple Govardhan Puja performed with essential samagri and online pandit guidance.",
-      "features": [
-        "Essential samagri for puja",
-        "Pandit guidance via video call",
-        "Prasad from Govardhan temple"
-      ]
     },
     {
-      "id": "standard",
-      "title": "Complete Annakut Poojan",
-      "price": "₹1101",
-      "description": "Full Govardhan and Annakut Puja including havan, Govardhan parikrama, and prasad.",
-      "features": [
-        "Complete samagri set",
-        "In-person or on-site Pandit",
-        "Govardhan Havan and Annakut rituals",
-        "Temple prasad & blessings from Vrindavan"
-      ]
-    }
-  ],
-
-  "comparisonTable": {
-    "columns": ["Package", "Price", "Features", "Delivery"],
-    "rows": [
-      {
-        "package": "Basic",
-        "price": "₹501",
-        "features": "Video Call Puja + Samagri + Temple Prasad",
-        "delivery": "Yes"
+      "title": "Diwali Puja – Festival of Lights and Prosperity",
+      "subtitle": "Wishing you a Diwali that sparkles with joy, love, and divine blessings. Let the light of diyas remove darkness from your life and fill your heart with peace, kindness, and abundance.",
+      "bannerImage": "/assets/pujas/diwali puja.jpg",
+      "slug": "diwali-puja",
+      "location": "Mathura",
+      "date": "20-10-2025",
+      "time": "06:00 PM ",
+      "category": [
+        "upcoming-pujas",
+        "puja",
+        "lakshmi-ganesh-puja"
+      ],
+      "tags": [
+        "Diwali",
+        "Lakshmi Puja",
+        "Ganesh Puja",
+        "Festival of Lights"
+      ],
+      "benefits": {
+        "heading": "Benefits of Performing Diwali Puja",
+        "points": [
+          "Invokes the blessings of Goddess Lakshmi for wealth and prosperity",
+          "Removes financial and emotional negativity from home and workplace",
+          "Brings peace, harmony, and happiness among family members",
+          "Ensures good fortune and success in upcoming endeavors",
+          "Strengthens spiritual growth through light and devotion"
+        ]
       },
-      {
-        "package": "Standard",
-        "price": "₹1101",
-        "features": "Full Puja + Havan + Annakut Offering + Prasad",
-        "delivery": "Yes"
+      "packages": [
+        {
+          "id": "basic",
+          "title": "Basic Diwali Puja",
+          "price": "₹501",
+          "description": "A simple Diwali Puja with all essential samagri and blessings for your family.",
+          "features": [
+            "Includes essential puja samagri",
+            "Performed by certified Vedic pandit",
+            "Duration: 1 hour",
+            "Lakshmi-Ganesh mantra chanting",
+            "Prasad included"
+          ],
+          "cta": "Select Package"
+        },
+        {
+          "id": "standard",
+          "title": "Standard Diwali Puja",
+          "price": "₹1101",
+          "description": "Extended Diwali Puja with Havan and Deep Daan for prosperity and protection.",
+          "features": [
+            "Complete puja samagri with Deep Daan set",
+            "Pandit + 1 assistant",
+            "Duration: 2 hours",
+            "Lakshmi-Ganesh Havan included",
+            "Prasad for 5 people"
+          ],
+          "cta": "Select Package"
+        },
+        {
+          "id": "premium",
+          "title": "Premium Diwali Maha Puja",
+          "price": "₹2101",
+          "description": "A grand Diwali celebration including Lakshmi-Ganesh Puja, Kuber Puja, and Havan.",
+          "features": [
+            "Full samagri with decorative setup",
+            "2 Pandits + 2 assistants",
+            "Duration: 3–4 hours",
+            "Lakshmi-Ganesh-Kuber Puja + Havan",
+            "Deep Daan & Prasad for 20 people",
+            "Temple Prasad from Mathura or Varanasi"
+          ],
+          "cta": "Select Package"
+        }
+      ],
+      "comparisonTable": {
+        "columns": [
+          "Package",
+          "Price",
+          "Duration",
+          "Features",
+          "Prasad"
+        ],
+        "rows": [
+          {
+            "package": "Basic",
+            "price": "₹501",
+            "duration": "1 hr",
+            "features": "Essential Puja + Samagri",
+            "prasad": "For 2"
+          },
+          {
+            "package": "Standard",
+            "price": "₹1101",
+            "duration": "2 hrs",
+            "features": "Puja + Havan + Deep Daan",
+            "prasad": "For 5"
+          },
+          {
+            "package": "Premium",
+            "price": "₹2101",
+            "duration": "3–4 hrs",
+            "features": "Lakshmi-Ganesh-Kuber Puja + Havan",
+            "prasad": "For 20"
+          }
+        ]
+      },
+      "templeDetails": {
+        "heading": "Our Association with Prominent Temples",
+        "description": "Our Diwali Puja rituals are connected with sacred temples dedicated to Goddess Lakshmi and Lord Ganesha, ensuring the most authentic Vedic processions and blessings for devotees.",
+        "highlights": [
+          "Option for live darshan from participating temples",
+          "Temple Prasad delivery included in Premium package",
+          "Conducted by trained Vedic pandits from Mathura and Varanasi"
+        ],
+        "temples": [
+          "Shri Lakshmi Narayan Mandir (Delhi)",
+          "Banke Bihari Ji (Vrindavan)",
+          "ISKCON Temple (Mathura)",
+          "Kashi Vishwanath Temple (Varanasi)",
+          "Shree Siddhivinayak Temple (Mumbai)",
+          "Prem Mandir (Vrindavan)"
+        ]
       }
-    ]
-  },
-
-  "templeDetails": {
-    "heading": "Our Temple Network",
-    "highlights": [
-      "Connected with sacred Govardhan Hill temples in Braj region",
-      "Rituals performed as per Vaishnav tradition",
-      "Prasad from Shri Giriraj Ji temples in Govardhan and Vrindavan"
-    ],
-    "temples": [
-      "Shri Giriraj Ji Temple (Govardhan)",
-      "Radha Kund Temple",
-      "ISKCON Temple (Vrindavan)",
-      "Banke Bihari Ji Temple (Vrindavan)",
-      "Radha Raman Mandir",
-      "Prem Mandir, Vrindavan"
-    ]
-  }
-}
-,
-
-   {
-  "title": "Bhai Dooj Poojan – Celebrating the Sacred Bond of Siblings",
-  "subtitle": "Celebrate this festival of love and protection with traditional Bhai Dooj rituals, symbolizing the unbreakable bond between brothers and sisters.",
-        "bannerImage": "/assets/pujas/rakha_bandhan.jpg",
-  "slug": "bhai-dooj-poojan",
-  "location": "Delhi NCR",
-  "date": "23-10-2025",
-  "time": "10:00 AM",
-
-  "category": ["upcoming-pujas", "puja"],
-  "tags": ["Bhai Dooj", "Brother-Sister Bond", "Vedic Rituals"],
-
-  "benefits": {
-    "heading": "Benefits of Bhai Dooj Poojan",
-    "description": "Bhai Dooj, also known as Bhau Beej, strengthens the sacred relationship between brothers and sisters. Sisters perform this puja to pray for their brothers’ long life, prosperity, and happiness. Our Vedic pandits conduct authentic rituals as per ancient traditions to bless the entire family with harmony and divine grace.",
-    "points": [
-      "Strengthens love and protection between brothers and sisters",
-      "Blesses brothers with long life, health, and prosperity",
-      "Removes negativity and promotes family harmony",
-      "Invokes divine blessings of Yama and Yamuna for mutual well-being",
-      "Brings happiness, peace, and spiritual bonding within families"
-    ]
-  },
-
-  "packages": [
-    {
-      "id": "basic",
-      "title": "Basic Bhai Dooj Puja",
-      "price": "₹401",
-      "description": "Simple Bhai Dooj Puja with traditional tilak and blessings.",
-      "features": [
-        "Essential puja samagri",
-        "Pandit guidance via video call",
-        "Tilak & Prasad included"
-      ]
     },
     {
-      "id": "standard",
-      "title": "Standard Bhai Dooj Poojan",
-      "price": "₹901",
-      "description": "Complete Bhai Dooj Poojan with Yama-Yamuna mantra chanting and aarti.",
-      "features": [
-        "Complete puja samagri",
-        "In-person Pandit",
-        "Tilak, Aarti & Sankalp",
-        "Prasad for brother and sister"
-      ]
-    }
-  ],
-
-  "comparisonTable": {
-    "columns": ["Package", "Price", "Features", "Delivery"],
-    "rows": [
-      {
-        "package": "Basic",
-        "price": "₹401",
-        "features": "Video Call Pooja + Tilak Samagri + Prasad",
-        "delivery": "Yes"
+      "title": "Govardhan Puja",
+      "subtitle": "Celebrate the divine act of Lord Krishna lifting the sacred Govardhan mountain to protect devotees.",
+      "bannerImage": "/assets/pujas/govardhan.jpg",
+      "slug": "govardhan-puja",
+      "location": "Delhi NCR",
+      "date": "22-10-2025",
+      "time": "06:00 PM",
+      "category": [
+        "upcoming-pujas",
+        "puja"
+      ],
+      "tags": [
+        "Govardhan Puja",
+        "Krishna",
+        "Braj Tradition",
+        "Nature Worship"
+      ],
+      "benefits": {
+        "heading": "Benefits of Govardhan Puja",
+        "description": "Govardhan Puja, also known as Annakut Puja, commemorates the day when Lord Krishna lifted the Govardhan mountain to protect the people of Braj from torrential rain. Performing this puja brings divine protection, prosperity, and harmony with nature.",
+        "points": [
+          "Invokes blessings of Lord Krishna for protection and prosperity",
+          "Removes obstacles and negative energies from home and life",
+          "Promotes gratitude towards nature and divine forces",
+          "Ensures good health, wealth, and happiness in the household",
+          "Brings divine grace and strengthens family unity"
+        ]
       },
-      {
-        "package": "Standard",
-        "price": "₹901",
-        "features": "In-person Pooja + Aarti + Sankalp",
-        "delivery": "Yes"
+      "packages": [
+        {
+          "id": "basic",
+          "title": "Basic Govardhan Puja",
+          "price": "₹501",
+          "description": "Simple Govardhan Puja performed with essential samagri and online pandit guidance.",
+          "features": [
+            "Essential samagri for puja",
+            "Pandit guidance via video call",
+            "Prasad from Govardhan temple"
+          ]
+        },
+        {
+          "id": "standard",
+          "title": "Complete Annakut Poojan",
+          "price": "₹1101",
+          "description": "Full Govardhan and Annakut Puja including havan, Govardhan parikrama, and prasad.",
+          "features": [
+            "Complete samagri set",
+            "In-person or on-site Pandit",
+            "Govardhan Havan and Annakut rituals",
+            "Temple prasad & blessings from Vrindavan"
+          ]
+        }
+      ],
+      "comparisonTable": {
+        "columns": [
+          "Package",
+          "Price",
+          "Features",
+          "Delivery"
+        ],
+        "rows": [
+          {
+            "package": "Basic",
+            "price": "₹501",
+            "features": "Video Call Puja + Samagri + Temple Prasad",
+            "delivery": "Yes"
+          },
+          {
+            "package": "Standard",
+            "price": "₹1101",
+            "features": "Full Puja + Havan + Annakut Offering + Prasad",
+            "delivery": "Yes"
+          }
+        ]
+      },
+      "templeDetails": {
+        "heading": "Our Temple Network",
+        "highlights": [
+          "Connected with sacred Govardhan Hill temples in Braj region",
+          "Rituals performed as per Vaishnav tradition",
+          "Prasad from Shri Giriraj Ji temples in Govardhan and Vrindavan"
+        ],
+        "temples": [
+          "Shri Giriraj Ji Temple (Govardhan)",
+          "Radha Kund Temple",
+          "ISKCON Temple (Vrindavan)",
+          "Banke Bihari Ji Temple (Vrindavan)",
+          "Radha Raman Mandir",
+          "Prem Mandir, Vrindavan"
+        ]
       }
-    ]
-  },
-
-  "templeDetails": {
-    "heading": "Our Temple Network for Bhai Dooj",
-    "highlights": [
-      "Associated with ancient Yamuna temples where Bhai Dooj originated",
-      "Puja performed as per Yama-Yamuna tradition for long life and prosperity",
-      "Blessings and Prasad available from associated temples"
-    ],
-    "temples": [
-      "Yamuna Temple (Mathura)",
-      "Banke Bihari Ji (Vrindavan)",
-      "ISKCON Temple (Delhi)",
-      "Radha Raman Mandir (Vrindavan)",
-      "Prem Mandir (Vrindavan)",
-      "Shree Lakshmi Narayan Temple (Delhi)"
-    ]
-  }
-}
-,
-   
- 
-   {
-  "title": "Durga Puja – Invoke Divine Strength and Protection",
-  "subtitle": "Celebrate the power and grace of Maa Durga with sacred rituals, devotion, and blessings from experienced Vedic Pandits.",
-        "bannerImage": "/assets/pujas/durga puja.jpg",
-  "slug": "durga-puja",
-  "location": "Delhi NCR",
-  "date": "2025-09-30",
-  "time": "10:00 AM",
-
-  "category": ["upcoming-pujas", "puja"],
-  "tags": ["Durga Puja", "Navratri", "Vedic Rituals", "Divine Protection", "Shakti Worship"],
-
-  "benefits": {
-    "heading": "Benefits of Durga Puja",
-    "description": "Durga Puja honors the supreme goddess Maa Durga — the embodiment of Shakti, strength, and righteousness. Performing this puja removes negativity, empowers devotees, and brings divine blessings for protection, prosperity, and success in life.",
-    "points": [
-      "Invokes divine protection and strength from Maa Durga",
-      "Removes fear, negative energies, and planetary doshas",
-      "Brings prosperity, good fortune, and spiritual upliftment",
-      "Promotes courage, wisdom, and confidence in personal and professional life",
-      "Ensures peace, health, and harmony in the household"
-    ]
-  },
-
-  "packages": [
-    {
-      "id": "basic",
-      "title": "Basic Durga Puja",
-      "price": "₹701",
-      "description": "Simple Durga Puja with essential samagri and virtual pandit guidance.",
-      "features": [
-        "Essential samagri for puja",
-        "Pandit guidance via video call",
-        "Durga prasad and blessings"
-      ]
     },
     {
-      "id": "standard",
-      "title": "Complete Navratri Puja",
-      "price": "₹1501",
-      "description": "Full Durga Puja including havan, Durga Saptashati path, and sankalp rituals.",
-      "features": [
-        "Complete samagri set",
-        "In-person Pandit for full rituals",
-        "Durga Saptashati path & Havan",
-        "Maa Durga prasad for family"
-      ]
-    }
-  ],
-
-  "comparisonTable": {
-    "columns": ["Package", "Price", "Features", "Delivery"],
-    "rows": [
-      {
-        "package": "Basic",
-        "price": "₹701",
-        "features": "Video Call Puja + Samagri + Prasad",
-        "delivery": "Yes"
+      "title": "Bhai Dooj Poojan – Celebrating the Sacred Bond of Siblings",
+      "subtitle": "Celebrate this festival of love and protection with traditional Bhai Dooj rituals, symbolizing the unbreakable bond between brothers and sisters.",
+      "bannerImage": "/assets/pujas/rakha_bandhan.jpg",
+      "slug": "bhai-dooj-poojan",
+      "location": "Delhi NCR",
+      "date": "23-10-2025",
+      "time": "10:00 AM",
+      "category": [
+        "upcoming-pujas",
+        "puja"
+      ],
+      "tags": [
+        "Bhai Dooj",
+        "Brother-Sister Bond",
+        "Vedic Rituals"
+      ],
+      "benefits": {
+        "heading": "Benefits of Bhai Dooj Poojan",
+        "description": "Bhai Dooj, also known as Bhau Beej, strengthens the sacred relationship between brothers and sisters. Sisters perform this puja to pray for their brothers’ long life, prosperity, and happiness. Our Vedic pandits conduct authentic rituals as per ancient traditions to bless the entire family with harmony and divine grace.",
+        "points": [
+          "Strengthens love and protection between brothers and sisters",
+          "Blesses brothers with long life, health, and prosperity",
+          "Removes negativity and promotes family harmony",
+          "Invokes divine blessings of Yama and Yamuna for mutual well-being",
+          "Brings happiness, peace, and spiritual bonding within families"
+        ]
       },
-      {
-        "package": "Standard",
-        "price": "₹1501",
-        "features": "In-person Puja + Saptashati Path + Havan",
-        "delivery": "Yes"
+      "packages": [
+        {
+          "id": "basic",
+          "title": "Basic Bhai Dooj Puja",
+          "price": "₹401",
+          "description": "Simple Bhai Dooj Puja with traditional tilak and blessings.",
+          "features": [
+            "Essential puja samagri",
+            "Pandit guidance via video call",
+            "Tilak & Prasad included"
+          ]
+        },
+        {
+          "id": "standard",
+          "title": "Standard Bhai Dooj Poojan",
+          "price": "₹901",
+          "description": "Complete Bhai Dooj Poojan with Yama-Yamuna mantra chanting and aarti.",
+          "features": [
+            "Complete puja samagri",
+            "In-person Pandit",
+            "Tilak, Aarti & Sankalp",
+            "Prasad for brother and sister"
+          ]
+        }
+      ],
+      "comparisonTable": {
+        "columns": [
+          "Package",
+          "Price",
+          "Features",
+          "Delivery"
+        ],
+        "rows": [
+          {
+            "package": "Basic",
+            "price": "₹401",
+            "features": "Video Call Pooja + Tilak Samagri + Prasad",
+            "delivery": "Yes"
+          },
+          {
+            "package": "Standard",
+            "price": "₹901",
+            "features": "In-person Pooja + Aarti + Sankalp",
+            "delivery": "Yes"
+          }
+        ]
+      },
+      "templeDetails": {
+        "heading": "Our Temple Network for Bhai Dooj",
+        "highlights": [
+          "Associated with ancient Yamuna temples where Bhai Dooj originated",
+          "Puja performed as per Yama-Yamuna tradition for long life and prosperity",
+          "Blessings and Prasad available from associated temples"
+        ],
+        "temples": [
+          "Yamuna Temple (Mathura)",
+          "Banke Bihari Ji (Vrindavan)",
+          "ISKCON Temple (Delhi)",
+          "Radha Raman Mandir (Vrindavan)",
+          "Prem Mandir (Vrindavan)",
+          "Shree Lakshmi Narayan Temple (Delhi)"
+        ]
       }
-    ]
-  },
-
-  "templeDetails": {
-    "heading": "Our Temple Network",
-    "highlights": [
-      "Associated with famous Shakti Peeth temples across India",
-      "Rituals performed by certified Durga Upasak Pandits",
-      "Blessings and prasad from renowned temples"
-    ],
-    "temples": [
-      "Vaishno Devi Temple (Jammu)",
-      "Dakshineswar Kali Temple (Kolkata)",
-      "Kamakhya Devi Temple (Assam)",
-      "Jwala Devi Temple (Himachal Pradesh)",
-      "Chhatarpur Temple (Delhi)",
-      "Kalighat Temple (Kolkata)"
-    ]
-  }
-}
-,
-   {
-  "title": "Shree Lakshmi Puja – Invoke Prosperity and Divine Wealth",
-  "subtitle": "Worship Maa Lakshmi, the Goddess of wealth, prosperity, and fortune, to invite abundance and happiness into your life.",
-  "bannerImage": "/assets/pujas/lakshami puja.jpg",
-  "slug": "shree-lakshmi-puja",
-  "location": "Mathura",
-  "date": "01-10-2025",
-  "time": "10:00 AM",
-
-  "category": ["upcoming-pujas", "puja"],
-  "tags": ["Lakshmi Puja", "Diwali Puja", "Vedic Rituals", "Prosperity", "Wealth Blessings"],
-
-  "benefits": {
-    "heading": "Benefits of Shree Lakshmi Puja",
-    "description": "Lakshmi Puja is performed to seek the blessings of Goddess Lakshmi — the divine embodiment of wealth, prosperity, and fortune. Our Vedic Pandits conduct the rituals following traditional procedures to attract abundance and remove financial obstacles.",
-    "points": [
-      "Brings prosperity, happiness, and success in business and career",
-      "Removes financial difficulties and attracts new opportunities",
-      "Ensures harmony, peace, and spiritual growth in the household",
-      "Invokes divine blessings for long-lasting wealth and stability",
-      "Eliminates negative energies and enhances positive vibrations at home"
-    ]
-  },
-
-  "packages": [
-    {
-      "id": "basic",
-      "title": "Basic Lakshmi Puja",
-      "price": "₹701",
-      "description": "Simple Lakshmi Puja with essential samagri and online pandit guidance.",
-      "features": [
-        "Essential puja samagri",
-        "Pandit guidance via video call",
-        "Lakshmi yantra and prasad included"
-      ]
     },
     {
-      "id": "standard",
-      "title": "Complete Lakshmi Havan",
-      "price": "₹1501",
-      "description": "Comprehensive Lakshmi Puja with havan, mantra chanting, and sankalp.",
-      "features": [
-        "Complete samagri set",
-        "In-person Vedic Pandit for full rituals",
-        "Lakshmi Havan and Maha Aarti",
-        "Prasad and yantra for the entire family"
-      ]
-    }
-  ],
-
-  "comparisonTable": {
-    "columns": ["Package", "Price", "Features", "Delivery"],
-    "rows": [
-      {
-        "package": "Basic",
-        "price": "₹701",
-        "features": "Video Call Puja + Samagri + Lakshmi Prasad",
-        "delivery": "Yes"
+      "title": "Durga Puja – Invoke Divine Strength and Protection",
+      "subtitle": "Celebrate the power and grace of Maa Durga with sacred rituals, devotion, and blessings from experienced Vedic Pandits.",
+      "bannerImage": "/assets/pujas/durga puja.jpg",
+      "slug": "durga-puja",
+      "location": "Delhi NCR",
+      "date": "2025-09-30",
+      "time": "10:00 AM",
+      "category": [
+        "upcoming-pujas",
+        "puja"
+      ],
+      "tags": [
+        "Durga Puja",
+        "Navratri",
+        "Vedic Rituals",
+        "Divine Protection",
+        "Shakti Worship"
+      ],
+      "benefits": {
+        "heading": "Benefits of Durga Puja",
+        "description": "Durga Puja honors the supreme goddess Maa Durga — the embodiment of Shakti, strength, and righteousness. Performing this puja removes negativity, empowers devotees, and brings divine blessings for protection, prosperity, and success in life.",
+        "points": [
+          "Invokes divine protection and strength from Maa Durga",
+          "Removes fear, negative energies, and planetary doshas",
+          "Brings prosperity, good fortune, and spiritual upliftment",
+          "Promotes courage, wisdom, and confidence in personal and professional life",
+          "Ensures peace, health, and harmony in the household"
+        ]
       },
-      {
-        "package": "Standard",
-        "price": "₹1501",
-        "features": "In-person Puja + Havan + Yantra + Prasad",
-        "delivery": "Yes"
+      "packages": [
+        {
+          "id": "basic",
+          "title": "Basic Durga Puja",
+          "price": "₹701",
+          "description": "Simple Durga Puja with essential samagri and virtual pandit guidance.",
+          "features": [
+            "Essential samagri for puja",
+            "Pandit guidance via video call",
+            "Durga prasad and blessings"
+          ]
+        },
+        {
+          "id": "standard",
+          "title": "Complete Navratri Puja",
+          "price": "₹1501",
+          "description": "Full Durga Puja including havan, Durga Saptashati path, and sankalp rituals.",
+          "features": [
+            "Complete samagri set",
+            "In-person Pandit for full rituals",
+            "Durga Saptashati path & Havan",
+            "Maa Durga prasad for family"
+          ]
+        }
+      ],
+      "comparisonTable": {
+        "columns": [
+          "Package",
+          "Price",
+          "Features",
+          "Delivery"
+        ],
+        "rows": [
+          {
+            "package": "Basic",
+            "price": "₹701",
+            "features": "Video Call Puja + Samagri + Prasad",
+            "delivery": "Yes"
+          },
+          {
+            "package": "Standard",
+            "price": "₹1501",
+            "features": "In-person Puja + Saptashati Path + Havan",
+            "delivery": "Yes"
+          }
+        ]
+      },
+      "templeDetails": {
+        "heading": "Our Temple Network",
+        "highlights": [
+          "Associated with famous Shakti Peeth temples across India",
+          "Rituals performed by certified Durga Upasak Pandits",
+          "Blessings and prasad from renowned temples"
+        ],
+        "temples": [
+          "Vaishno Devi Temple (Jammu)",
+          "Dakshineswar Kali Temple (Kolkata)",
+          "Kamakhya Devi Temple (Assam)",
+          "Jwala Devi Temple (Himachal Pradesh)",
+          "Chhatarpur Temple (Delhi)",
+          "Kalighat Temple (Kolkata)"
+        ]
       }
-    ]
-  },
-
-  "templeDetails": {
-    "heading": "Our Temple Network",
-    "highlights": [
-      "Associated with prominent Lakshmi temples across India",
-      "Rituals performed as per authentic Vedic Lakshmi Tantra procedures",
-      "Blessings and prasad from sacred temples of wealth and prosperity"
-    ],
-    "temples": [
-      "Mahalakshmi Temple (Kolhapur)",
-      "Ashtalakshmi Temple (Chennai)",
-      "Kamakhya Temple (Assam)",
-      "Lakshmi Narayan Temple (Delhi)",
-      "Padmavathi Devi Temple (Tirupati)",
-      "Banke Bihari Temple (Vrindavan)"
-    ]
-  }
-}
-,
-   {
-  "title": "Dussehra Puja – Celebration of Victory of Good over Evil",
-  "subtitle": "Join us in celebrating the divine triumph of Lord Rama over Ravana with traditional rituals and Vedic blessings.",
-  "bannerImage": "/assets/pujas/dushera.jpg",
-  "slug": "dussehra-puja",
-  "location": "Mathura",
-  "date": "01-10-2025",
-  "time": "10:00 AM",
-
-  "category": ["upcoming-pujas", "puja", "festival"],
-  "tags": ["Dussehra", "Rama Victory", "Vedic Rituals", "Good Over Evil", "Navratri End"],
-
-  "benefits": {
-    "heading": "Benefits of Dussehra Puja",
-    "description": "Dussehra Puja marks the victory of Lord Rama over Ravana and the triumph of righteousness. Performing this puja removes negative energies, restores balance, and brings strength, protection, and success in all endeavors.",
-    "points": [
-      "Removes negative energies and evil influences from life",
-      "Brings strength, courage, and victory in challenges",
-      "Ensures peace, harmony, and prosperity in family and business",
-      "Invokes divine blessings of Lord Rama and Goddess Durga",
-      "Promotes self-confidence and righteousness in daily life"
-    ]
-  },
-
-  "packages": [
-    {
-      "id": "basic",
-      "title": "Basic Dussehra Puja",
-      "price": "₹701",
-      "description": "Simple Dussehra Puja with essential rituals and samagri included.",
-      "features": [
-        "Essential Dussehra samagri",
-        "Pandit guidance via video call",
-        "Recitation of Ram Raksha Stotra",
-        "Prasad included"
-      ]
     },
     {
-      "id": "standard",
-      "title": "Complete Dussehra Yagna",
-      "price": "₹1501",
-      "description": "Comprehensive Dussehra Puja with havan, Durga visarjan, and Ram Parayan.",
-      "features": [
-        "Complete samagri and setup",
-        "In-person Pandit and assistant",
-        "Rama & Durga invocation rituals",
-        "Victory Havan & Prasad for family"
-      ]
+      "title": "Shree Lakshmi Puja – Invoke Prosperity and Divine Wealth",
+      "subtitle": "Worship Maa Lakshmi, the Goddess of wealth, prosperity, and fortune, to invite abundance and happiness into your life.",
+      "bannerImage": "/assets/pujas/lakshami puja.jpg",
+      "slug": "shree-lakshmi-puja",
+      "location": "Mathura",
+      "date": "01-10-2025",
+      "time": "10:00 AM",
+      "category": [
+        "upcoming-pujas",
+        "puja"
+      ],
+      "tags": [
+        "Lakshmi Puja",
+        "Diwali Puja",
+        "Vedic Rituals",
+        "Prosperity",
+        "Wealth Blessings"
+      ],
+      "benefits": {
+        "heading": "Benefits of Shree Lakshmi Puja",
+        "description": "Lakshmi Puja is performed to seek the blessings of Goddess Lakshmi — the divine embodiment of wealth, prosperity, and fortune. Our Vedic Pandits conduct the rituals following traditional procedures to attract abundance and remove financial obstacles.",
+        "points": [
+          "Brings prosperity, happiness, and success in business and career",
+          "Removes financial difficulties and attracts new opportunities",
+          "Ensures harmony, peace, and spiritual growth in the household",
+          "Invokes divine blessings for long-lasting wealth and stability",
+          "Eliminates negative energies and enhances positive vibrations at home"
+        ]
+      },
+      "packages": [
+        {
+          "id": "basic",
+          "title": "Basic Lakshmi Puja",
+          "price": "₹701",
+          "description": "Simple Lakshmi Puja with essential samagri and online pandit guidance.",
+          "features": [
+            "Essential puja samagri",
+            "Pandit guidance via video call",
+            "Lakshmi yantra and prasad included"
+          ]
+        },
+        {
+          "id": "standard",
+          "title": "Complete Lakshmi Havan",
+          "price": "₹1501",
+          "description": "Comprehensive Lakshmi Puja with havan, mantra chanting, and sankalp.",
+          "features": [
+            "Complete samagri set",
+            "In-person Vedic Pandit for full rituals",
+            "Lakshmi Havan and Maha Aarti",
+            "Prasad and yantra for the entire family"
+          ]
+        }
+      ],
+      "comparisonTable": {
+        "columns": [
+          "Package",
+          "Price",
+          "Features",
+          "Delivery"
+        ],
+        "rows": [
+          {
+            "package": "Basic",
+            "price": "₹701",
+            "features": "Video Call Puja + Samagri + Lakshmi Prasad",
+            "delivery": "Yes"
+          },
+          {
+            "package": "Standard",
+            "price": "₹1501",
+            "features": "In-person Puja + Havan + Yantra + Prasad",
+            "delivery": "Yes"
+          }
+        ]
+      },
+      "templeDetails": {
+        "heading": "Our Temple Network",
+        "highlights": [
+          "Associated with prominent Lakshmi temples across India",
+          "Rituals performed as per authentic Vedic Lakshmi Tantra procedures",
+          "Blessings and prasad from sacred temples of wealth and prosperity"
+        ],
+        "temples": [
+          "Mahalakshmi Temple (Kolhapur)",
+          "Ashtalakshmi Temple (Chennai)",
+          "Kamakhya Temple (Assam)",
+          "Lakshmi Narayan Temple (Delhi)",
+          "Padmavathi Devi Temple (Tirupati)",
+          "Banke Bihari Temple (Vrindavan)"
+        ]
+      }
     },
     {
-      "id": "premium",
-      "title": "Grand Dussehra Celebration",
-      "price": "₹3101",
-      "description": "Full Dussehra event with Ramayan Path, havan, and Ravana effigy burning (symbolic).",
-      "features": [
-        "Full ritual setup and decoration",
-        "2 Pandits + 2 assistants",
-        "Ramayan Katha & symbolic effigy ritual",
-        "Prasad and blessings for the entire family"
-      ]
-    }
-  ],
-
-  "comparisonTable": {
-    "columns": ["Package", "Price", "Duration", "Features", "Prasad"],
-    "rows": [
-      {
-        "package": "Basic",
-        "price": "₹701",
-        "duration": "1 hr",
-        "features": "Basic Puja + Ram Raksha Stotra",
-        "prasad": "Yes"
+      "title": "Dussehra Puja – Celebration of Victory of Good over Evil",
+      "subtitle": "Join us in celebrating the divine triumph of Lord Rama over Ravana with traditional rituals and Vedic blessings.",
+      "bannerImage": "/assets/pujas/dushera.jpg",
+      "slug": "dussehra-puja",
+      "location": "Mathura",
+      "date": "01-10-2025",
+      "time": "10:00 AM",
+      "category": [
+        "upcoming-pujas",
+        "puja",
+        "festival"
+      ],
+      "tags": [
+        "Dussehra",
+        "Rama Victory",
+        "Vedic Rituals",
+        "Good Over Evil",
+        "Navratri End"
+      ],
+      "benefits": {
+        "heading": "Benefits of Dussehra Puja",
+        "description": "Dussehra Puja marks the victory of Lord Rama over Ravana and the triumph of righteousness. Performing this puja removes negative energies, restores balance, and brings strength, protection, and success in all endeavors.",
+        "points": [
+          "Removes negative energies and evil influences from life",
+          "Brings strength, courage, and victory in challenges",
+          "Ensures peace, harmony, and prosperity in family and business",
+          "Invokes divine blessings of Lord Rama and Goddess Durga",
+          "Promotes self-confidence and righteousness in daily life"
+        ]
       },
-      {
-        "package": "Standard",
-        "price": "₹1501",
-        "duration": "2 hrs",
-        "features": "In-person Puja + Havan",
-        "prasad": "Yes"
+      "packages": [
+        {
+          "id": "basic",
+          "title": "Basic Dussehra Puja",
+          "price": "₹701",
+          "description": "Simple Dussehra Puja with essential rituals and samagri included.",
+          "features": [
+            "Essential Dussehra samagri",
+            "Pandit guidance via video call",
+            "Recitation of Ram Raksha Stotra",
+            "Prasad included"
+          ]
+        },
+        {
+          "id": "standard",
+          "title": "Complete Dussehra Yagna",
+          "price": "₹1501",
+          "description": "Comprehensive Dussehra Puja with havan, Durga visarjan, and Ram Parayan.",
+          "features": [
+            "Complete samagri and setup",
+            "In-person Pandit and assistant",
+            "Rama & Durga invocation rituals",
+            "Victory Havan & Prasad for family"
+          ]
+        },
+        {
+          "id": "premium",
+          "title": "Grand Dussehra Celebration",
+          "price": "₹3101",
+          "description": "Full Dussehra event with Ramayan Path, havan, and Ravana effigy burning (symbolic).",
+          "features": [
+            "Full ritual setup and decoration",
+            "2 Pandits + 2 assistants",
+            "Ramayan Katha & symbolic effigy ritual",
+            "Prasad and blessings for the entire family"
+          ]
+        }
+      ],
+      "comparisonTable": {
+        "columns": [
+          "Package",
+          "Price",
+          "Duration",
+          "Features",
+          "Prasad"
+        ],
+        "rows": [
+          {
+            "package": "Basic",
+            "price": "₹701",
+            "duration": "1 hr",
+            "features": "Basic Puja + Ram Raksha Stotra",
+            "prasad": "Yes"
+          },
+          {
+            "package": "Standard",
+            "price": "₹1501",
+            "duration": "2 hrs",
+            "features": "In-person Puja + Havan",
+            "prasad": "Yes"
+          },
+          {
+            "package": "Premium",
+            "price": "₹3101",
+            "duration": "3–4 hrs",
+            "features": "Grand Ritual + Ramayan Path + Effigy Ritual",
+            "prasad": "Yes"
+          }
+        ]
       },
-      {
-        "package": "Premium",
-        "price": "₹3101",
-        "duration": "3–4 hrs",
-        "features": "Grand Ritual + Ramayan Path + Effigy Ritual",
-        "prasad": "Yes"
+      "templeDetails": {
+        "heading": "Our Temple Network",
+        "description": "Our Dussehra rituals are performed in association with renowned temples dedicated to Lord Rama and Goddess Durga, ensuring authentic Vedic procedures and divine blessings.",
+        "highlights": [
+          "Connected with ancient Ram and Durga temples of North India",
+          "Authentic rituals based on Valmiki Ramayana traditions",
+          "Prasad and blessings from temple priests available for devotees"
+        ],
+        "temples": [
+          "Kalaram Temple (Nashik)",
+          "Ram Janmabhoomi Temple (Ayodhya)",
+          "Jhandewalan Temple (Delhi)",
+          "Durga Mandir (Varanasi)",
+          "Prem Mandir (Vrindavan)",
+          "ISKCON Temple (Mathura)"
+        ]
       }
-    ]
-  },
-
-  "templeDetails": {
-    "heading": "Our Temple Network",
-    "description": "Our Dussehra rituals are performed in association with renowned temples dedicated to Lord Rama and Goddess Durga, ensuring authentic Vedic procedures and divine blessings.",
-    "highlights": [
-      "Connected with ancient Ram and Durga temples of North India",
-      "Authentic rituals based on Valmiki Ramayana traditions",
-      "Prasad and blessings from temple priests available for devotees"
-    ],
-    "temples": [
-      "Kalaram Temple (Nashik)",
-      "Ram Janmabhoomi Temple (Ayodhya)",
-      "Jhandewalan Temple (Delhi)",
-      "Durga Mandir (Varanasi)",
-      "Prem Mandir (Vrindavan)",
-      "ISKCON Temple (Mathura)"
-    ]
-  }
-}
-,
-
-   {
-  "title": "Chhath Puja",
-  "subtitle": "Celebrate the Sun God and thank nature for prosperity",
-  "bannerImage": "/assets/pujas/chhat puja.jpg",
-  "slug": "chhath-puja",
-  "location": "Mathura",
-  "date": "27-10-2025",
-  "time": "5:00 PM",
-  "category": ["upcoming-pujas", "rudrabhishek"],
-  "tags": ["Chhath Puja", "Surya Dev", "Sun Worship", "Prosperity"],
-  "benefits": {
-    "heading": "Benefits of Chhath Puja",
-    "description": "Chhath Puja is dedicated to Surya Dev (the Sun God) and Chhathi Maiya, symbolizing gratitude, purity, and self-discipline. It is believed to bring balance, prosperity, and health.",
-    "points": [
-      "Promotes mental and physical well-being through devotion and fasting",
-      "Ensures prosperity, health, and harmony in family life",
-      "Removes negativity and brings divine blessings from Surya Dev",
-      "Enhances gratitude, self-discipline, and emotional strength",
-      "Fulfills desires and brings peace to the household"
-    ]
-  },
-  "packages": [
-    {
-      "id": "basic",
-      "title": "Abhishek Participation",
-      "price": "₹751",
-      "description": "Participate in temple abhishek remotely with name and gotra sankalp.",
-      "features": [
-        "Gotra Sankalp by temple Pandit",
-        "Your name included in the puja",
-        "Abhishek video shared after completion"
-      ]
     },
     {
-      "id": "premium",
-      "title": "Live Puja + Prasad",
-      "price": "₹1501",
-      "description": "Attend live puja via Zoom with special Braj prasad delivery.",
-      "features": [
-        "Live darshan through Zoom",
-        "Temple prasadam delivered to your home",
-        "Exclusive blessings from Braj Pandits"
-      ]
+      "title": "Chhath Puja",
+      "subtitle": "Celebrate the Sun God and thank nature for prosperity",
+      "bannerImage": "/assets/pujas/chhat puja.jpg",
+      "slug": "chhath-puja",
+      "location": "Mathura",
+      "date": "27-10-2025",
+      "time": "5:00 PM",
+      "category": [
+        "upcoming-pujas",
+        "rudrabhishek"
+      ],
+      "tags": [
+        "Chhath Puja",
+        "Surya Dev",
+        "Sun Worship",
+        "Prosperity"
+      ],
+      "benefits": {
+        "heading": "Benefits of Chhath Puja",
+        "description": "Chhath Puja is dedicated to Surya Dev (the Sun God) and Chhathi Maiya, symbolizing gratitude, purity, and self-discipline. It is believed to bring balance, prosperity, and health.",
+        "points": [
+          "Promotes mental and physical well-being through devotion and fasting",
+          "Ensures prosperity, health, and harmony in family life",
+          "Removes negativity and brings divine blessings from Surya Dev",
+          "Enhances gratitude, self-discipline, and emotional strength",
+          "Fulfills desires and brings peace to the household"
+        ]
+      },
+      "packages": [
+        {
+          "id": "basic",
+          "title": "Abhishek Participation",
+          "price": "₹751",
+          "description": "Participate in temple abhishek remotely with name and gotra sankalp.",
+          "features": [
+            "Gotra Sankalp by temple Pandit",
+            "Your name included in the puja",
+            "Abhishek video shared after completion"
+          ]
+        },
+        {
+          "id": "premium",
+          "title": "Live Puja + Prasad",
+          "price": "₹1501",
+          "description": "Attend live puja via Zoom with special Braj prasad delivery.",
+          "features": [
+            "Live darshan through Zoom",
+            "Temple prasadam delivered to your home",
+            "Exclusive blessings from Braj Pandits"
+          ]
+        }
+      ],
+      "comparisonTable": {
+        "columns": [
+          "Package",
+          "Price",
+          "Inclusion",
+          "Darshan",
+          "Prasad"
+        ],
+        "rows": [
+          {
+            "package": "Basic",
+            "price": "₹751",
+            "inclusion": "Sankalp + Video Recording",
+            "darshan": "No",
+            "prasad": "No"
+          },
+          {
+            "package": "Premium",
+            "price": "₹1501",
+            "inclusion": "Live Zoom + Sankalp",
+            "darshan": "Yes",
+            "prasad": "Yes"
+          }
+        ]
+      },
+      "templeDetails": {
+        "heading": "Our Temple Network",
+        "description": "Our pandits are connected with famous Braj temples like Banke Bihari Ji (Vrindavan), ISKCON Temple (Mathura), Radha Raman Mandir, and others, ensuring authentic rituals as per Vaishnav tradition.",
+        "highlights": [
+          "Associated with ancient Surya and Vaishnav temples in Vrindavan",
+          "Blessings from experienced Vraj region priests",
+          "Prasad available from our temple network"
+        ],
+        "temples": [
+          "Banke Bihari Ji (Vrindavan)",
+          "ISKCON Temple (Mathura)",
+          "Radha Raman Mandir",
+          "Radha Vallabh Temple",
+          "Prem Mandir",
+          "Krishna Balaram Mandir"
+        ]
+      }
     }
   ],
-  "comparisonTable": {
-    "columns": ["Package", "Price", "Inclusion", "Darshan", "Prasad"],
-    "rows": [
-      {
-        "package": "Basic",
-        "price": "₹751",
-        "inclusion": "Sankalp + Video Recording",
-        "darshan": "No",
-        "prasad": "No"
-      },
-      {
-        "package": "Premium",
-        "price": "₹1501",
-        "inclusion": "Live Zoom + Sankalp",
-        "darshan": "Yes",
-        "prasad": "Yes"
-      }
-    ]
-  },
-  "templeDetails": {
-    "heading": "Our Temple Network",
-    "description": "Our pandits are connected with famous Braj temples like Banke Bihari Ji (Vrindavan), ISKCON Temple (Mathura), Radha Raman Mandir, and others, ensuring authentic rituals as per Vaishnav tradition.",
-    "highlights": [
-      "Associated with ancient Surya and Vaishnav temples in Vrindavan",
-      "Blessings from experienced Vraj region priests",
-      "Prasad available from our temple network"
-    ],
-    "temples": [
-      "Banke Bihari Ji (Vrindavan)",
-      "ISKCON Temple (Mathura)",
-      "Radha Raman Mandir",
-      "Radha Vallabh Temple",
-      "Prem Mandir",
-      "Krishna Balaram Mandir"
-    ]
-  }
-}
-
-  ],
-
   "whyChooseUs": {
     "heading": "Why Book with Braj Pandit?",
     "points": [
@@ -754,7 +815,6 @@
       "Spiritual Satisfaction Guaranteed"
     ]
   },
-
   "testimonials": [
     {
       "name": "Priya Sharma",
@@ -767,12 +827,10 @@
       "message": "The Jhula utsav was mesmerizing. Our family felt divine blessings throughout the day."
     }
   ],
-
   "ctaSection": {
     "text": "Book Your Krishna Janmashtami Puja Today & Invite Lord Krishna’s Blessings!",
     "buttonText": "Proceed to Booking"
   },
-
   "faq": [
     {
       "question": "Is samagri included in the package?",
