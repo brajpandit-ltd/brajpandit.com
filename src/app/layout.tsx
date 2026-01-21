@@ -71,6 +71,48 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://brajpandit.com" />
+
+        {/* Sitemap */}
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+        {/* Schema.org Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "BrajPandit - Online Puja & Spiritual Services",
+              description:
+                "Professional online puja services, astrology consultation, horoscope reading, and spiritual guidance by experienced pandits",
+              url: "https://brajpandit.com",
+              image: "https://brajpandit.com/assets/og-image.jpg",
+              telephone: "+91-XXXXXXXXXX",
+              email: "support@brajpandit.com",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Braj Region",
+                addressLocality: "Mathura",
+                addressRegion: "Uttar Pradesh",
+                postalCode: "281001",
+                addressCountry: "IN",
+              },
+              areaServed: {
+                "@type": "Country",
+                name: "IN",
+              },
+              priceRange: "$$",
+              sameAs: [
+                "https://www.facebook.com/brajpandit",
+                "https://www.instagram.com/brajpandit",
+                "https://www.youtube.com/@brajpandit",
+              ],
+            }),
+          }}
+        />
+
         {/* Google AdSense Script */}
         <script
           async
