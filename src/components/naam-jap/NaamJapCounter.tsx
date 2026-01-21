@@ -29,38 +29,85 @@ const NaamJapCounter = () => {
   // Save Modal State
   const [isSaveModalOpen, setIsSaveModalOpen] = useState(false);
   const [username, setUsername] = useState("");
+  const [mobile, setMobile] = useState("");
   const [isSaving, setIsSaving] = useState(false);
+  const [isLoadingData, setIsLoadingData] = useState(false);
 
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const idleTimerRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Load from LocalStorage
+  // Load from LocalStorage and fetch user data
   useEffect(() => {
-    const storedTotal = localStorage.getItem("naamjap_total");
-    const storedToday = localStorage.getItem("naamjap_today");
-    const storedDate = localStorage.getItem("naamjap_date");
-    const storedTime = localStorage.getItem("naamjap_time");
+    const loadUserData = async () => {
+      const storedTotal = localStorage.getItem("naamjap_total");
+      const storedToday = localStorage.getItem("naamjap_today");
+      const storedDate = localStorage.getItem("naamjap_date");
+      const storedUsername = localStorage.getItem("naamjap_username");
+      const storedMobile = localStorage.getItem("naamjap_mobile");
 
-    // Load saved username if exists
-    const storedUsername = localStorage.getItem("naamjap_username");
-    if (storedUsername) setUsername(storedUsername);
+      // Load saved username and mobile if exists
+      if (storedUsername) setUsername(storedUsername);
+      if (storedMobile) setMobile(storedMobile);
 
-    if (storedTotal) setTotalCount(parseInt(storedTotal, 10));
+      // Load from localStorage first (always restore counts)
+      if (storedTotal) setTotalCount(parseInt(storedTotal, 10));
 
-    // Check date for Today reset
-    const currentDate = new Date().toDateString();
-    if (storedDate === currentDate && storedToday) {
-      setTodayCount(parseInt(storedToday, 10));
-    } else {
-      // New day or first time
-      setTodayCount(0);
-      localStorage.setItem("naamjap_date", currentDate);
-    }
+      // Check date for Today reset
+      const currentDate = new Date().toDateString();
+      const storedDateStr = localStorage.getItem("naamjap_date");
 
-    // Restore timer if wanted? User said "Resume on next jap". simpler to just start at 0 or stored time?
-    // "Pause when user stops interaction for 10 seconds". This suggests the timer is "active chanting time".
-    // I will not persist the timer state across page loads heavily, maybe just zero it out or keep it if within session.
-    // Let's keep it simple: Timer is for the current session/visual.
+      if (storedDateStr === currentDate && storedToday) {
+        // Same day - restore today's count from localStorage
+        setTodayCount(parseInt(storedToday, 10));
+      } else if (storedDateStr && storedDateStr !== currentDate) {
+        // New day - reset today count to 0
+        setTodayCount(0);
+        localStorage.setItem("naamjap_date", currentDate);
+      } else {
+        // First time - set current date
+        localStorage.setItem("naamjap_date", currentDate);
+      }
+
+      // Try to fetch user data from Google Sheets (optional sync)
+      if (storedUsername || storedMobile) {
+        setIsLoadingData(true);
+        try {
+          const params = new URLSearchParams();
+          if (storedUsername) params.append("username", storedUsername);
+          if (storedMobile) params.append("mobile", storedMobile);
+
+          const response = await fetch(
+            `/api/get-user-data?${params.toString()}`
+          );
+          if (response.ok) {
+            const result = await response.json();
+            // Only sync if it's today's data and different from local
+            const currentDateStr = new Date().toDateString();
+            const dataDate = new Date(result.data.date).toDateString();
+
+            if (dataDate === currentDateStr) {
+              const sheetsJap = result.data.jap || 0;
+              const localJap = parseInt(storedToday || "0", 10);
+
+              // Use the higher count (in case user saved from another device)
+              if (sheetsJap > localJap) {
+                setTodayCount(sheetsJap);
+                toast.info(`Synced from cloud: ${sheetsJap} japs! 🙏`);
+              } else if (localJap > 0) {
+                toast.info(`Welcome back, ${result.data.username}! 🙏`);
+              }
+            }
+          }
+        } catch (error) {
+          console.error("Error loading user data:", error);
+          // Silently fail - localStorage data is already loaded
+        } finally {
+          setIsLoadingData(false);
+        }
+      }
+    };
+
+    loadUserData();
   }, []);
 
   // Save to LocalStorage
@@ -138,6 +185,12 @@ const NaamJapCounter = () => {
       return;
     }
 
+    // Optional mobile validation
+    if (mobile.trim() && !/^[0-9]{10,15}$/.test(mobile.trim())) {
+      toast.error("Please enter a valid mobile number (10-15 digits)");
+      return;
+    }
+
     setIsSaving(true);
     try {
       const response = await fetch("/api/save-jap", {
@@ -145,17 +198,24 @@ const NaamJapCounter = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           username: username.trim(),
+          mobile: mobile.trim() || undefined,
           jap: todayCount,
           malas: malasCompleted,
         }),
       });
 
+      console.log("response", response);
+
       if (response.ok) {
         toast.success("Jap Saved Successfully! 🕉️");
         localStorage.setItem("naamjap_username", username.trim());
+        if (mobile.trim()) {
+          localStorage.setItem("naamjap_mobile", mobile.trim());
+        }
         setIsSaveModalOpen(false);
       } else {
-        toast.error("Failed to save. Please try again.");
+        const errorData = await response.json();
+        toast.error(errorData.message || "Failed to save. Please try again.");
       }
     } catch (error) {
       console.error(error);
@@ -179,7 +239,7 @@ const NaamJapCounter = () => {
 
       {/* Main Counter Ring */}
       <div
-        className="relative w-72 h-72 md:w-80 md:h-80 rounded-full border-8 border-orange-100 bg-white shadow-[0_0_40px_rgba(255,165,0,0.15)] flex items-center justify-center cursor-pointer select-none transition-transform active:scale-95 touch-manipulation tap-highlight-transparent"
+        className="relative w-60 h-60 md:w-70 md:h-70 rounded-full border-8 border-orange-300 bg-white shadow-[0_0_40px_rgba(255,165,0,0.15)] flex items-center justify-center cursor-pointer select-none transition-transform active:scale-95 touch-manipulation tap-highlight-transparent"
         onClick={handleIncrement}
         style={{ WebkitTapHighlightColor: "transparent" }}
       >
@@ -273,17 +333,23 @@ const NaamJapCounter = () => {
       >
         <div>
           <p className="text-gray-600 text-sm mb-4">
-            Enter your name to save your today's Jap count (
+            Enter your details to save your today's Jap count (
             <span className="font-bold text-orange-600">{todayCount}</span>{" "}
             chants,{" "}
             <span className="font-bold text-orange-600">{malasCompleted}</span>{" "}
             malas).
           </p>
 
+          {isLoadingData && (
+            <div className="text-center py-2 text-sm text-orange-600">
+              Loading your data... 🕉️
+            </div>
+          )}
+
           <div className="space-y-4">
             <div>
               <label className="block text-xs font-medium text-gray-700 mb-1">
-                Your Name
+                Your Name <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -293,6 +359,26 @@ const NaamJapCounter = () => {
                 className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-100 transition-all font-medium"
                 autoFocus
               />
+            </div>
+
+            <div>
+              <label className="block text-xs font-medium text-gray-700 mb-1">
+                Mobile Number{" "}
+                <span className="text-gray-400 text-xs">(Optional)</span>
+              </label>
+              <input
+                type="tel"
+                value={mobile}
+                onChange={(e) =>
+                  setMobile(e.target.value.replace(/[^0-9]/g, ""))
+                }
+                placeholder="e.g. 9876543210"
+                maxLength={15}
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-100 transition-all font-medium"
+              />
+              <p className="text-xs text-gray-400 mt-1">
+                Helps retrieve your data when you return
+              </p>
             </div>
 
             <div className="flex gap-3 pt-2">
@@ -313,7 +399,7 @@ const NaamJapCounter = () => {
             </div>
 
             <p className="text-xs text-center text-gray-400 mt-2">
-              * No login required. Data is saved securely along with your name.
+              * No login required. Data is saved securely to Google Sheets.
             </p>
           </div>
         </div>
