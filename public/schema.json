@@ -1,0 +1,50 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "BrajPandit - Online Puja & Spiritual Services",
+  "description": "Professional online puja services, astrology consultation, horoscope reading, and spiritual guidance by experienced pandits",
+  "url": "https://brajpandit.com",
+  "image": "https://brajpandit.com/assets/logo.png",
+  "telephone": "+91-XXXXXXXXXX",
+  "email": "support@brajpandit.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Braj Region",
+    "addressLocality": "Mathura",
+    "addressRegion": "Uttar Pradesh",
+    "postalCode": "281001",
+    "addressCountry": "IN"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "IN"
+  },
+  "priceRange": "$$",
+  "sameAs": [
+    "https://www.facebook.com/brajpandit",
+    "https://www.instagram.com/brajpandit",
+    "https://www.youtube.com/@brajpandit"
+  ],
+  "service": [
+    {
+      "@type": "Service",
+      "name": "Online Puja Services",
+      "description": "Professional online puja ceremonies performed by experienced pandits"
+    },
+    {
+      "@type": "Service",
+      "name": "Astrology Consultation",
+      "description": "Expert astrology consultation and horoscope readings"
+    },
+    {
+      "@type": "Service",
+      "name": "Pandit Services",
+      "description": "Professional pandit services for various spiritual ceremonies"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "150"
+  }
+}
