@@ -1,0 +1,56 @@
+# BrajPandit.com - SEO Metadata
+
+## Website Information
+- Domain: brajpandit.com
+- Type: Spiritual Services & E-Commerce
+- Language: Hindi, English
+
+## Primary Keywords
+- Radha Naam Japa
+- Online Puja Services
+- Astrology Consultation
+- Pandits Services
+- Horoscope Reading
+- Braj Yatra
+- Naam Jaap Counter
+
+## Content Categories
+- E-Pujas (Online Puja Services)
+- Personalized Puja Ceremonies
+- Group Pujas
+- Astrology & Horoscope Services
+- Pandit Consultations
+- Braj Pilgrimage Tours
+- Spiritual Blog
+- Naam Jaap (Chanting Counter)
+
+## Sitemap Structure
+- /sitemap.xml - Main sitemap with all pages
+- /sitemap-pages.xml - Service-specific pages
+- /sitemap-blogs.xml - Blog and content pages
+
+## Important Pages for SEO
+- Homepage (/) - Priority 1.0
+- Services (/services) - Priority 0.9
+- About Us (/about-us) - Priority 0.9
+- Pandits (/pandits) - Priority 0.8
+- Blog (/blogs) - Priority 0.7
+- Horoscope (/horoscope) - Priority 0.8
+- Astrology (/astrology) - Priority 0.8
+- Naam Jap (/naam-jap) - Priority 0.8
+- Braj Yatra (/braj-yatra) - Priority 0.7
+
+## Search Engine Submission
+- Google Search Console: https://search.google.com/search-console
+- Bing Webmaster Tools: https://www.bing.com/webmaster
+- Yandex Webmaster: https://webmaster.yandex.com
+
+## Recommendations
+1. Update all blog posts in /sitemap-blogs.xml with actual URLs
+2. Add meta descriptions to all pages
+3. Ensure proper heading hierarchy (H1, H2, H3)
+4. Add schema markup for LocalBusiness and Services
+5. Optimize images with alt text
+6. Build quality backlinks from spiritual and religious websites
+7. Create content targeting long-tail keywords
+8. Add structured data for breadcrumbs and reviews

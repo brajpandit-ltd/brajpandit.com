@@ -107,17 +107,18 @@ const StreakChallengeSection = () => {
 
           {/* Monthly */}
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-            <div className="text-center mb-6">
+            <div className="flex flex-col items-center gap-4">
               <img
                 src="/assets/naam-jaap/naam japa counter online.jpg"
-                alt="Challenge Prizes"
-                className="w-24 h-24 object-cover rounded-full shadow-md mx-auto mb-4"
+                alt="Year End Prizes"
+                className="w-full h-32 object-cover rounded-lg shadow-md"
               />
+
               <h3 className="text-lg font-bold text-orange-700 flex items-center justify-center gap-2">
                 <span>🏆</span> Challenge Prizes
               </h3>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-4 mt-4">
               <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
                 <h4 className="font-bold text-orange-800 mb-2">
                   🥇 1st Month Challenge
