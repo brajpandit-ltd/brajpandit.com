@@ -182,12 +182,19 @@ const JapStatistics: React.FC<JapStatisticsProps> = ({ days = 30 }) => {
       </div>
 
       {/* Chart */}
-      <div className="bg-gray-50 rounded-xl p-4 mb-6">
-        <ResponsiveContainer width="100%" height={350}>
-          <LineChart
-            data={chartData}
-            margin={{ top: 20, right: 30, left: 10, bottom: 20 }}
-          >
+      <div className="bg-gray-50 rounded-xl p-4 mb-6 flex justify-center">
+  <div className="w-full max-w-full">
+    <ResponsiveContainer width="100%" height={350}>
+      <LineChart
+        data={chartData}
+        margin={{
+          top: 20,
+          right: window.innerWidth < 640 ? 10 : 30,
+          left: window.innerWidth < 640 ? 0 : 10,
+          bottom: 20,
+        }}
+      >
+
             <CartesianGrid
               strokeDasharray="3 3"
               stroke="#e5e7eb"
@@ -242,7 +249,9 @@ const JapStatistics: React.FC<JapStatisticsProps> = ({ days = 30 }) => {
               name="Daily Japa"
             />
           </LineChart>
+         
         </ResponsiveContainer>
+         </div>
         <div className="text-center mt-2">
           <span className="text-sm text-orange-600 font-medium">
             ➜ Daily Japa
